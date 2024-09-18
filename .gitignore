@@ -24,3 +24,28 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+# Anaconda environment
+.env/
+.conda/
+
+# Python cache directories
+__pycache__/
+.pytest_cache/
+.pyre/
+
+# Jupyter Notebook checkpoints and metadata
+.ipynb_checkpoints/
+*.ipynb-meta
+
+# Anaconda environment files
+.env.yml
+requirements.txt
+conda-env/
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+.venv/
