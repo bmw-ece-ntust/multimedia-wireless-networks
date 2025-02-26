@@ -1,40 +1,40 @@
-![](./assets/lab-logo.jpeg)
-
 # <center>Multimedia Wireless Networks (ET5907701) </center>
 
+![bmw-logo](./assets/lab-logo.jpeg)
+
 - [Multimedia Wireless Networks (ET5907701) ](#multimedia-wireless-networks-et5907701-)
-- [1. Introduction](#1-introduction)
-  - [1.1. Person in Charge](#11-person-in-charge)
-  - [1.2. Course Detail](#12-course-detail)
-  - [1.3 Initial ToDo](#13-initial-todo)
-- [2. Course Outline](#2-course-outline)
-  - [2.1. Objectives](#21-objectives)
-  - [2.2. Schedule](#22-schedule)
-  - [2.3. Evaluation](#23-evaluation)
-  - [2.4. Assignments](#24-assignments)
-    - [A1 (Deadline: 3/5, 08.00 A.M.)](#a1-deadline-35-0800-am)
-    - [A2 (Deadline: 4/9, 08.00 A.M.)](#a2-deadline-49-0800-am)
-    - [A3 (Deadline: 5/14, 08.00 A.M.)](#a3-deadline-514-0800-am)
-  - [2.5. Evaluation Criteria](#25-evaluation-criteria)
-- [References](#references)
-- [Samples](#samples)
+  - [1. Introduction](#1-introduction)
+    - [1.1. Person in Charge](#11-person-in-charge)
+    - [1.2. Course Detail](#12-course-detail)
+    - [1.3 Initial ToDo](#13-initial-todo)
+  - [2. Course Outline](#2-course-outline)
+    - [2.1. Objectives](#21-objectives)
+    - [2.2. Schedule](#22-schedule)
+    - [2.3. Evaluation](#23-evaluation)
+    - [2.4. Assignments](#24-assignments)
+      - [A1 (Deadline: 3/3 23.59 A.M.)](#a1-deadline-33-2359-am)
+      - [A2 (Deadline: 4/7, 23.59 A.M.)](#a2-deadline-47-2359-am)
+      - [A3 (Deadline: 5/13, 23.59 A.M.)](#a3-deadline-513-2359-am)
+    - [2.5. Evaluation Criteria](#25-evaluation-criteria)
+  - [References](#references)
+  - [Samples](#samples)
 
-# 1. Introduction
+## 1. Introduction
 
-## 1.1. Person in Charge
+### 1.1. Person in Charge
 
 - **Instructor**: Prof. Ray-Guang Cheng (<crg@gapps.ntust.edu.tw>)
 - **Teaching Assistants**:
   1. Ian Joseph Chandra (<d11202805@gapps.ntust.edu.tw>)
   2. YenTing (<m11102202@mail.ntust.edu.tw>)
 
-## 1.2. Course Detail
+### 1.2. Course Detail
 
 1. [LINE group](https://line.me/ti/g/ykdO07UluN):
 
-    ![](./assets/LINE%20group%20Small.jpeg)
+    ![line-group](./assets/LINE%20group%20Small.jpeg)
 
-2. Slides on [Moodle]().
+2. [Teaching materials](./Teaching%20Materials/).
 3. Youtube [Playlist](https://www.youtube.com/playlist?list=PLNxlEcQdkOt_qHBq-W7T_eMtIJe3Ebryz) of course recordings.
 4. [WebEx Link for Online Course](https://ctld.webex.com/meet/crg).
 5. [Q&A Google Form](https://forms.gle/FCPydtpv225nNDhz6).
@@ -49,7 +49,7 @@
   > [!CAUTION]
   > We won't count your Q&A outside the course session.
 
-## 1.3 Initial ToDo
+### 1.3 Initial ToDo
 
 1. Create a [GitHub account](https://github.com/join).
 2. Provide your information & gmail to be used in this course in this [Google form](https://forms.gle/szQXJkVMSAYxoKrD6).
@@ -69,9 +69,9 @@ Dear all,
 The slides for opening and Part-I are uploaded. Please refer to [Schedule](#Schedule).
 Ray -->
 
-# 2. Course Outline
+## 2. Course Outline
 
-## 2.1. Objectives
+### 2.1. Objectives
 
 1. This course introduces the **basic knowledge of Quality-of-Service (QoS)**. Four main issues will be addressed:
     1. Multimedia Applications
@@ -88,10 +88,10 @@ Ray -->
   > Readme First: [The jobs of the future – and two skills you need to get them](https://www.weforum.org/agenda/2016/09/jobs-of-future-and-skills-you-need)
 
   > [!NOTE]
-  > Conclussion:
+  > **Conclussion**:
   > The study shows that workers who successfully combine mathematical and interpersonal skills in the knowledge-based economies of the future should find many rewarding and lucrative opportunities.
 
-## 2.2. Schedule
+### 2.2. Schedule
 
 | Date                   | Topic/Slide                                                                                                                                                                                                                                                                                                                                              | Presentations                                                                                    |
 | :--------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -114,7 +114,7 @@ Ray -->
 | Juniper eLearning - I  | [Getting Started with Networking](https://learningportal.juniper.net/juniper/user_transcript.aspx)                                                                                                                                                                                                                                                       |                                                                                                  |
 | Juniper eLearning - II | [Getting Started with Wi-Fi](https://learningportal.juniper.net/juniper/user_transcript.aspx)                                                                                                                                                                                                                                                            |                                                                                                  |
 
-## 2.3. Evaluation
+### 2.3. Evaluation
 
 - **Q&A/Presentation: 15%**
   - Weekly: up to **15 pts** (1 pt/week)
@@ -133,9 +133,9 @@ Ray -->
 >
 > Extra work for score adjustment will be given **after the Final Score is released**.
 
-## 2.4. Assignments
+### 2.4. Assignments
 
-### A1 (Deadline: 3/5, 08.00 A.M.)
+#### A1 (Deadline: 3/3 23.59 A.M.)
 
 - Purpose: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
 - Interpersonal Skills:
@@ -148,7 +148,7 @@ Ray -->
   - Video (4~5 mins): 1 pt/item * 4 = **6 pt**;
   - Experience sharing (3~5 mins): **2 pt**
 
-### A2 (Deadline: 4/9, 08.00 A.M.)
+#### A2 (Deadline: 4/7, 23.59 A.M.)
 
 - Purpose: Learn to identify the problem and verify the concepts using simulation and analytical results.
 - Paper: [Modeling and Estimation of One-Shot Random Access for Finite-User Multichannel Slotted ALOHA Systems](https://ieeexplore.ieee.org/abstract/document/6211364)
@@ -158,7 +158,7 @@ Ray -->
   - Numercial Results (should be identical as the paper): **5 pt**
   - Oral presentation: **2 pt**
 
-### A3 (Deadline: 5/14, 08.00 A.M.)
+#### A3 (Deadline: 5/13, 23.59 A.M.)
 
 - Purpose: Learn to identify the problem and verify the concepts using simulation and analytical results.
 - Paper: [ALOHA Packet System With and Without Slots and Capture](https://www.researchgate.net/publication/234802142_ALOHA_Packet_System_With_and_Without_Slots_and_Capture)
@@ -178,13 +178,12 @@ Reference:
 1. [Learning the 802.11 Standard](https://blogs.arubanetworks.com/solutions/learning-the-802-11-standard/)
 2. [RTI DDS Document](https://community.rti.com/static/documentation/connext-dds/5.2.0/doc/manuals/connext_dds/html_files/RTI_ConnextDDS_CoreLibraries_UsersManual/index.htm#UsersManual/AvailableDocs.htm%3FTocPath%3D_____2) -->
 
-## 2.5. Evaluation Criteria
+### 2.5. Evaluation Criteria
 
 ![image](https://hackmd.io/_uploads/S1lZwBZc1x.png)
 
-# References
+## References
 
--
 - [IEEE 802.11 Documents](https://mentor.ieee.org/802.11/documents?is_dcn=Random%20access&is_group=00be&is_options=1&is_year=2021)
 - [IEEE 802.11be D 1.31](https://www.ieee802.org/11/private/Draft_Standards/11be/Draft%20P802.11be_D1.31.pdf)
 - [Learning the 802.11 Standard](https://blogs.arubanetworks.com/solutions/learning-the-802-11-standard/)
@@ -195,7 +194,7 @@ Reference:
 - [Ultralearning by Scott Young](https://www.scotthyoung.com/blog/ultralearning/)
 - [Time Management by Randy Pausch](https://www.youtube.com/watch?v=JKBFwR1HIFU)
 
-# Samples
+## Samples
 
 - [2019](https://hackmd.io/PT5GnfcETu-eMZWV_DHWPQ?view&fbclid=IwAR3cCQZOzJSczTz4s53SW3EXwmHf_aFAmeC0ClxvgH5bB5KVIvMuCvh3nuk#Proposal-of-final-project)
 - [2020](https://hackmd.io/74Xn924wT9mlqwTU4sYB1A#Final-Project)
