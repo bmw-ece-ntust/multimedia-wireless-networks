@@ -22,10 +22,10 @@
 
 ## 1. Profile
 
-1. Name:
-2. Student ID:
-3. Department:
-4. Student status: (NTUST Student/Exchange student)
+1. Name: 賴俊愷 LAI, CHUN-KAI
+2. Student ID: M11302204
+3. Department: ECE
+4. Student status: NTUST Student
 
 ## 2. Assignments
 
