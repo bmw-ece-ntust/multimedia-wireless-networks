@@ -19,7 +19,7 @@ Score (15%):
 
 - [x]  Study note: 2 pt/item * 4 = **7 pt**;
 - [x]  Video (4~5 mins): 1 pt/item * 4 = **6 pt**;
-- [ ]  Experience sharing (3~5 mins): **2 pt**
+- [x]  Experience sharing (3~5 mins): **2 pt**
 </aside>
 
 # Presentation
@@ -208,3 +208,15 @@ The reference source for this topic is currently unavailable. I have compiled th
 - Effective teamwork requires intentional effort and practice
 - Implementing these tips can transform group dynamics
 - Strong teams drive organizational success and innovation
+
+<aside>
+Personal Experience Sharing:
+
+Presentation Skills: Understanding the principles of "Keep It Simple" and "Never Read from Slides" will allow me to create more effective presentations by focusing on key messages rather than overwhelming the audience with too much information, ensuring they can easily follow and remember the main points.
+
+Research Paper Reading: Applying the Three-Pass Method will enable me to process papers more efficiently, gaining an overview before delving into details, and better identifying the most relevant literature for my research.
+
+Teamwork: By establishing clear goals and fostering open communication, I can prevent issues related to unclear responsibilities and communication barriers in future team projects. Learning how to build trust and resolve conflicts constructively will help me create more efficient collaborative environments.
+
+- Mastering these interpersonal skills will not only enhance my academic performance but also prepare me for future professional environments
+</aside>
