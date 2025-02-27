@@ -17,7 +17,7 @@ Reference:
 
 Score (15%):
 
-- [ ]  Study note: 2 pt/item * 4 = **7 pt**;
+- [x]  Study note: 2 pt/item * 4 = **7 pt**;
 - [ ]  Video (4~5 mins): 1 pt/item * 4 = **6 pt**;
 - [ ]  Experience sharing (3~5 mins): **2 pt**
 </aside>
