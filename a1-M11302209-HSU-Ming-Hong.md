@@ -1,3 +1,7 @@
+# Study Note for Assignment 1
+
+- [Slide Link](https://gamma.app/docs/Key-Skills-for-Success-jbbwbow7dzh4amr) 
+
 ### Key Points
 - Research suggests that mastering a 5-minute presentation involves focusing on one central message and using clear, engaging strategies.
 - It seems likely that effectively reading research papers requires a three-pass approach for efficient comprehension and critical analysis.
