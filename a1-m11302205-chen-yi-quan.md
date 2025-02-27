@@ -49,7 +49,7 @@ Score (15%):
 ### 4. Simplify Data Presentation
 
 • Ensure charts and graphs are clear and easy to understand
-• Avoid overcomplicated infographics
+• Avoid over-complicated info graphics
 • Select only the most crucial data points
 • Maintain accuracy and credibility of information
 
@@ -120,55 +120,6 @@ Steps for conducting a literature survey using the three-pass method:
 - Allows adjustment of paper evaluation depth based on needs and available time
 
 ---
-
-## Academic Writing & Presentation Formats
-
-### Essays
-
-A structured writing on a specific topic with:
-
-- **Introduction** - states topic, approach, and thesis
-- **Body** - presents main points with supporting evidence
-- **Conclusion** - restates topic, summarizes main points, and clarifies argument context
-
-### Presentations
-
-Delivery of key ideas requiring:
-
-- **Introduction** - topic overview and outline
-- **Body** - explanation of main points
-- **Conclusion** - summary of key points
-
-Effective presentation elements:
-
-- Bullet points
-- Quotes
-- Visual elements (pictures, charts, diagrams)
-
-### Reports
-
-Investigation and analysis with recommendations, featuring:
-
-- Title page
-- Executive summary
-- Table of contents
-- Introduction
-- Methodology
-- Findings
-- Conclusions
-- Recommendations
-- References
-- Appendices
-
-### Other Academic Formats
-
-Common assessment types include:
-
-- **Quizzes** - multiple choice, short answer, fill-in-the-blanks, extended response
-- **Annotated bibliography** - resources with summaries and evaluations
-- **Case studies** - detailed analysis of real situations
-- **Reflective writing** - insights from learning experiences
-- **Literature reviews** - synthesis of existing research without new ideas
 
 ## Effective Research Paper Reading and Academic Writing
 
