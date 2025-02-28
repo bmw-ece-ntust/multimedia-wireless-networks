@@ -29,7 +29,7 @@
 
 ## 2. Assignments
 
-### A1 (DL: 2024/03/05, 08.00 A.M.)
+### A1 (DL: 2025/03/03, 23.59)
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
