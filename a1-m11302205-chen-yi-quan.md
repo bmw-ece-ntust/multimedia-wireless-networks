@@ -210,6 +210,11 @@ The reference source for this topic is currently unavailable. I have compiled th
 - Strong teams drive organizational success and innovation
 
 <aside>
+Video:
+https://youtu.be/AqQMyeFO8W4
+</aside>
+
+<aside>
 Personal Experience Sharing:
 
 Presentation Skills: Understanding the principles of "Keep It Simple" and "Never Read from Slides" will allow me to create more effective presentations by focusing on key messages rather than overwhelming the audience with too much information, ensuring they can easily follow and remember the main points.
