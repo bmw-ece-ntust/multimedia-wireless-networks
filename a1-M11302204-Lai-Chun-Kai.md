@@ -1,6 +1,6 @@
 # Assignment 1 - M11302204
 
-## 1. 5-Minute Presentation ([1](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/) , [2](https://www.youtube.com/watch?v=YVgS_opYacQ))
+## 1. 5-Minute Presentation ([Ref.1](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/) , [Ref.2](https://www.youtube.com/watch?v=YVgS_opYacQ))
 
 ### 1-1 How to Prepare Yourself as a Speaker
 - **Body Language Matters** – Use gestures, smile, show enthusiasm, and make eye contact to exude confidence.
@@ -25,9 +25,20 @@
 3. **The "Why"** – Clearly explain the significance of your work and its real-world impact.
 
 ### 1-5 Summary: Five Tips
-1. **Keep Slides Simple**: Avoid generic templates; start from scratch to ensure uniqueness and simplicity.
-2. **Use Minimal Text**: Use few words, large, easy-to-read font; think about audience at the back.
-3. **One Point per Slide**: Break up points into separate slides to prevent audience from reading ahead.
-4. **Effective Use of Photos**: Use high-quality, emotional photos; apply rule of thirds, ensure permission and size.
-5. **Simplify Data Presentation**: Extract key data points, avoid complex graphs; ensure accuracy to original source.
+> [!IMPORTANT]
+> 1. **Keep Slides Simple**: Avoid generic templates; start from scratch to ensure uniqueness and simplicity.
+> 2. **Use Minimal Text**: Use few words, large, easy-to-read font; think about audience at the back.
+> 3. **One Point per Slide**: Break up points into separate slides to prevent audience from reading ahead.
+> 4. **Effective Use of Photos**: Use high-quality, emotional photos; apply rule of thirds, ensure permission and size.
+> 5. **Simplify Data Presentation**: Extract key data points, avoid complex graphs; ensure accuracy to original source.
+
 ---
+
+## 2. How to Read a Paper ([Ref.](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf))
+### 2-1 The Three-Pass Method
+| Pass        | Time Allocation                          | Goal                           | Key Activities |
+|------------|------------------------------------|-------------------------------|----------------|
+| First Pass | 5-10 minutes                     | Quick assessment for relevance | Answer the five Cs: Category, Context, Correctness, Contributions, Clarity; decide if further reading is needed |
+| Second Pass | Up to an hour                    | Grasp the content deeply       | Look at figures/diagrams, mark unread references, summarize main thrust with evidence |
+| Third Pass  | 4-5 hours (beginners), 1 hour (experienced) | Deep understanding            | Virtually re-implement the paper, identify assumptions, failings, add to tools, jot future work ideas |
+
