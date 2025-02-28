@@ -22,10 +22,10 @@
 
 ## 1. Profile
 
-1. Name:
-2. Student ID:
-3. Department:
-4. Student status: (NTUST Student/Exchange student)
+1. Name:劉蕙瑋 LIU, HUI-WEI
+2. Student ID: B11001113
+3. Department: Industrial Management
+4. Student status: NTUST Student
 
 ## 2. Assignments
 
