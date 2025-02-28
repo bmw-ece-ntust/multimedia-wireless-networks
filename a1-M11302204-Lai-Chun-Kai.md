@@ -1,5 +1,21 @@
 # Assignment 1 - M11302204
+## 📌 Table of Contents  
+1. [5-Minute Presentation](#1-5-minute-presentation)  
+   - [How to Prepare Yourself as a Speaker](#1-1-how-to-prepare-yourself-as-a-speaker)  
+   - [What Makes for Good Presentation Slides?](#1-2-what-makes-for-good-presentation-slides)  
+   - [How Does the Audience Influence Your Presentation?](#1-3-how-does-the-audience-influence-your-presentation)  
+   - [What Makes a 5-Minute Pitch Memorable?](#1-4-what-makes-a-5-minute-pitch-memorable)  
+   - [Summary: Five Tips](#1-5-summary-five-tips)  
+2. [How to Read a Paper](#2-how-to-read-a-paper)  
+   - [The Three-Pass Method](#2-1-the-three-pass-method)  
+3. [How to Write a Report](#3-how-to-write-a-report)  
+   - [What is an Essay?](#3-1-what-is-essay)  
+   - [Structure of an Essay](#3-2-structure-of-an-essay)  
+   - [Tips to Enhance Essay Success](#3-3-tips-to-enhance-essay-success)  
+4. [10 Tips for Better Teamwork](#4-10-tips-for-better-teamwork)  
+   - [Tips for Effective Teamwork in the Workplace](#4-1-tips-for-effective-teamwork-in-the-workplace)  
 
+---
 ## 1. 5-Minute Presentation ([Ref.1](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/) , [Ref.2](https://www.youtube.com/watch?v=YVgS_opYacQ))
 
 ### 1-1 How to Prepare Yourself as a Speaker
@@ -70,3 +86,23 @@ An essay is a piece of writing on a specific subject, topic, or issue. It consis
 > 2.  Use **linking words** to connect ideas smoothly.
 > 3.  Follow proper **paragraph structure** to maintain clarity.
 > 4.  Review the **Writing Skills** section for additional guidance.  
+
+
+## 4. 10 Tips for Better Teamwork ([Ref.](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/))
+### 4-1 Tips for Effective Teamwork in the Workplace  
+
+Teamwork is crucial for success. People have unique personalities, strengths, and backgrounds, which can lead to workplace conflicts. Understanding communication styles and working effectively with diverse individuals fosters a productive team.  
+
+ 
+> [!IMPORTANT]
+> 1. **Practice Good Communication** – Listen actively, deliver clear messages, and resolve misunderstandings.  
+> 2. **Work Well with Everyone** – Understand different personalities, collaborate, and respect differences.  
+> 3. **Clarify Roles & Responsibilities** – Align strengths with roles, ensure accountability, and respect contributions.  
+> 4. **Set Clear Goals** – Establish a vision, create SMART goals, and adjust as needed.  
+> 5. **Value Every Voice** – Encourage input, respect ideas, and recognize each member’s contributions.  
+> 6. **Adopt a Team Mindset** – Prioritize team success over individual goals and appreciate collaboration.  
+> 7. **Support Team Members** – Offer help, share information, and provide necessary tools.  
+> 8. **Recognize Contributions** – Show appreciation, acknowledge efforts, and express gratitude.  
+> 9. **Build Relationships** – Foster trust, be transparent, and take time to connect with colleagues.  
+> 10. **Break Down Barriers** – Promote open dialogue, address conflicts, and avoid assumptions.  
+
