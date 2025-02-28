@@ -6,7 +6,7 @@
   - [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
   - [How to Write a Report](https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/how-to-write-a-report/)
   - [10 Tips for Better Teamwork](http://thebalancemoney.com/tips-for-better-teamwork-1919225)
-- Deadline: 3/5, 08.00 A.M.
+- Deadline: 2025/03/03, 23.59
 - Score (15%):
   - Study note: 2 pt/item * 4 = 7 pt;
   - Video (4~5 mins): 1 pt/item * 4 = 6 pt;
