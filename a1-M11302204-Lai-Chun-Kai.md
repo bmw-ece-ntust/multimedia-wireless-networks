@@ -42,3 +42,31 @@
 | Second Pass | Up to an hour                    | Grasp the content deeply       | Look at figures/diagrams, mark unread references, summarize main thrust with evidence |
 | Third Pass  | 4-5 hours (beginners), 1 hour (experienced) | Deep understanding            | Virtually re-implement the paper, identify assumptions, failings, add to tools, jot future work ideas |
 
+---
+## 3. How to Write a Report ([Ref.](https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/assignment-types/))
+### 3-1 What is Essay?
+An essay is a piece of writing on a specific subject, topic, or issue. It consists of three main parts:
+
+
+### 3-2 Structure of an Essay
+* **Introduction**  
+  - Introduce the topic.  
+  - Outline how you will discuss it.  
+  - Present the main argument or purpose of the essay.  
+
+* **Body**  
+  - Present main points with explanations.  
+  - Provide supporting evidence for each point.  
+  - Show how each point relates to your essay’s argument.  
+
+* **Conclusion**  
+  - Restate the topic (similar to the introduction, but reworded).  
+  - Summarize the main points and clarify your argument.  
+  - Provide recommendations if relevant.  
+  - Do **not** introduce new content in the conclusion. 
+### 3-3 Tips to enhance Essay success
+> [!IMPORTANT]
+> 1.  Ensure **flow** and **logical structure**.
+> 2.  Use **linking words** to connect ideas smoothly.
+> 3.  Follow proper **paragraph structure** to maintain clarity.
+> 4.  Review the **Writing Skills** section for additional guidance.  
