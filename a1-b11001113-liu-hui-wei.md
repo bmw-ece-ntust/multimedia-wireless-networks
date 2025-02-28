@@ -139,4 +139,6 @@ To enhance teamwork, here are 10 effective tips:
   - By clarifying roles and responsibilities, team members better understand each other’s expectations, reducing misunderstandings.
   - Open communication and respect for diversity foster innovation and problem-solving.
   - Additionally, recognizing and appreciating each person’s contributions boosts morale and overall job satisfaction.
-
+---
+**Video sharing:**
+https://youtu.be/zcaGlVPsbvM
