@@ -22,10 +22,10 @@
 
 ## 1. Profile
 
-1. Name:
-2. Student ID:
-3. Department:
-4. Student status: (NTUST Student/Exchange student)
+1. Name: 楊智元 Yang, ZHI-YUAN
+2. Student ID: M11302201
+3. Department: ECE
+4. Student status: NTUST Student
 
 ## 2. Assignments
 
@@ -33,8 +33,8 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
-  - [ ] [Study Note](path to another .md file for your assignment)
-  - [ ] [Video Presentation](YouTube Hyperlink) of your assignment explanation.
+  - [x] [Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302201-yang-zhi-yuan/a1-M11302201-Yang_ZHI_YUAN.md)
+  - [x] [Video Presentation](https://youtu.be/RXiG3igOxuw?si=jHhZVlrCHYRaYTe0) of your assignment explanation.
   - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
