@@ -2,7 +2,7 @@
 
 # <center> 2025 Multimedia Wireless Networks (ET5907701) </center>
 
-- [ 2025 Multimedia Wireless Networks (ET5907701) ](#-2024-multimedia-wireless-networks-et5907701-)
+- [2025 Multimedia Wireless Networks (ET5907701)](#-2024-multimedia-wireless-networks-et5907701-)
   - [Introduction](#introduction)
   - [1. Profile](#1-profile)
   - [2. Assignments:](#2-assignments)
@@ -11,21 +11,25 @@
     - [A3 (DL: 2025/05/14, 08.00 A.M.)](#a3-dl-20240514-0800-am)
 
 ## 1. Profile
+
 1. Name: **Lucas Herranz Gancedo**
 2. Student ID: **M11351802**
 3. Department: **Graduate Institute of Intelligent Manufacturing Technology**
 4. Student status: **NTUST Student**
 
-## 2. Assignments:
+## 2. Assignments
 
-### A1 (DL: 2025/03/05, 08.00 A.M.)
+### A1 (DL: 2025/03/03, 23.59 P.M.)
+
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
   - [ ] [Study Note](/notes/A1-Study-notes.md)
   - [ ] [Video Presentation](YouTube Hyperlink) of your assignment explanation.
+  - [ ] [Slides](/assets/ass01.pdf)
   - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
 
 ### A2 (DL: 2025/04/09, 08.00 A.M.)
+
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
 - Submissions:
   - [ ] [Study Note](path to another .md file for your assignment)
@@ -34,6 +38,7 @@
   - [ ] [Peer Review](https://forms.gle/njd22Apu7ZGTbKzJ7)
 
 ### A3 (DL: 2025/05/14, 08.00 A.M.)
+
 - [Assignement Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a3-deadline-514-0800-am)
 - Submissions:
   - [ ] [Study Note](path to another .md file for your assignment)
