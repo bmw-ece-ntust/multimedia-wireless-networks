@@ -21,7 +21,7 @@ Reports should present findings clearly and concisely, following a standard stru
 Effective teamwork relies on clarifying the mission, promoting open communication, and valuing individual contributions. These guidelines, while generally agreed upon, may need adjustment based on team size and context, with leadership support being crucial for success.
 
 ---
-
+<br><br><br><br>
 ### Comprehensive Study Note for Assignment 1: Detailed Strategies for Academic and Professional Success
 
 This document provides an in-depth exploration of essential academic and professional skills: delivering concise 5-minute presentations, critically analyzing research papers, constructing quality reports, and enhancing team collaboration. Each section is designed to offer actionable tips and strategies, ensuring students are well-prepared for both academic and workplace challenges. The following detailed breakdown aims to equip learners with the tools needed for success, drawing on established methodologies and best practices.
