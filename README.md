@@ -3,22 +3,13 @@
 ![bmw-logo](./assets/lab-logo.jpg)
 
 - [Multimedia Wireless Networks (ET5907701)](#multimedia-wireless-networks-et5907701)
-  - [Introduction](#introduction)
   - [1. Profile](#1-profile)
   - [2. Assignments](#2-assignments)
     - [A1 (DL: 2024/03/05, 08.00 A.M.)](#a1-dl-20240305-0800-am)
     - [A2 (DL: 2024/04/09, 08.00 A.M.)](#a2-dl-20240409-0800-am)
     - [A3 (DL: 2024/05/14, 08.00 A.M.)](#a3-dl-20240514-0800-am)
+   
 
-## Introduction
-
-> [! WARNING]
-> You can remove the Introduction section in your personal branch
-
-1. Create a branch & name it: `[year]-[Student ID]-[Name]`. Example: `2020-d11202805-Ian Joseph Chandra`.
-2. Update this README.md to fill in your profile.
-3. Organize your study notes by creating folders.
-4. Rename the 3 `.md` files for your study notes.
 
 ## 1. Profile
 
