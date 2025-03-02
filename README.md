@@ -5,7 +5,7 @@
 - [Multimedia Wireless Networks (ET5907701)](#multimedia-wireless-networks-et5907701)
   - [1. Profile](#1-profile)
   - [2. Assignments](#2-assignments)
-    - [A1 (DL: 2024/03/05, 08.00 A.M.)](#a1-dl-20240305-0800-am)
+    - [A1 (DL: 2024/03/03, 11.59 P.M.)](#a1-dl-20240303-1159-pm)
     - [A2 (DL: 2024/04/09, 08.00 A.M.)](#a2-dl-20240409-0800-am)
     - [A3 (DL: 2024/05/14, 08.00 A.M.)](#a3-dl-20240514-0800-am)
    
@@ -13,14 +13,14 @@
 
 ## 1. Profile
 
-1. Name:
-2. Student ID:
-3. Department:
-4. Student status: (NTUST Student/Exchange student)
+1. Name: 陳均諭 Chun Yu Chen
+2. Student ID: M11302229
+3. Department: NTUST ECE
+4. Student status: NTUST Student
 
 ## 2. Assignments
 
-### A1 (DL: 2024/03/05, 08.00 A.M.)
+### A1 (DL: 2024/03/03, 11.59 P.M.)
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
