@@ -20,10 +20,10 @@
 4. Create `.md` files for your study notes.
 
 ## 1. Profile
-1. Name: 
-2. Student ID: 
-3. Department: 
-4. Student status: (NTUST Student/Exchange student)
+1. Name: Li Kuan Chin
+2. Student ID: M11302206
+3. Department: ECE
+4. Student status: NTUST Student
 
 ## 2. Assignments:
 
