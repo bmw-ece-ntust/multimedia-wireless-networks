@@ -200,4 +200,4 @@ I will continue to refine these skills and adapt them to different contexts.
 - Alabama Cooperative Extension System. (2020, July 15). *10 tips for communication in the workplace*. Auburn University. Retrieved March 3, 2025, from [https://www.aces.edu/blog/topics/finance-career/10-tips-for-communication-in-the-workplace/](https://www.aces.edu/blog/topics/finance-career/10-tips-for-communication-in-the-workplace/)  
 
 ## 8. Appendix
-Video
+[Assignment 1 Video Presentation -- Chun Yu Chen](https://youtu.be/HXcbZz0pUJA)
