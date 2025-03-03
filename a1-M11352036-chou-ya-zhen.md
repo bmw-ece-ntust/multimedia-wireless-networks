@@ -10,9 +10,9 @@
 > Table of Contents
 > - [I.1 Tips for a Memorable 5-Minute Research Presentation](#I.1-Tips-for-a-Memorable-5-Minute-Research-Presentation)
 > - [I.2 Mastering 5-Minute Presentations](#I.2-mastering-5--minute-presentations)
-> - [II. How to read a paper](#II.-How-to-read-a-paper)
-> - [III. How to Write a Report](#III.-how-to-write-a-report)
-> - [IV. 10 Tips for Better Teamwork](#IV.-10-Tips-for-Effective-Teamwork-in-the-Workplace)
+> - [II. How to read a paper](#II-How-to-read-a-paper)
+> - [III. How to Write a Report](#III-how-to-write-a-report)
+> - [IV. 10 Tips for Better Teamwork](#IV-10-Tips-for-Effective-Teamwork-in-the-Workplace)
 
 ## I.1 Tips for a Memorable 5-Minute Research Presentation
 > “If you get the first 5 minutes down, you are going to be golden for the rest of your presentation.” 
