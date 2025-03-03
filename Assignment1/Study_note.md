@@ -83,6 +83,12 @@ Researchers spend hundreds of hours annually reading papers, yet this skill is r
 
 Core concept: Read papers in three sequential passes, each providing deeper understanding
 
+| **Pass** | **Description** | **Key Actions** | **Outcome** |
+| --- | --- | --- | --- |
+| **First Pass** | A quick scan to get an overview and decide whether further reading is needed | 1. Read the title, abstract, and introduction<br>2. Read section and subsection headings (ignore the details)<br>3. Read the conclusion<br>4. Glance over references and mark those already read | Able to answer the **5 Cs**:<br>1. **Category** – What type of paper is this?<br>2. **Context** – What other papers is it related to?<br>3. **Correctness** – Are the assumptions valid?<br>4. **Contributions** – What are the main contributions?<br>5. **Clarity** – Is the paper well-written? |
+| **Second Pass** | More careful reading to understand the content while skipping details like proofs | 1. Examine figures, diagrams, and graphs (check labels, error bars, statistical significance)<br>2. Take notes or write comments in the margins<br>3. Mark relevant unread references for further reading | Able to summarize the main idea and key evidence to others; suitable for papers of interest but outside your specialty |
+| **Third Pass** | Deep understanding, especially useful for reviewers | 1. Try to re-implement the paper’s assumptions and experiments<br>2. Challenge every assumption in the paper<br>3. Consider alternative ways to present the same ideas and note future research directions | Able to reconstruct the entire paper from memory and identify its strengths and weaknesses, including hidden assumptions, missing citations, and flaws in methodology |
+
 - **First Pass: Quick Scan (5-10 minutes)**
     - Read the title, abstract, and introduction
     - Browse section and subsection headings
@@ -209,6 +215,11 @@ The reference source for this topic is currently unavailable. I have compiled th
 - Implementing these tips can transform group dynamics
 - Strong teams drive organizational success and innovation
 
+
+<aside>
+Video:
+https://youtu.be/AqQMyeFO8W4
+</aside>
 
 <aside>
 Personal Experience Sharing:
