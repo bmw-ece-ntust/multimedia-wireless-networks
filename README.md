@@ -2,13 +2,12 @@
 
 # <center> 2025 Multimedia Wireless Networks (ET5907701) </center>
 
-- [2025 Multimedia Wireless Networks (ET5907701)](#-2024-multimedia-wireless-networks-et5907701-)
-  - [Introduction](#introduction)
+- [2025 Multimedia Wireless Networks (ET5907701)](#-2025-multimedia-wireless-networks-et5907701-)
   - [1. Profile](#1-profile)
   - [2. Assignments:](#2-assignments)
-    - [A1 (DL: 2025/03/05, 08.00 A.M.)](#a1-dl-20240305-0800-am)
-    - [A2 (DL: 2025/04/09, 08.00 A.M.)](#a2-dl-20240409-0800-am)
-    - [A3 (DL: 2025/05/14, 08.00 A.M.)](#a3-dl-20240514-0800-am)
+    - [A1 (DL: 2025/03/03, 23.59 P.M.)](#a1-dl-20250303-2359-pm)
+    - [A2 (DL: TBD)](#a2-dl-tbd)
+    - [A3 (DL: TBD)](#a3-dl-tbd)
 
 ## 1. Profile
 
@@ -23,12 +22,12 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
-  - [ ] [Study Note](/notes/A1-Study-notes.md)
-  - [ ] [Video Presentation](YouTube Hyperlink) of your assignment explanation.
-  - [ ] [Slides](/assets/ass01.pdf)
+  - [x] [Study Note](/notes/A1-Study-notes.md)
+  - [x] [Video Presentation](https://youtu.be/rUWogr4oI_Y)
+  - [x] [Slides](/assets/ass01.pdf)
   - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
 
-### A2 (DL: 2025/04/09, 08.00 A.M.)
+### A2 (DL: TBD)
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
 - Submissions:
@@ -37,7 +36,7 @@
   - [ ] [Numercial Results (should be identical as the paper)](path to specific section in your study note)
   - [ ] [Peer Review](https://forms.gle/njd22Apu7ZGTbKzJ7)
 
-### A3 (DL: 2025/05/14, 08.00 A.M.)
+### A3 (DL: TBD)
 
 - [Assignement Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a3-deadline-514-0800-am)
 - Submissions:

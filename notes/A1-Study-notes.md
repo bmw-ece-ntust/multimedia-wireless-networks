@@ -1,18 +1,17 @@
-# A1 Study Notes (Deadline: 2025/03/05)
+# A1 Study Notes (Deadline: 2025/03/03, 23:59 P.M.)
 
 ## Table of Contents
 
 - Task 1: [5-Minute Presentation](#task-1-5-minute-presentation)
-  - 1.1. [Mastering the art of 5 minute presentations](#11-mastering-the-art-of-5-minute-presentations).
-    - 1.1.1. [Prepare yourself](#111-prepare-yourself).
-    - 1.1.2. [Good presentation slides](#112-good-presentation-slides).
-      - 1.1.2.1. [Keep it simple](#1121-keep-it-simple).
-      - 1.1.2.2. [Never read from the slides](#1122-never-read-from-the-slides).
-      - 1.1.2.3. [Use beautiful photos](#1123-use-beautiful-photos).
-      - 1.1.2.4. [Keep data simple](#1124-keep-data-simple).
-      - 1.1.2.5. [Repetition](#1125-repetition).
-    - 1.1.3. [The audience](#113-the-audience).
-    - 1.1.4. [Conclusions](#114-conclusions).
+  - 1.1. [Prepare yourself](#11-prepare-yourself).
+  - 1.2. [Good presentation slides](#12-good-presentation-slides).
+    - 1.2.1. [Keep it simple](#1121-keep-it-simple).
+    - 1.2.2. [Never read from the slides](#1122-never-read-from-the-slides).
+    - 1.2.3. [Use beautiful photos](#1123-use-beautiful-photos).
+    - 1.2.4. [Keep data simple](#1124-keep-data-simple).
+    - 1.2.5. [Repetition](#1125-repetition).
+  - 1.3. [The audience](#113-the-audience).
+  - 1.4. [Conclusions](#114-conclusions).
 - Task 2: [How to read a paper](#task-2-how-to-read-a-paper).
   - 2.1. [Introduction](#21-introduction).
   - 2.2. [The Three-Pass Approach](#22-the-three-pass-approach).
@@ -46,11 +45,9 @@
 
 ## Task 1: 5-Minute Presentation
 
-### 1.1. Mastering the art of 5 minute presentations
-
 According to [Cornell University](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/) here is a summary of the art of presenting research work as well as some tips. A presentation consists of three elements: the speaker (you), the presentation slides and the audience.
 
-#### 1.1.1. Prepare yourself
+### 1.1. Prepare yourself
 
 - Focus on your body language.
   - Gestures are important to emphasize your message.
@@ -62,16 +59,16 @@ According to [Cornell University](https://gradcareers.cornell.edu/spotlights/tip
   - Use words that are understandable to the whole audience.
   - If you cannot find words to explain jargon terms, try analogies.
 
-#### 1.1.2. Good presentation slides
+### 1.2. Good presentation slides
 
 Based on this [tutorial](https://youtu.be/YVgS_opYacQ?feature=shared) by the University of North Carolina (UNC).
 
-##### 1.1.2.1. Keep it simple
+#### 1.2.1. Keep it simple
 
 - You want people to pay attention to what you are saying, not the slides. **Your slides should be simple**.
 - Do not always rely on templates, some are boring (overly used), and some are too complex.
 
-##### 1.1.2.2. Never read from the slides
+#### 1.2.2. Never read from the slides
 
 - The human brain is not very good at processing audio and text at the same time.
 - Too much text on the screen can distract listeners from the speaker.
@@ -79,7 +76,7 @@ Based on this [tutorial](https://youtu.be/YVgS_opYacQ?feature=shared) by the Uni
 - Use simple and easy to read fonts and large sizes.
 - One single point per slide.
 
-##### 1.1.2.3. Use beautiful photos
+#### 1.2.3. Use beautiful photos
 
 - Images cause emotional reactions on the audience.
 - Keep away from generic stock photos.
@@ -90,22 +87,24 @@ Based on this [tutorial](https://youtu.be/YVgS_opYacQ?feature=shared) by the Uni
   - [The Noun Project](https://thenounproject.com/).
 - Look for big enough pictures (at least `1920 x 1280` pixels).
 - When choosing pictures **consider the rule of thirds**, you want the focal point of the images to be near one of this four points in the slide.
-  ![[assets/rule-of-thirds-composition.png|The composition rule of thirds]]
-  _The four points indicated in the picture are considered visual hot spots, where the viewer's eye will most likely want to focus_.
 
-##### 1.1.2.4. Keep data simple
+![](../assets/rule-of-thirds-composition.png)
+
+_The four points indicated in the picture are considered visual hot spots, where the viewer's eye will most likely want to focus_.
+
+#### 1.2.4. Keep data simple
 
 - Use **simple data graphics** where information is readable to all the audience.
 - If you create new graphics to make the data more presentable, always remember to be accurate and cite the sources.
 
-##### 1.1.2.5. Repetition
+#### 1.2.5. Repetition
 
 - Repeat design elements across the slide deck.
 - Choose **one font** and use it throughout the presentation.
 - Choose a **simple color pallet of two to three colors** and use them consistently.
 - Use **consistent layouts** across the slide deck.
 
-#### 1.1.3. The audience
+### 1.3. The audience
 
 The audience you have dictates how you present your information.
 
@@ -115,7 +114,7 @@ The audience you have dictates how you present your information.
 - Understand what are the goals and the issues that the audience has.
 - Use images that intrigue your audience.
 
-#### 1.1.4. Conclusions
+### 1.4. Conclusions
 
 In order to make your 5-minute presentation memorable make sure:
 
