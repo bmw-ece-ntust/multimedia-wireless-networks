@@ -8,13 +8,13 @@
     4. [10 Tips for Better Teamwork](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/) 
 
 > Table of Contents
-> - [I.I Tips for a Memorable 5-Minute Research Presentation](#I-Tips-for-a-Memorable-5-Minute-Research-Presentation)
-> - [I.II Mastering 5-Minute Presentations](#I-mastering-5--minute-presentations)
+> - [I.I Tips for a Memorable 5-Minute Research Presentation](#I.I-Tips-for-a-Memorable-5-Minute-Research-Presentation)
+> - [I.II Mastering 5-Minute Presentations](#I.II-mastering-5-minute-presentations)
 > - [II. How to read a paper](#II-How-to-read-a-paper)
 > - [III. How to Write a Report](#III-how-to-write-a-report)
 > - [IV. 10 Tips for Better Teamwork](#IV-10-Tips-for-Effective-Teamwork-in-the-Workplace)
 
-## I.I Tips for a Memorable 5-Minute Research Presentation
+## I.I Tips for a Memorable 5 Minute Research Presentation
 > “If you get the first 5 minutes down, you are going to be golden for the rest of your presentation.” 
 
 There are three parts of a presentation that can influence the outcome of the presentation.
@@ -29,7 +29,7 @@ Here is what makes your 5-minute pitch memorable:
 - It tells a good story: when you have a flow with compelling images, it helps tell a story, saves explanation, and hooks the audience.
 - It gives a ‘why’: from your presentation, the audience should know why they should care about your work, the implications of your results and how they can apply this information.
 
-## I.II Mastering 5-Minute Presentations
+## I.II Mastering 5 Minute Presentations
 Tips for a Powerful 5-Minute Presentation
 
 ### 1. Focus on One Key Concept
