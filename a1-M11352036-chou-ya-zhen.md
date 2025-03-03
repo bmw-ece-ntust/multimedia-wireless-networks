@@ -8,8 +8,8 @@
     4. [10 Tips for Better Teamwork](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/) 
 
 > Table of Contents
-> - [I.1 Tips for a Memorable 5-Minute Research Presentation](#I.1-Tips-for-a-Memorable-5-Minute-Research-Presentation)
-> - [I.2 Mastering 5-Minute Presentations](#I.2-mastering-5--minute-presentations)
+> - [I.1 Tips for a Memorable 5-Minute Research Presentation](#Tips-for-a-Memorable-5-Minute-Research-Presentation)
+> - [I.2 Mastering 5-Minute Presentations](#mastering-5--minute-presentations)
 > - [II. How to read a paper](#II-How-to-read-a-paper)
 > - [III. How to Write a Report](#III-how-to-write-a-report)
 > - [IV. 10 Tips for Better Teamwork](#IV-10-Tips-for-Effective-Teamwork-in-the-Workplace)
