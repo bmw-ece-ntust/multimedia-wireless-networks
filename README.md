@@ -1,6 +1,6 @@
 ![](./assets/lab-logo.jpg)
 
-# <center> 2024 Multimedia Wireless Networks (ET5907701) </center>
+# <center> 2025 Multimedia Wireless Networks (ET5907701) </center>
 
 - [ 2024 Multimedia Wireless Networks (ET5907701) ](#-2024-multimedia-wireless-networks-et5907701-)
   - [Introduction](#introduction)
@@ -32,7 +32,7 @@
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
   - [x] [Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11352036-chou-ya-zhen/a1-M11352036-chou-ya-zhen.md)
-  - [x] [Video Presentation]() of your assignment explanation. [Slide](https://docs.google.com/presentation/d/1ISGPo4jGIpPiM6fYeM6cfCbV-Y9P7XlMX4HPBvHRc2I/edit?usp=sharing)
+  - [x] [Video Presentation](https://youtu.be/FuClsrMMOkA) of your assignment explanation. [Slide](https://docs.google.com/presentation/d/1ISGPo4jGIpPiM6fYeM6cfCbV-Y9P7XlMX4HPBvHRc2I/edit?usp=sharing)
   - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
