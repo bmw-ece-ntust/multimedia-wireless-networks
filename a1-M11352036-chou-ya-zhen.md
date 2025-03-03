@@ -11,7 +11,7 @@
 > - [Tips for a Memorable 5-Minute Research Presentation](#I.1-Tips-for-a-Memorable-5-Minute-Research-Presentation)
 > - [Mastering 5-Minute Presentations](#I.2-mastering-5-minute-presentations)
 > - [How tp read a paper](#II-effective-reading-of-research-papers)
-> - [How Write a Report](#III-how-to-write-a-report)
+> - [How to Write a Report](#III-how-to-write-a-report)
 > - [10 Tips for Better Teamwork](#IV-10-Tips-for-Effective-Teamwork-in-the-Workplace)
 
 ## I.1 Tips for a Memorable 5-Minute Research Presentation
@@ -120,7 +120,7 @@ Tip: Filters out 50-80% of papers for experienced readers.
 - Prepare for review, implementation, or extension.
 Tip: Compare to your knowledge—what’s novel?
 
-## III. How Write a Report
+## III. How to Write a Report
 ### Notes on Assignment Types
 
 Depending on your course of study, you may encounter various types of assignments designed to meet specific learning outcomes. Here's an overview of the most common assignment types:
