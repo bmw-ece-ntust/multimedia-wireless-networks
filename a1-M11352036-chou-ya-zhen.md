@@ -2,19 +2,34 @@
 
 - Purpose: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
 - Interpersonal Skills:
-    1. 5-Minute Presentation ([[1]](https://www.thebalancesmb.com/mastering-the-art-of-the-5-minute-presentation-2951697)The page not found, [[2]](https://www.youtube.com/watch?v=YVgS_opYacQ))
+    1. 5-Minute Presentation ([[1]](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/) , [[2]](https://www.youtube.com/watch?v=YVgS_opYacQ))
     2. [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
     3. [How to Write a Report](https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/how-to-write-a-report/)
     4. [10 Tips for Better Teamwork](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/) 
 
 > Table of Contents
-> - [Mastering 5-Minute Presentations](#mastering-5-minute-presentations)
-> - [How tp read a paper](#effective-reading-of-research-papers)
-> - [How Write a Report](#how-to-write-a-report)
-> - [Crafting Quality Reports](#crafting-quality-reports)
-> - [10 Tips for Better Teamwork](#10-Tips-for-Effective-Teamwork-in-the-Workplace)
+> - [Tips for a Memorable 5-Minute Research Presentation](#I.1-Tips-for-a-Memorable-5-Minute-Research-Presentation)
+> - [Mastering 5-Minute Presentations](#I.2-mastering-5-minute-presentations)
+> - [How tp read a paper](#II-effective-reading-of-research-papers)
+> - [How Write a Report](#III-how-to-write-a-report)
+> - [10 Tips for Better Teamwork](#IV-10-Tips-for-Effective-Teamwork-in-the-Workplace)
 
-## I. Mastering 5-Minute Presentations
+## I.1 Tips for a Memorable 5-Minute Research Presentation
+> “If you get the first 5 minutes down, you are going to be golden for the rest of your presentation.” 
+
+There are three parts of a presentation that can influence the outcome of the presentation.
+
+- You, the speaker
+- Your presentation slides
+- The audience
+
+Here is what makes your 5-minute pitch memorable:
+
+- It is passionate: This comes with understanding what inspires your work. Passion for research leads you to excel, even when you suffer setbacks.
+- It tells a good story: when you have a flow with compelling images, it helps tell a story, saves explanation, and hooks the audience.
+- It gives a ‘why’: from your presentation, the audience should know why they should care about your work, the implications of your results and how they can apply this information.
+
+## I.2 Mastering 5-Minute Presentations
 Tips for a Powerful 5-Minute Presentation
 
 ### 1. Focus on One Key Concept
@@ -163,7 +178,7 @@ Presentations involve delivering information to an audience verbally, often supp
 
 Understanding the specific requirements and expectations of each assignment type is crucial for academic success. Always refer to your course materials and guidelines to ensure you meet the necessary criteria.
 
-# 10 Tips for Effective Teamwork in the Workplace
+## IV. 10 Tips for Effective Teamwork in the Workplace
 
 1. **Practice Good Communication Skills**
    - Review the "10 Tips for Communication in the Workplace" provided by Alabama Extension.
