@@ -1,6 +1,6 @@
 # Multimedia Wireless Networks (ET5907701) Assignment 1
 ---
-- Purpose: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
+- Purpose: Learn the background knowledge of interpersonal skills and apply it in the following assignments. 
 - Interpersonal Skills:
   - 5-Minute Presentation ([[1]](https://www.thebalancemoney.com/mastering-the-art-of-the-5-minute-presentation-2951697),[[2]](https://www.youtube.com/watch?v=YVgS_opYacQ&ab_channel=UNCLibraries))
   - [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
