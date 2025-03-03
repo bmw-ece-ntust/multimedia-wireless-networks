@@ -24,8 +24,8 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
-  - [ ] [Study Note](path to another .md file for your assignment)
-  - [ ] [Video Presentation](YouTube Hyperlink) of your assignment explanation.
+  - [ ] [Assignment 1 Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a1-m11302229-Chun-Yu-Chen.md)
+  - [ ] [Assignment 1 Video Presentation -- Chun Yu Chen](https://youtu.be/HXcbZz0pUJA).
   - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
