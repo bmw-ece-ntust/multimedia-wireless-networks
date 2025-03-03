@@ -1,4 +1,6 @@
-# Assignment 1 Study Note
+# Assignment 1
+
+![images/A1-0.png](./images/A1-0.png)
 
 ## Table of Contents
 - [0. Introduction](#0-introduction)
@@ -48,6 +50,7 @@ There are three parts of a presentation that can influence the outcome of the pr
   * Choose high-quality images
   * Ensure visuals complement your message and enhance recall
   * make the focal point of photos is near one of these point — photos will look more dynamic and interesting
+   ![images/A1-1.png](./images/A1-1.png)
 * **Keep data SIMPLE**
   * Present only the most essential data
   * Use clean, easy-to-read charts — avoid clutter
