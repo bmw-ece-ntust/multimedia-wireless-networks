@@ -185,5 +185,19 @@ I will continue to refine these skills and adapt them to different contexts.
 
 ## 7. Reference
 
+- Cornell University. (n.d.). *Tips for a memorable 5-minute research presentation*. Graduate Careers at Cornell. Retrieved March 3, 2025, from [https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/)  
+
+- Ewing, L. (2016, April 13). *5 tips in 5 minutes - Presentations* [Video]. YouTube. [https://www.youtube.com/watch?v=YVgS_opYacQ](https://www.youtube.com/watch?v=YVgS_opYacQ)  
+
+- Keshav, S. (2007). *How to read a paper*. Stanford University. Retrieved March 3, 2025, from [https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)  
+
+- Open Polytechnic. (n.d.-a). *How to write a report*. Open Polytechnic of New Zealand. Retrieved March 3, 2025, from [https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/assignment-types/](https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/assignment-types/)  
+
+- Open Polytechnic. (n.d.-b). *Basic structure of a report*. Open Polytechnic of New Zealand. Retrieved March 3, 2025, from [https://www.openpolytechnic.ac.nz/assets/Uploads/Assignments-Basic-structure-of-a-report.pdf](https://www.openpolytechnic.ac.nz/assets/Uploads/Assignments-Basic-structure-of-a-report.pdf)  
+
+- Alabama Cooperative Extension System. (2021, March 22). *10 tips for effective teamwork in the workplace*. Auburn University. Retrieved March 3, 2025, from [https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/)  
+
+- Alabama Cooperative Extension System. (2020, July 15). *10 tips for communication in the workplace*. Auburn University. Retrieved March 3, 2025, from [https://www.aces.edu/blog/topics/finance-career/10-tips-for-communication-in-the-workplace/](https://www.aces.edu/blog/topics/finance-career/10-tips-for-communication-in-the-workplace/)  
+
 ## 8. Appendix
 Video
