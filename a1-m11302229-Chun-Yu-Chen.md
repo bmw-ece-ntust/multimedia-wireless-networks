@@ -46,7 +46,7 @@ There are three parts of a presentation that can influence the outcome of the pr
   * Using a small amount of text can help people remember your main points
   * Explain in your own words — don’t just recite text
   * Maintain eye contact and engage with your audience
-* **Use beautiful photos**
+* **Use beautiful images**
   * Choose high-quality images
   * Ensure visuals complement your message and enhance recall
   * make the focal point of photos is near one of these point — photos will look more dynamic and interesting
