@@ -7,13 +7,13 @@
     3. [How to Write a Report](https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/how-to-write-a-report/)
     4. [10 Tips for Better Teamwork](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/) 
 
-### Table of Contents
-- [Mastering 5-Minute Presentations](#mastering-5-minute-presentations)
-- [How tp read a paper](#effective-reading-of-research-papers)
-- [How Write a Report](#how-to-write-a-report)
-- [Crafting Quality Reports](#crafting-quality-reports)
-- [10 Tips for Better Teamwork](#10-Tips-for-Effective-Teamwork-in-the-Workplace)
----
+> Table of Contents
+> - [Mastering 5-Minute Presentations](#mastering-5-minute-presentations)
+> - [How tp read a paper](#effective-reading-of-research-papers)
+> - [How Write a Report](#how-to-write-a-report)
+> - [Crafting Quality Reports](#crafting-quality-reports)
+> - [10 Tips for Better Teamwork](#10-Tips-for-Effective-Teamwork-in-the-Workplace)
+
 ## I. Mastering 5-Minute Presentations
 Tips for a Powerful 5-Minute Presentation
 
@@ -218,6 +218,7 @@ Understanding the specific requirements and expectations of each assignment type
    - Maintain transparency in interactions.
    - Invest time in getting to know each other.
    - Be accessible and approachable.
+
 
 10. **Break Down Barriers**
     - Promote open dialogue.
