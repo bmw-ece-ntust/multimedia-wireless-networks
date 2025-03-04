@@ -26,7 +26,6 @@
 - **Instructor**: Prof. Ray-Guang Cheng (<crg@gapps.ntust.edu.tw>)
 - **Teaching Assistants**:
   1. Ian Joseph Chandra (<d11202805@gapps.ntust.edu.tw>)
-  2. YenTing (<m11102202@mail.ntust.edu.tw>)
 
 ### 1.2. Course Detail
 
