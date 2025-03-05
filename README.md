@@ -52,15 +52,17 @@
 
 1. Create a [GitHub account](https://github.com/join).
 2. Provide your information & gmail to be used in this course in this [Google form](https://forms.gle/szQXJkVMSAYxoKrD6).
-3. Read the [GitHub markdown features](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) information.
-4. Download [Visual Studio Code](https://code.visualstudio.com/download) (for study notes writing).
-  
-  > [!TIP]
-  Read how to generate automatic [Table of Content (ToC)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one#table-of-contents) using [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension.
-
+3. Download [Visual Studio Code](https://code.visualstudio.com/download) (for study notes writing).
+4. Install several VScode extensions:
+   1. [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+      1. Automatically generate & update the [table of content (ToC)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one#table-of-contents).
+      2. [GitHub markdown features](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) information.
+   2. [Markdown Preview GitHub](http://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+   3. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
+   <br>Get free Copilot from [GitHub education](https://education.github.com/discount_requests/application).
+   4. [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
 5. Create your own branch in this repository using this format: `[year]-[student ID]-[English Name]`.
-
-    Ex: `2024-d11202805-Ian Joseph Chandra`
+    <br>Ex: `2024-d11202805-Ian Joseph Chandra`
 6. Copy the content of the [branch template](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/tree/template) to your own branch & update your profile information in your README.md file.
 
 <!-- ## Announcement (NEW!)
