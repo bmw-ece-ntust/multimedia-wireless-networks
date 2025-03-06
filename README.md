@@ -57,7 +57,9 @@
    1. [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
       1. Automatically generate & update the [table of content (ToC)](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one#table-of-contents).
       2. [GitHub markdown features](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) information.
-   2. [Markdown Preview GitHub](http://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+   2. Markdown Preview (Choose one):
+      1. [Markdown Preview GitHub](http://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
+      2. [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
    3. [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
    <br>Get free Copilot from [GitHub education](https://education.github.com/discount_requests/application).
    4. [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
