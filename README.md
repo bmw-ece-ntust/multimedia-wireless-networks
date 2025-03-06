@@ -35,7 +35,7 @@
 
 2. [Teaching materials](./Teaching%20Materials/).
 3. Youtube [Playlist](https://www.youtube.com/playlist?list=PLNxlEcQdkOt_qHBq-W7T_eMtIJe3Ebryz) of course recordings.
-4. Teams Online course:
+4. [Teams Online course](https://www.microsoft.com/en-us/microsoft-teams/join-a-meeting):
     <br>**Note**: Register your [NTUST MS student account](https://www.cc.ntust.edu.tw/p/404-1050-83384.php?Lang=en) to get the course transcript & recordings.
    - Meeting ID: 484 576 276 678
    - Passcode: r4L9cd2U
