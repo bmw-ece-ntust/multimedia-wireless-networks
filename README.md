@@ -6,8 +6,8 @@
   - [1. Profile](#1-profile)
   - [2. Assignments:](#2-assignments)
     - [A1 (DL: 2025/03/03, 23.59 P.M.)](#a1-dl-20250303-2359-pm)
-    - [A2 (DL: TBD)](#a2-dl-tbd)
-    - [A3 (DL: TBD)](#a3-dl-tbd)
+    - [A2 (DL: 2025/04/07, 23.59 P.M.)](#a2-dl-20250407-2359-pm)
+    - [A3 (DL: 2025/05/13, 23.59 P.M.)](#a3-dl-20250415-2359-pm)
 
 ## 1. Profile
 
@@ -22,12 +22,12 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
-  - [x] [Study Note](/notes/A1-Study-notes.md)
+  - [x] [Study NoteS](/notes/A1-Study-notes.md)
   - [x] [Video Presentation](https://youtu.be/rUWogr4oI_Y)
   - [x] [Slides](/assets/ass01.pdf)
-  - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
+  - [x] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5).
 
-### A2 (DL: TBD)
+### A2 (DL: 2025/04/07, 23.59 P.M.)
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
 - Submissions:
@@ -36,7 +36,7 @@
   - [ ] [Numercial Results (should be identical as the paper)](path to specific section in your study note)
   - [ ] [Peer Review](https://forms.gle/njd22Apu7ZGTbKzJ7)
 
-### A3 (DL: TBD)
+### A3 (DL: 2025/05/13, 23.59 P.M.)
 
 - [Assignement Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a3-deadline-514-0800-am)
 - Submissions:
