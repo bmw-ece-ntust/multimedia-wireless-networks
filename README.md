@@ -12,9 +12,9 @@
     - [2.2. Schedule](#22-schedule)
     - [2.3. Evaluation](#23-evaluation)
     - [2.4. Assignments](#24-assignments)
-      - [A1 (Deadline: 3/3 23.59 A.M.)](#a1-deadline-33-2359-am)
-      - [A2 (Deadline: 4/7, 23.59 A.M.)](#a2-deadline-47-2359-am)
-      - [A3 (Deadline: 5/13, 23.59 A.M.)](#a3-deadline-513-2359-am)
+      - [A1](#a1)
+      - [A2](#a2)
+      - [A3](#a3)
     - [2.5. Evaluation Criteria](#25-evaluation-criteria)
   - [References](#references)
   - [Samples](#samples)
@@ -137,34 +137,37 @@ Ray -->
 
 ### 2.4. Assignments
 
-#### A1 (Deadline: 3/3 23.59 A.M.)
+#### A1
 
-- Purpose: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
-- Interpersonal Skills:
+- **Deadline**: 3/3 23.59 A.M.
+- **Purpose**: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
+- **Interpersonal Skills**:
     1. 5-Minute Research Presentation ([[1]](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/),[[2]](https://www.youtube.com/watch?v=YVgS_opYacQ))
     2. [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
     3. [How to Write a Report](https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/how-to-write-a-report/)
     4. [10 Tips for Better Teamwork](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/)
-- Score (15%):
+- **Score (15%)**:
   - Study note: 2 pt/item * 4 = **7 pt**;
   - Video (4~5 mins): 1 pt/item * 4 = **6 pt**;
   - Experience sharing (3~5 mins): **2 pt**
 
-#### A2 (Deadline: 4/7, 23.59 A.M.)
+#### A2
 
-- Purpose: Learn to identify the problem and verify the concepts using simulation and analytical results.
-- Paper: [Modeling and Estimation of One-Shot Random Access for Finite-User Multichannel Slotted ALOHA Systems](https://ieeexplore.ieee.org/abstract/document/6211364)
-- Score (15%):
+- **Deadline**: 4/7, 23.59 A.M.
+- **Purpose**: Learn to identify the problem and verify the concepts using simulation and analytical results.
+- **Paper**: [Modeling and Estimation of One-Shot Random Access for Finite-User Multichannel Slotted ALOHA Systems](https://ieeexplore.ieee.org/abstract/document/6211364)
+- **Score (15%)**:
   - Study note: **3 pt**
   - Flowchart + source code for simulation and analysis: **5 pt**
   - Numercial Results (should be identical as the paper): **5 pt**
   - Oral presentation: **2 pt**
 
-#### A3 (Deadline: 5/13, 23.59 A.M.)
+#### A3
 
-- Purpose: Learn to identify the problem and verify the concepts using simulation and analytical results.
-- Paper: [ALOHA Packet System With and Without Slots and Capture](https://www.researchgate.net/publication/234802142_ALOHA_Packet_System_With_and_Without_Slots_and_Capture)
-- Score (15%):
+- **Deadline**: 5/13, 23.59 A.M.
+- **Purpose**: Learn to identify the problem and verify the concepts using simulation and analytical results.
+- **Paper**: [ALOHA Packet System With and Without Slots and Capture](https://www.researchgate.net/publication/234802142_ALOHA_Packet_System_With_and_Without_Slots_and_Capture)
+- **Score (15%)**:
   - Study note: **3 pt**
   - Flowchart + source code for analysis: **5 pt**
   - Numercial Results (should be identical as the paper): **5 pt**
