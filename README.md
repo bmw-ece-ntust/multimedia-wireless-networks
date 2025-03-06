@@ -35,18 +35,17 @@
 
 2. [Teaching materials](./Teaching%20Materials/).
 3. Youtube [Playlist](https://www.youtube.com/playlist?list=PLNxlEcQdkOt_qHBq-W7T_eMtIJe3Ebryz) of course recordings.
-4. [WebEx Link for Online Course](https://ctld.webex.com/meet/crg).
+4. Teams Online course:
+    <br>**Note**: Register your [NTUST MS student account](https://www.cc.ntust.edu.tw/p/404-1050-83384.php?Lang=en) to get the course transcript & recordings.
+   - Meeting ID: 484 576 276 678
+   - Passcode: r4L9cd2U
 5. [Q&A Google Form](https://forms.gle/FCPydtpv225nNDhz6).
   
   > [!IMPORTANT]  
-  > This form is only opened during the course session (automatically closed outside the course session).
-  <!-- > 1. You can only use NTUST gapps account to input ([NTUST gapps application instruction](https://forms.gle/WLK8a5GDFpjT9AKLA)). -->
-
-  > [!TIP]
-  > Submit your Q&A **immediately** after raising or answering question in class.
-
-  > [!CAUTION]
-  > We won't count your Q&A outside the course session.
+  >
+  > - This form is only opened during the course session (automatically closed outside the course session).
+  > - Submit your Q&A **immediately** after raising or answering question in class.
+  > - We won't count your Q&A outside the course session.
 
 ### 1.3 Initial ToDo
 
