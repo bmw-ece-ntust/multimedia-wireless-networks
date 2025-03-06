@@ -25,7 +25,7 @@
   - [x] [Study Note](./a1-M11302209-HSU-Ming-Hong.md)
   - [x] [Video Presentation](https://youtu.be/myXUy0x4jH8)
     - [Slide Link](https://gamma.app/docs/Key-Skills-for-Success-jbbwbow7dzh4amr) 
-  - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
+  - [x] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5)
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
 
@@ -34,7 +34,7 @@
   - [ ] [Study Note](./a2-M11302209-HSU-Ming-Hong.md)
   - [ ] [Flowchart + source code for simulation and analysis](path to specific section in your study note)
   - [ ] [Numercial Results (should be identical as the paper)](path to specific section in your study note)
-  - [ ] [Peer Review](https://forms.gle/njd22Apu7ZGTbKzJ7)
+  - [ ] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5)
 
 ### A3 (DL: 2024/05/14, 08.00 A.M.)
 
@@ -43,4 +43,4 @@
   - [ ] [Study Note](./a3-M11302209-HSU-Ming-Hong.md)
   - [ ] [Flowchart + source code for simulation and analysis](path to specific section in your study note)
   - [ ] [Numercial Results (should be identical as the paper)](path to specific section in your study note)
-  - [ ] [Peer Review](https://forms.gle/yVtjYqxZyRgcjbeE8)
+  - [ ] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5)
