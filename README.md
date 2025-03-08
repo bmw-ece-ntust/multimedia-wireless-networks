@@ -24,7 +24,7 @@
 
 1. Name:劉蕙瑋 LIU, HUI-WEI
 2. Student ID: B11001113
-3. Department: Industrial Management
+3. Department: IM
 4. Student status: NTUST Student
 
 ## 2. Assignments
@@ -33,9 +33,9 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a1-deadline-35-0800-am)
 - Submissions:
-  - [ ] [Study Note](path to another .md file for your assignment)
-  - [ ] [Video Presentation](YouTube Hyperlink) of your assignment explanation.
-  - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
+  - [x] [Study Note](path to another .md file for your assignment)
+  - [x] [Video Presentation](YouTube Hyperlink) of your assignment explanation.
+  - [x] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
 
