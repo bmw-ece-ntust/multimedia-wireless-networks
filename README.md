@@ -26,7 +26,7 @@
 - Submissions:
   - [x] [Assignment 1 Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a1-m11302229-Chun-Yu-Chen.md)
   - [x] [Assignment 1 Video Presentation -- Chun Yu Chen](https://youtu.be/HXcbZz0pUJA).  [Presentation Slide](https://www.canva.com/design/DAGgrP8kmhY/p69S1q7YFHDy9TKCpw-AUw/edit?utm_content=DAGgrP8kmhY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-  - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
+  - [ ] [Peer Review]([https://forms.gle/tPVAdfAc4hBiUtg88](https://docs.google.com/forms/d/e/1FAIpQLSfRnxq685epUtG5pLHLfxgMmcAg7UcMH0B4z4mDJwshvSMvHg/viewform))
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
 
