@@ -35,7 +35,7 @@
 - Submissions:
   - [x] [Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302201-yang-zhi-yuan/a1-M11302201-Yang_ZHI_YUAN.md)
   - [x] [Video Presentation](https://youtu.be/RXiG3igOxuw?si=jHhZVlrCHYRaYTe0) of your assignment explanation. [Slide](https://drive.google.com/file/d/15XFntVkqvcJzERV4c7_k3KHkzRmi6CAk/view?usp=sharing)
-  - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
+  - [x] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5)
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
 
