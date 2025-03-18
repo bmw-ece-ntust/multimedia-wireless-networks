@@ -13,8 +13,14 @@
     - [2.3. Evaluation](#23-evaluation)
     - [2.4. Assignments](#24-assignments)
       - [A1](#a1)
+        - [A1-old](#a1-old)
+        - [A1-new](#a1-new)
       - [A2](#a2)
+        - [A2-old](#a2-old)
+        - [A2-new](#a2-new)
       - [A3](#a3)
+        - [A3-new](#a3-new)
+        - [A3-old](#a3-old)
     - [2.5. Evaluation Criteria](#25-evaluation-criteria)
   - [References](#references)
   - [Samples](#samples)
@@ -30,9 +36,7 @@
 ### 1.2. Course Detail
 
 1. [LINE group](https://line.me/ti/g/ykdO07UluN):
-
-    ![line-group](./assets/LINE%20group%20Small.jpeg)
-
+    <br>![line-group](./assets/LINE%20group%20Small.jpeg)
 2. [Teaching materials](./Teaching%20Materials/).
 3. Youtube [Playlist](https://www.youtube.com/playlist?list=PLNxlEcQdkOt_qHBq-W7T_eMtIJe3Ebryz) of course recordings.
 4. [Teams Online course](https://www.microsoft.com/en-us/microsoft-teams/join-a-meeting):
@@ -139,6 +143,8 @@ Ray -->
 
 #### A1
 
+##### A1-old
+
 - **Deadline**: 3/3 23.59 A.M.
 - **Purpose**: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
 - **Interpersonal Skills**:
@@ -151,7 +157,30 @@ Ray -->
   - Video (4~5 mins): 1 pt/item * 4 = **6 pt**;
   - Experience sharing (3~5 mins): **2 pt**
 
+##### A1-new
+
+- **Title:** Self-introduction
+- **Deadline**: 3/3 23.59 A.M.
+- **Purposes:**
+  - Learn the background knowledge of interpersonal skills and apply it in the following assignments.
+    - Introduce yourself (1pt),
+    - Show us your goal (1pt),
+    - Show us your study plan (1pt).
+- **References:**
+  - [How to Create a Study Schedule: 14 Steps](https://www.wikihow.com/Create-a-Study-Schedule)
+  - [Time Management by Randy Pausch](https://www.youtube.com/watch?v=JKBFwR1HIFU)
+- **Deliverables:**
+  - Study note (40%)
+  - Presentation video (5 mins) (40%)
+  - Top 3 students (20%):
+    <br>**Note** : [Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A)
+    - 1
+    - 2
+    - 3
+
 #### A2
+
+##### A2-old
 
 - **Deadline**: 4/7, 23.59 A.M.
 - **Purpose**: Learn to identify the problem and verify the concepts using simulation and analytical results.
@@ -162,7 +191,50 @@ Ray -->
   - Numercial Results (should be identical as the paper): **5 pt**
   - Oral presentation: **2 pt**
 
+##### A2-new
+
+- **Title**: ns-3 Network Simulator
+- **Deadline**: 4/7, 23.59 A.M.
+- **Purposes:**
+    - Part I: Study (30%)
+        - Learn the basic concept of ns-3;
+        - Install ns-3;
+    - Part II: Simulate the LTE network using ns-3 (40%)
+        - Execute an example for [LTE](https://www.nsnam.org/docs/models/html/lte-user.html)
+        - Define and generate a network topology by yourself, e.g.
+            - A square of 10 km x10 km.
+            - The center point is (0,0)
+            - 9 macro-cells are located in (5,5), (0, 5) (-5, 5), (5,0), (0,0),  (-5,0), (5,-5), (0, -5) (-5, -5). The cell radius of each macro cell is 5 km
+            - 30 micro-cells, each has radius of 1 km, are randomly distributed in the square area
+            - 50 UEs are randomly distributed in the square area
+            - Explain the models you used in your simulation, e.g.,
+                - mobility model
+                - traffic model
+                - channel model by yourself
+            - Plot the performance metrics you simulated
+- **References:**
+  - [ns-3](https://www.nsnam.org/)
+  - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
+  - [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)
+  - [ns-3 LTE module](https://www.nsnam.org/docs/models/html/lte-user.html)
+  - [3GPP NR ns-3 module](https://github.com/QiuYukang/5G-LENA)
+- **Deliverables:**
+  - **Part I (30%):**
+    - Weekly Plan (Setup timeline for you to finish the goal above)
+    - Network topology
+    - Studying note
+    - Presentation video
+  - **Part II (40%):**
+    - Demo video: Run a simulation for LTE Network
+  - **Top 3 students (30%):**
+    <br>**Note**: [Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A)
+    - 1
+    - 2
+    - 3
+
 #### A3
+
+##### A3-new
 
 - **Deadline**: 5/13, 23.59 A.M.
 - **Purpose**: Learn to identify the problem and verify the concepts using simulation and analytical results.
@@ -172,6 +244,35 @@ Ray -->
   - Flowchart + source code for analysis: **5 pt**
   - Numercial Results (should be identical as the paper): **5 pt**
   - Oral presentation: **2 pt**
+
+##### A3-old
+
+- **Title**: ns-3 Open RAN
+- **Deadline**: 5/13, 23.59 A.M.
+- **References:**
+  - Part I (30%): Study
+    - Study the the [paper](https://arxiv.org/pdf/2209.14171.pdf),
+      - Problems
+      - Challenges and importances of the problem
+      - Assumptions
+      - Performance metrics
+      - Basic concepts adopted to solve the problem
+      - Results used to demonstrate that the problem is solved
+  - Part II (40%): Use the tool [ns3-o-ran-e2](https://github.com/o-ran-sc/sim-ns3-o-ran-e2) to duplicate/demo the simulation scenario
+- **Deliverables:**
+  - **Part I (30%):**
+    - Weekly Plan
+    - Network topology
+    - Studying note
+    - Presentation video
+    - [Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A) ()
+  - **Part II (40%):**
+    - Demo video: Run a simulation for 5G NR
+  - Top 3 (30%):
+    <br>[Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A)
+    - 1
+    - 2
+    - 3
 
 <!-- # 3. Paper Studies
 
