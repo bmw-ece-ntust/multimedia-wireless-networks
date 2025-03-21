@@ -16,11 +16,7 @@
         - [A1-old](#a1-old)
         - [A1-new](#a1-new)
       - [A2](#a2)
-        - [A2-old](#a2-old)
-        - [A2-new](#a2-new)
       - [A3](#a3)
-        - [A3-new](#a3-new)
-        - [A3-old](#a3-old)
     - [2.5. Evaluation Criteria](#25-evaluation-criteria)
   - [References](#references)
   - [Samples](#samples)
@@ -180,38 +176,25 @@ Ray -->
 
 #### A2
 
-##### A2-old
-
-- **Deadline**: 4/7, 23.59 A.M.
-- **Purpose**: Learn to identify the problem and verify the concepts using simulation and analytical results.
-- **Paper**: [Modeling and Estimation of One-Shot Random Access for Finite-User Multichannel Slotted ALOHA Systems](https://ieeexplore.ieee.org/abstract/document/6211364)
-- **Score (15%)**:
-  - Study note: **3 pt**
-  - Flowchart + source code for simulation and analysis: **5 pt**
-  - Numercial Results (should be identical as the paper): **5 pt**
-  - Oral presentation: **2 pt**
-
-##### A2-new
-
 - **Title**: ns-3 Network Simulator
 - **Deadline**: 4/7, 23.59 A.M.
 - **Purposes:**
-    - Part I: Study (30%)
-        - Learn the basic concept of ns-3;
-        - Install ns-3;
-    - Part II: Simulate the LTE network using ns-3 (40%)
-        - Execute an example for [LTE](https://www.nsnam.org/docs/models/html/lte-user.html)
-        - Define and generate a network topology by yourself, e.g.
-            - A square of 10 km x10 km.
-            - The center point is (0,0)
-            - 9 macro-cells are located in (5,5), (0, 5) (-5, 5), (5,0), (0,0),  (-5,0), (5,-5), (0, -5) (-5, -5). The cell radius of each macro cell is 5 km
-            - 30 micro-cells, each has radius of 1 km, are randomly distributed in the square area
-            - 50 UEs are randomly distributed in the square area
-            - Explain the models you used in your simulation, e.g.,
-                - mobility model
-                - traffic model
-                - channel model by yourself
-            - Plot the performance metrics you simulated
+  - Part I: Study (30%)
+    - Learn the basic concept of ns-3;
+    - Install ns-3;
+  - Part II: Simulate the LTE network using ns-3 (40%)
+    - Execute an example for [LTE](https://www.nsnam.org/docs/models/html/lte-user.html)
+    - Define and generate a network topology by yourself, e.g.
+      - A square of 10 km x10 km.
+      - The center point is (0,0)
+      - 9 macro-cells are located in (5,5), (0, 5) (-5, 5), (5,0), (0,0),  (-5,0), (5,-5), (0, -5) (-5, -5). The cell radius of each macro cell is 5 km
+      - 30 micro-cells, each has radius of 1 km, are randomly distributed in the square area
+      - 50 UEs are randomly distributed in the square area
+      - Explain the models you used in your simulation, e.g.,
+        - mobility model
+        - traffic model
+        - channel model by yourself
+      - Plot the performance metrics you simulated
 - **References:**
   - [ns-3](https://www.nsnam.org/)
   - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
@@ -233,19 +216,6 @@ Ray -->
     - 3
 
 #### A3
-
-##### A3-new
-
-- **Deadline**: 5/13, 23.59 A.M.
-- **Purpose**: Learn to identify the problem and verify the concepts using simulation and analytical results.
-- **Paper**: [ALOHA Packet System With and Without Slots and Capture](https://www.researchgate.net/publication/234802142_ALOHA_Packet_System_With_and_Without_Slots_and_Capture)
-- **Score (15%)**:
-  - Study note: **3 pt**
-  - Flowchart + source code for analysis: **5 pt**
-  - Numercial Results (should be identical as the paper): **5 pt**
-  - Oral presentation: **2 pt**
-
-##### A3-old
 
 - **Title**: ns-3 Open RAN
 - **Deadline**: 5/13, 23.59 A.M.
