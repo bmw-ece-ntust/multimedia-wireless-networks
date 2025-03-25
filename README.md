@@ -198,8 +198,9 @@ Ray -->
 - **References:**
   - [ns-3](https://www.nsnam.org/)
   - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
-  - [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)
-  - [ns-3 LTE module](https://www.nsnam.org/docs/models/html/lte-user.html)
+  - [ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)
+  <!-- - [ns-3 LTE module](https://www.nsnam.org/docs/models/html/lte-user.html) -->
+  - [ns-3 WiFi module](https://www.nsnam.org/docs/models/html/wifi-design.html)
   - [3GPP NR ns-3 module](https://github.com/QiuYukang/5G-LENA)
 - **Deliverables:**
   - **Part I (30%):**
