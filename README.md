@@ -182,19 +182,20 @@ Ray -->
   - Part I: Study (30%)
     - Learn the basic concept of ns-3;
     - Install ns-3;
-  - Part II: Simulate the LTE network using ns-3 (40%)
-    - Execute an example for [LTE](https://www.nsnam.org/docs/models/html/lte-user.html)
-    - Define and generate a network topology by yourself, e.g.
-      - A square of 10 km x10 km.
-      - The center point is (0,0)
-      - 9 macro-cells are located in (5,5), (0, 5) (-5, 5), (5,0), (0,0),  (-5,0), (5,-5), (0, -5) (-5, -5). The cell radius of each macro cell is 5 km
-      - 30 micro-cells, each has radius of 1 km, are randomly distributed in the square area
-      - 50 UEs are randomly distributed in the square area
-      - Explain the models you used in your simulation, e.g.,
-        - mobility model
-        - traffic model
-        - channel model by yourself
-      - Plot the performance metrics you simulated
+  - Part II: Simulate the WiFi network using ns-3 (40%)
+    - **Area:** A square of **100 meters x 100 meters**, representing an indoor environment such as a large office, campus, or warehouse.  
+    - **Center Point:** The origin at **(0,0)**.  
+    - **Access Points (APs):**  
+      - **9 APs** are deployed in a grid pattern to ensure optimal coverage.  
+      - **Locations:**  
+        - (5,5), (0,5), (-5,5)  
+        - (5,0), (0,0), (-5,0)  
+        - (5,-5), (0,-5), (-5,-5)  
+      - Each AP has a **WiFi coverage radius of 10 meters**, typical for indoor scenarios.  
+    - **Stations (STAs):**  
+      - **50 STAs** are randomly distributed within the area.  
+      - Each STA is a wireless device (e.g., laptop, smartphone, or IoT device) that connects to the nearest AP based on signal strength.  
+
 - **References:**
   - [ns-3](https://www.nsnam.org/)
   - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
