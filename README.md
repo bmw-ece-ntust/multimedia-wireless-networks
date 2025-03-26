@@ -194,7 +194,12 @@ Ray -->
       - Each AP has a **WiFi coverage radius of 10 meters**, typical for indoor scenarios.  
     - **Stations (STAs):**  
       - **50 STAs** are randomly distributed within the area.  
-      - Each STA is a wireless device (e.g., laptop, smartphone, or IoT device) that connects to the nearest AP based on signal strength.  
+      - Each STA is a wireless device (e.g., laptop, smartphone, or IoT device) that connects to the nearest AP based on signal strength.
+    - **Mobility model**:
+      - **Use case**: Ongoing business voice communications
+      - **% of loading**: 60%
+      - **Mobility type**: Stationary
+      - **STA group**: Office essential
 
 - **References:**
   - [ns-3](https://www.nsnam.org/)
@@ -210,7 +215,7 @@ Ray -->
     - Studying note
     - Presentation video
   - **Part II (40%):**
-    - Demo video: Run a simulation for LTE Network
+    - Demo video: Run a simulation for WiFi Network
   - **Top 3 students (30%):**
     <br>**Note**: [Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A)
     - 1
