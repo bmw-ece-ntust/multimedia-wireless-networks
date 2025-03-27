@@ -16,8 +16,8 @@
         - [A1-old](#a1-old)
         - [A1-new](#a1-new)
       - [A2](#a2)
-      - [A2 Old version (LTE Simulation)](#a2-old-version-lte-simulation)
-      - [A2 New version (WiFi Simulation)](#a2-new-version-wifi-simulation)
+        - [A2 Old version (LTE Simulation)](#a2-old-version-lte-simulation)
+        - [A2 New version (WiFi Simulation)](#a2-new-version-wifi-simulation)
       - [A3](#a3)
     - [2.5. Evaluation Criteria](#25-evaluation-criteria)
   - [References](#references)
@@ -181,7 +181,7 @@ Ray -->
 - **Title**: ns-3 Network Simulator
 - **Deadline**: 4/7, 23.59 A.M.
 
-#### A2 Old version (LTE Simulation)
+##### A2 Old version (LTE Simulation)
 
 - **Purposes:**
 - Part I: Study (30%)
@@ -215,7 +215,7 @@ Ray -->
   - [ns-3 LTE module](https://www.nsnam.org/docs/models/html/lte-user.html)
   - [3GPP NR ns-3 module](https://github.com/QiuYukang/5G-LENA)
 
-#### A2 New version (WiFi Simulation)
+##### A2 New version (WiFi Simulation)
 
 - **Purposes:**
   - Part I: Study (30%)
