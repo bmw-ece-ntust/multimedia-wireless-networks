@@ -179,7 +179,7 @@ Ray -->
 #### A2
 
 - **Title**: ns-3 Network Simulator
-- **Deadline**: 4/7, 23.59 A.M.
+- **Deadline**: 11th April 2025, 23.59 A.M.
 
 ##### A2 Old version (LTE Simulation)
 
