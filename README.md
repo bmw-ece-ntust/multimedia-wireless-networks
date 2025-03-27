@@ -16,6 +16,8 @@
         - [A1-old](#a1-old)
         - [A1-new](#a1-new)
       - [A2](#a2)
+      - [A2 Old version (LTE Simulation)](#a2-old-version-lte-simulation)
+      - [A2 New version (WiFi Simulation)](#a2-new-version-wifi-simulation)
       - [A3](#a3)
     - [2.5. Evaluation Criteria](#25-evaluation-criteria)
   - [References](#references)
@@ -178,6 +180,43 @@ Ray -->
 
 - **Title**: ns-3 Network Simulator
 - **Deadline**: 4/7, 23.59 A.M.
+
+#### A2 Old version (LTE Simulation)
+
+- **Purposes:**
+- Part I: Study (30%)
+  - Learn the basic concept of ns-3;
+  - Install ns-3;
+- Part II: Simulate the LTE network using ns-3 (40%)
+  - Execute an example for [LTE](https://www.nsnam.org/docs/models/html/lte-user.html)
+  - Define and generate a network topology by yourself, e.g.
+    - A square of 10 km x10 km.
+    - The center point is (0,0)
+    - 9 macro-cells are located in (5,5), (0, 5) (-5, 5), (5,0), (0,0),  (-5,0), (5,-5), (0, -5) (-5, -5). The cell radius of each macro cell is 5 km
+    - 30 micro-cells, each has radius of 1 km, are randomly distributed in the square area
+    - 50 UEs are randomly distributed in the square area
+    - Explain the models you used in your simulation, e.g.,
+      - mobility model
+      - traffic model
+      - channel model by yourself
+    - Plot the performance metrics you simulated
+    - **Mobility model**:
+      - **Use case**: Ongoing business voice communications
+      - **% of loading**: 60%
+      - **Mobility type**: Stationary
+      - **Service Profile**"
+        - **Slice**: eMBB
+        - **QoS Identifier**: 1:GBR Conv Voice
+        - **UE group**: Office essential
+- **References:**
+  - [ns-3](https://www.nsnam.org/)
+  - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
+  - [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)
+  - [ns-3 LTE module](https://www.nsnam.org/docs/models/html/lte-user.html)
+  - [3GPP NR ns-3 module](https://github.com/QiuYukang/5G-LENA)
+
+#### A2 New version (WiFi Simulation)
+
 - **Purposes:**
   - Part I: Study (30%)
     - Learn the basic concept of ns-3;
@@ -200,7 +239,6 @@ Ray -->
       - **% of loading**: 60%
       - **Mobility type**: Stationary
       - **STA group**: Office essential
-
 - **References:**
   - [ns-3](https://www.nsnam.org/)
   - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
