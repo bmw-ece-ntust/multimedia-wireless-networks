@@ -201,8 +201,8 @@ Ray -->
       - channel model by yourself
     - Plot the performance metrics you simulated
     - **Mobility model**:
-      - **Use case**: Ongoing business voice communications
-      - **% of loading**: 60%
+      - **Use case**: Lunch break, shopping apps
+      - **% of loading**: 25%
       - **Mobility type**: Stationary
       - **Service Profile**"
         - **Slice**: eMBB
@@ -235,9 +235,9 @@ Ray -->
       - **50 STAs** are randomly distributed within the area.  
       - Each STA is a wireless device (e.g., laptop, smartphone, or IoT device) that connects to the nearest AP based on signal strength.
     - **Mobility model**:
-      - **Use case**: Ongoing business voice communications
-      - **% of loading**: 60%
-      - **Mobility type**: Stationary
+      - **Use case**: Lunch break
+      - **% of loading**: 25%
+      - **Mobility type**: Walking
       - **STA group**: Office essential
 - **References:**
   - [ns-3](https://www.nsnam.org/)
