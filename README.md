@@ -13,11 +13,7 @@
     - [2.3. Evaluation](#23-evaluation)
     - [2.4. Assignments](#24-assignments)
       - [A1](#a1)
-        - [A1-old](#a1-old)
-        - [A1-new](#a1-new)
       - [A2](#a2)
-        - [A2 Old version (LTE Simulation)](#a2-old-version-lte-simulation)
-        - [A2 New version (WiFi Simulation)](#a2-new-version-wifi-simulation)
       - [A3](#a3)
     - [2.5. Evaluation Criteria](#25-evaluation-criteria)
   - [References](#references)
@@ -141,8 +137,6 @@ Ray -->
 
 #### A1
 
-##### A1-old
-
 - **Deadline**: 3/3 23.59 A.M.
 - **Purpose**: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
 - **Interpersonal Skills**:
@@ -154,7 +148,7 @@ Ray -->
   - Study note: 2 pt/item * 4 = **7 pt**;
   - Video (4~5 mins): 1 pt/item * 4 = **6 pt**;
   - Experience sharing (3~5 mins): **2 pt**
-
+<!-- 
 ##### A1-new
 
 - **Title:** Self-introduction
@@ -174,91 +168,70 @@ Ray -->
     <br>**Note** : [Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A)
     - 1
     - 2
-    - 3
+    - 3 -->
 
 #### A2
 
 - **Title**: ns-3 Network Simulator
 - **Deadline**: 11th April 2025, 23.59 A.M.
+- **1. Objectives**  
+  - **NS-3 Installation (30%)**: Provide an installation guide that includes:  
+    1. **Commands**: List terminal commands used for installation.  
+    2. **Verification**: Copy & paste terminal logs confirming successful installation.  
+    3. **Final Check**: Run [`hello-simulator.cc`](https://www.nsnam.org/docs/release/3.19/doxygen/hello-simulator_8cc_source.html) to verify installation.  
+  - **LTE / WiFi Simulation (50%)**:  
+    - **Submission Requirements**: Upload your simulation source code under `./a2/src/` in your branch. For each milestone, provide:  
+      1. **Input**: Commands or source code (attach hyperlinks from `./a2/src/`).  
+      2. **Output**: Figures, results, and explanations.  
+  - **Extra Credit (20%)**:  
+    - **Peer Review Bonus:** Top 3 students based on peer reviews receive extra credit: **Top 1:** +20%, **Top 2:** +15%, **Top 3:** +10%.  
+    - **Extended Deployment Bonus:** If you deploy **9 nodes in WiFi/LTE** and commit before **March 29, 2025, 19:00 PM**, you get an **extra 10%**.  
 
-##### A2 Old version (LTE Simulation)
+- **2. Submission Guidelines**  
+  - Upload all source code under `./a2/src/` and include comments. Each milestone should include input commands/source code, output figures, and explanations/analysis. Reports should be uploaded in `assignment-2.md`.  
 
-- **Purposes:**
-- Part I: Study (30%)
-  - Learn the basic concept of ns-3;
-  - Install ns-3;
-- Part II: Simulate the LTE network using ns-3 (40%)
-  - Execute an example for [LTE](https://www.nsnam.org/docs/models/html/lte-user.html)
-  - Define and generate a network topology by yourself, e.g.
-    - A square of 10 km x10 km.
-    - The center point is (0,0)
-    - 9 macro-cells are located in (5,5), (0, 5) (-5, 5), (5,0), (0,0),  (-5,0), (5,-5), (0, -5) (-5, -5). The cell radius of each macro cell is 5 km
-    - 30 micro-cells, each has radius of 1 km, are randomly distributed in the square area
-    - 50 UEs are randomly distributed in the square area
-    - Explain the models you used in your simulation, e.g.,
-      - mobility model
-      - traffic model
-      - channel model by yourself
-    - Plot the performance metrics you simulated
-    - **Mobility model**:
-      - **Use case**: Lunch break, shopping apps
-      - **% of loading**: 25%
-      - **Mobility type**: Stationary
-      - **Service Profile**"
-        - **Slice**: eMBB
-        - **QoS Identifier**: 1:GBR Conv Voice
-        - **UE group**: Office essential
-- **References:**
-  - [ns-3](https://www.nsnam.org/)
-  - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
-  - [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)
-  - [ns-3 LTE module](https://www.nsnam.org/docs/models/html/lte-user.html)
-  - [3GPP NR ns-3 module](https://github.com/QiuYukang/5G-LENA)
+- **3. Milestones & Grading**  
+  - **1. Deploy Two Nodes (10%)**: Base Station (**BS**) for LTE or Access Point (**AP**) for WiFi simulation.  
+  - **2. Assign 16 Users to Each Node (10%)**: 16 **User Equipments (UEs)** for LTE or **STAs** for WiFi per node. Provide a user table (e.g., MAC addresses or STA/UE IDs).  
+    - **Formula:**  
+      $$ X_0 = Y_0 = 16 $$  
+    - **Definitions:** \( X_0 \) = Initial Users in Node A, \( Y_0 \) = Initial Users in Node B.  
+  - **3. Full-Queue Model Transmission (10%)**: Implement a [full-queue model](https://www.nsnam.org/doxygen/d9/db7/fcfs-wifi-queue-scheduler_8cc_source.html). Ensure each STA/UE continuously transmits to AP/BS.  
+  - **4. DCF & Throughput Analysis (10%)**: Implement **Distributed Coordination Function (DCF)**. Analyze throughput behavior.  
+  - **5. Mobility Model Simulation (10%)**:  
+    - **Simulation Duration:** 10 minutes.  
+    - **User Movement:**  
+      - **At minute 3:** 20% of STAs move from Node A → Node B, and 40% move from Node B → Node A.  
+      - **At minute 6:** 20% of STAs move from Node A → Node B, and 40% move from Node B → Node A.  
+    - **Formulas:**  
+      - **Minute 3:**  
+        $$ X_1 = X_0 \times p, \quad Y_1 = Y_0 \times q $$  
+      - **Minute 6:**  
+        $$ X_2 = X_1 \times p, \quad Y_2 = Y_1 \times q $$  
+    - **Definitions:**  
+      - \( p = 25\% \) → Users moving from Node A to Node B.  
+      - \( q = 50\% \) → Users moving from Node B to Node A.  
+      - \( X_1, X_2 \) → Users in Node A after each movement.  
+      - \( Y_1, Y_2 \) → Users in Node B after each movement.  
+  - **6. Final Report (10%)**:  
+    - **Final User Distribution:** How many users remain in Node A & Node B at the end?  
+    - **Throughput Analysis:** Provide a graph with **X-axis** = Time (minutes), **Y-axis** = Throughput, and two separate throughput lines for Node A & Node B.  
+    - **Video Demonstration:** Record the simulation activity & attach the hyperlink in your report. Ensure **file access is open**.  
 
-##### A2 New version (WiFi Simulation)
+- **4. References**  
+  - [ns-3](https://www.nsnam.org/)  
+  - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)  
+  - [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)  
+  - [ns-3 LTE Module](https://www.nsnam.org/docs/models/html/lte-user.html)  
+  - [ns-3 WiFi Module](https://www.nsnam.org/docs/models/html/wifi-design.html)  
+  - [3GPP NR ns-3 Module](https://github.com/QiuYukang/5G-LENA)  
 
-- **Purposes:**
-  - Part I: Study (30%)
-    - Learn the basic concept of ns-3;
-    - Install ns-3;
-  - Part II: Simulate the WiFi network using ns-3 (40%)
-    - **Area:** A square of **100 meters x 100 meters**, representing an indoor environment such as a large office, campus, or warehouse.  
-    - **Center Point:** The origin at **(0,0)**.  
-    - **Access Points (APs):**  
-      - **9 APs** are deployed in a grid pattern to ensure optimal coverage.  
-      - **Locations:**  
-        - (5,5), (0,5), (-5,5)  
-        - (5,0), (0,0), (-5,0)  
-        - (5,-5), (0,-5), (-5,-5)  
-      - Each AP has a **WiFi coverage radius of 10 meters**, typical for indoor scenarios.  
-    - **Stations (STAs):**  
-      - **50 STAs** are randomly distributed within the area.  
-      - Each STA is a wireless device (e.g., laptop, smartphone, or IoT device) that connects to the nearest AP based on signal strength.
-    - **Mobility model**:
-      - **Use case**: Lunch break
-      - **% of loading**: 25%
-      - **Mobility type**: Walking
-      - **STA group**: Office essential
-- **References:**
-  - [ns-3](https://www.nsnam.org/)
-  - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)
-  - [ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)
-  <!-- - [ns-3 LTE module](https://www.nsnam.org/docs/models/html/lte-user.html) -->
-  - [ns-3 WiFi module](https://www.nsnam.org/docs/models/html/wifi-design.html)
-  - [3GPP NR ns-3 module](https://github.com/QiuYukang/5G-LENA)
-- **Deliverables:**
-  - **Part I (30%):**
-    - Weekly Plan (Setup timeline for you to finish the goal above)
-    - Network topology
-    - Studying note
-    - Presentation video
-  - **Part II (40%):**
-    - Demo video: Run a simulation for WiFi Network
-  - **Top 3 students (30%):**
-    <br>**Note**: [Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A)
-    - 1
-    - 2
-    - 3
+- **5. Top 3 Students (30%)**  
+  - **Note**: [Mutual Evaluation Form](https://forms.gle/pmYkqqNMTczk3FW7A)  
+  - 1.  
+  - 2.  
+  - 3.  
+
 
 #### A3
 
