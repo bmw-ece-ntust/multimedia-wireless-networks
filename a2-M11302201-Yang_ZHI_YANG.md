@@ -172,13 +172,13 @@ make
 
 | Parameter | Value |  description  |
 |:---------:|:-----:|:-------------:|
-|  enb_num  |   4   | Number of eNB |
+|  enb_num  |   9   | Number of eNB |
 |  ue_num   |  16   | Number of UE  |
 
-|     Model      | Device |            Mondel name             | Location                                          |
-|:--------------:| ------ |:----------------------------------:| ------------------------------------------------- |
-| Mobility model | eNB    | ns3::ConstantPositionMobilityModel | (89,89), (269,89), (89,269), (269,269)            |
-| Mobility model | UE     |   ns3::RandomWalk2dMobilityModel   | Random position(center: (180, 180), speed: 20m/s) |
+|     Model      | Device |            Mondel name             | 
+|:--------------:| ------ |:----------------------------------:|
+| Mobility model | eNB    | ns3::ConstantPositionMobilityModel |
+| Mobility model | UE     |   ns3::RandomWalk2dMobilityModel   | 
 
 #### <span style="background:#B5FFB5; border-radius:9px; padding: 6px 11px;">**4.1.1 Create Mobility model simulation source code**</span>
 ==Put your UE an eNB figure into `./ns-3.39/scratch`==
