@@ -258,11 +258,13 @@ Ray -->
      - ($X_1, X_2$) → Users in Node A after each movement.  
      - ($Y_1, Y_2$) → Users in Node B after each movement.  
 
-**4. Analysis Report (9-points)**
+3. **Analysis Report**:
+   1. What is the final users distribution (value of $X_2$ & $Y_2$)? Show the users table for each movement. (`2-points`)
+   2. Show & analyze the figures of the aggregated throughput in Node-A & Node-B through time (`3-points`):
+      - X-axis = time & Y-axis = throughput.
+      - Analyze & explain your results.
 
-1. What is the final users distribution (value of $X_2$ & $Y_2$)? Show the users table for each movement. (`2-points`)
-2. Show & analyze the figures of througput of Node-A & Node-B (X-axis = time & Y-axis = throughput) (`3-points`)
-3. Show the 10-minutes video simulation (`3-points`)
+4. Show the 10-minutes video simulation (`3-points`)
 
 **5. References**  
 
