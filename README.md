@@ -93,38 +93,38 @@ Ray -->
 
 ### 2.2. Schedule
 
-| Date                   | Topic/Slide                                                                                                                                                                                                                                                                                                                                              | Presentations                                                                                    |
-| :--------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Week 1**: 2/18       | [Opening](./Teaching%20Materials/2025_MultimediaWirelessNetworks.pdf)                                                                                                                                                                                                                                                                                                                                              |                                                                                                  |
-| **Week 2**: 2/25       | [Part-I:](./Teaching%20Materials/Part-1_2024.pdf) Multimedia Applications                                                                                                                                                                                                                                                                                                                      |                                                                                                  |
-| **Week 3**: 3/4        | QoS Fundamentals                                                                                                                                                                                                                                                                                                                                    | [Assignment 1](#a1-deadline-33-2359-am)                                                                                     |
-| **Week 4**: 3/11       | QoS Fundamentals                                                                                                                                                                                                                                                                                                                                         |                                                                                                  |
-| **Week 5**: 3/18       |  QoS Mechanisms                                                                                                                                                                                                                                                                                    |                                                                                                  |
-| **Week 6**: 3/25       | QoS Mechanisms                                                                                                                                                                                                                                                                                                                                           | [Time Management](https://hackmd.io/YfiaqPIqSLO2Cj76zcUrrA)                                      |
-| **Week 7**: 4/1        | QoS Mechanisms                                                                                                                                                                                                                                                                                                                                         |                                                                                                  |
-| **Week 8**: 4/8        | QoS Mechanisms                                                                                                                                                                                                                                                                                                                                           | [Assignment 2](#a2-deadline-47-2359-am)                                                                                   |
-| **Week 9**: 4/15       | Part-II: [Wireless Local Area Networks (WLANs)](), [Overview of 802.11 Networks](), [802.11 MAC]()                                                                                                                                                                                                                                                                                                                                           |                                                                                                  |
-| **Week 10**: 4/22      | [802.11 MAC]()  | [Introduction to 802.11ax]()      |
-| **Week 11**: 4/29      |                                                                                                                                                                                                                                                                                                                                              | 802.11 MAC                                                                                                 |
-| **Week 12**: 5/6       | [802.11e](https://drive.google.com/file/d/1ik94M5TC_-1_C-LKtcRgO24c5oR-YDFq/view?usp=sharing)                                                                                                                                                                   |                                    |
-| **Week 13**: 5/13      | 802.11e                                                                                                                                                                                                                                                    | [Assignment 3](#a3-deadline-513-2359-am)                                                                                   |
-| **Week 14**: 5/20      | 5G QoS                                                                                                                                                                                                                                                                                                                              |                                                                                                  |
-| **Week 15**: 5/27      |  5G QoS                                                                                                                                                                                                                                                                                                                                                |                                                                                                  |
-| **Week 16**: 6/3       | **Final Exam**                                                                                                                                                                                                                                                                                                                                                   | |
-| Juniper eLearning - I  | [Getting Started with Networking](https://learningportal.juniper.net/juniper/user_transcript.aspx)                                                                                                                                                                                                                                                       |                                                                                                  |
-| Juniper eLearning - II | [Getting Started with Wi-Fi](https://learningportal.juniper.net/juniper/user_transcript.aspx)                                                                                                                                                                                                                                                            |                                                                                                  |
+| Date                   | Topic/Slide                                                                                        | Presentations                                               |
+| :--------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Week 1**: 2/18       | [Opening](./Teaching%20Materials/2025_MultimediaWirelessNetworks.pdf)                              |                                                             |
+| **Week 2**: 2/25       | [Part-I:](./Teaching%20Materials/Part-1_2024.pdf) Multimedia Applications                          |                                                             |
+| **Week 3**: 3/4        | QoS Fundamentals                                                                                   | [Assignment 1](#a1-deadline-33-2359-am)                     |
+| **Week 4**: 3/11       | QoS Fundamentals                                                                                   |                                                             |
+| **Week 5**: 3/18       | QoS Mechanisms                                                                                     |                                                             |
+| **Week 6**: 3/25       | QoS Mechanisms                                                                                     | [Time Management](https://hackmd.io/YfiaqPIqSLO2Cj76zcUrrA) |
+| **Week 7**: 4/1        | QoS Mechanisms                                                                                     |                                                             |
+| **Week 8**: 4/8        | QoS Mechanisms                                                                                     | [Assignment 2](#a2-deadline-47-2359-am)                     |
+| **Week 9**: 4/15       | Part-II: [Wireless Local Area Networks (WLANs)](), [Overview of 802.11 Networks](), [802.11 MAC]() |                                                             |
+| **Week 10**: 4/22      | [802.11 MAC]()                                                                                     | [Introduction to 802.11ax]()                                |
+| **Week 11**: 4/29      |                                                                                                    | 802.11 MAC                                                  |
+| **Week 12**: 5/6       | [802.11e](https://drive.google.com/file/d/1ik94M5TC_-1_C-LKtcRgO24c5oR-YDFq/view?usp=sharing)      |                                                             |
+| **Week 13**: 5/13      | 802.11e                                                                                            | [Assignment 3](#a3-deadline-513-2359-am)                    |
+| **Week 14**: 5/20      | 5G QoS                                                                                             |                                                             |
+| **Week 15**: 5/27      | 5G QoS                                                                                             |                                                             |
+| **Week 16**: 6/3       | **Final Exam**                                                                                     |                                                             |
+| Juniper eLearning - I  | [Getting Started with Networking](https://learningportal.juniper.net/juniper/user_transcript.aspx) |                                                             |
+| Juniper eLearning - II | [Getting Started with Wi-Fi](https://learningportal.juniper.net/juniper/user_transcript.aspx)      |                                                             |
 
 ### 2.3. Evaluation
 
-- **Q&A/Presentation: 15%**
-  - Weekly: up to **15 pts** (1 pt/week)
-- **[Assignments](#24-assignments): 45%**
-- **Final Exam: 30%**. Materials:
+- **Q&A: up to 15 points** (1 point/week)
+- **[Assignments](#24-assignments): 3 * 15 = 45 points**
+- **Final Exam: 30 points**. Materials:
   - QoS Fundamentals
   - QoS Mechanisms
   - 802.11/802.11e
   - 5G QoS
   - Assignments
+  - Guest Lectures
 
 >[!NOTE]
 > The final score of this course can be adjusted to meet the requirements from our department:
@@ -174,64 +174,104 @@ Ray -->
 
 - **Title**: ns-3 Network Simulator
 - **Deadline**: 11th April 2025, 23.59 A.M.
-- **1. Objectives**  
-  - **NS-3 Installation (30%)**: Provide an installation guide that includes:  
-    1. **Commands**: List terminal commands used for installation.  
-    2. **Verification**: Copy & paste terminal logs confirming successful installation.  
-    3. **Final Check**: Run [`hello-simulator.cc`](https://www.nsnam.org/docs/release/3.19/doxygen/hello-simulator_8cc_source.html) to verify installation.  
-  - **LTE / WiFi Simulation (50%)**:  
-    - **Submission Requirements**: Upload your simulation source code under `./a2/src/` in your branch. For each milestone, provide:  
+
+**1. Submission Guidelines**  
+
+- Installation guide:
+    1. **Commands**: List terminal commands used for installation.
+    2. **Verification**: Copy and paste the terminal logs confirming each step's success.
+    3. **Final Check**: Run [`hello-simulator.cc`](https://www.nsnam.org/docs/release/3.19/doxygen/hello-simulator_8cc_source.html) to verify installation.
+
+    References for Installation guides:
+  - [NVIDIA CUDA installation guide](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+  - [ns-3 installation guide](https://www.nsnam.org/docs/installation/html/linux.html)
+
+- Source-code documentation
+    1. Upload all source code under `./a2/src/`
+    2. Include comments for each function.
+  
+- Assignment report (`assignment-2.md`):
+    1. **Section 1**: Installation guide for ns-3
+    2. **Section 2**: Simulation explanation:
+       1. Explain how you execute each milestone (include source code snippet/hyperlink for the `line of code`).
+       2. Show figures & explanation for result analysis part.
+
+- **Video simmulation**: Record How simulation your simulation run & attach the hyperlink in the final report on `assignment-2md`)
+
+>[!CAUTION]
+>Source code without report in `assignment-2.md` will not count as point.
+---
+**2. Objectives**  
+
+1. **NS-3 Installation (`1-points`)**:
+    <br> Installation guide report requirements:
+
+2. **LTE / WiFi Simulation (`2-points`)**:
+   - **Submission Requirements**: Upload your simulation source code under `./a2/src/` in your branch. For each milestone, provide:
       1. **Input**: Commands or source code (attach hyperlinks from `./a2/src/`).  
-      2. **Output**: Figures, results, and explanations.  
-  - **Extra Credit (20%)**:  
-    - **Peer Review Bonus:** Top 3 students based on peer reviews receive extra credit: **Top 1:** +20%, **Top 2:** +15%, **Top 3:** +10%.  
-    - **Extended Deployment Bonus:** If you deploy **9 nodes in WiFi/LTE** and commit before **March 29, 2025, 19:00 PM**, you get an **extra 10%**.  
+      2. **Output**: Figures, results, and explanations.
 
-- **2. Submission Guidelines**  
-  - Upload all source code under `./a2/src/` and include comments. Each milestone should include input commands/source code, output figures, and explanations/analysis. Reports should be uploaded in `assignment-2.md`.  
+3. **Analysis reports** (`8-points`)
 
-- **3. Milestones & Grading**  
-  - **1. Deploy Two Nodes (10%)**: Base Station (**BS**) for LTE or Access Point (**AP**) for WiFi simulation.  
-  - **2. Assign 16 Users to Each Node (10%)**: 16 **User Equipments (UEs)** for LTE or **STAs** for WiFi per node. Provide a user table (e.g., MAC addresses or STA/UE IDs).  
-    - **Formula:**  
-      $$ X_0 = Y_0 = 16 $$  
-    - **Definitions:** \( X_0 \) = Initial Users in Node A, \( Y_0 \) = Initial Users in Node B.  
-  - **3. Full-Queue Model Transmission (10%)**: Implement a [full-queue model](https://www.nsnam.org/doxygen/d9/db7/fcfs-wifi-queue-scheduler_8cc_source.html). Ensure each STA/UE continuously transmits to AP/BS.  
-  - **4. DCF & Throughput Analysis (10%)**: Implement **Distributed Coordination Function (DCF)**. Analyze throughput behavior.  
-  - **5. Mobility Model Simulation (10%)**:  
-    - **Simulation Duration:** 10 minutes.  
-    - **User Movement:**  
-      - **At minute 3:** 20% of STAs move from Node A → Node B, and 40% move from Node B → Node A.  
-      - **At minute 6:** 20% of STAs move from Node A → Node B, and 40% move from Node B → Node A.  
-    - **Formulas:**  
-      - **Minute 3:**  
-        $$ X_1 = X_0 \times p, \quad Y_1 = Y_0 \times q $$  
-      - **Minute 6:**  
-        $$ X_2 = X_1 \times p, \quad Y_2 = Y_1 \times q $$  
-    - **Definitions:**  
-      - \( p = 25\% \) → Users moving from Node A to Node B.  
-      - \( q = 50\% \) → Users moving from Node B to Node A.  
-      - \( X_1, X_2 \) → Users in Node A after each movement.  
-      - \( Y_1, Y_2 \) → Users in Node B after each movement.  
-  - **6. Final Report (10%)**:  
-    - **Final User Distribution:** How many users remain in Node A & Node B at the end?  
-    - **Throughput Analysis:** Provide a graph with **X-axis** = Time (minutes), **Y-axis** = Throughput, and two separate throughput lines for Node A & Node B.  
-    - **Video Demonstration:** Record the simulation activity & attach the hyperlink in your report. Ensure **file access is open**.  
+4. **Peer review** (`1-point`)
 
-- **4. References**  
-  - [ns-3](https://www.nsnam.org/)  
-  - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)  
-  - [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)  
-  - [ns-3 LTE Module](https://www.nsnam.org/docs/models/html/lte-user.html)  
-  - [ns-3 WiFi Module](https://www.nsnam.org/docs/models/html/wifi-design.html)  
-  - [3GPP NR ns-3 Module](https://github.com/QiuYukang/5G-LENA)  
+5. **Extra Credit (`up to 3-points`)**:
+   - **Peer Review Bonus:** Top 3 students based on peer reviews receive extra credit:
+     - **Top 1:** (`3-points`)
+     - **Top 2:** (`2-points`)
+     - **Top 3:** (`1-points`)
 
-- **5. Top 3 Students (30%)**  
-  - **Note**: [Mutual Evaluation Form](https://forms.gle/pmYkqqNMTczk3FW7A)  
-  - 1.  
-  - 2.  
-  - 3.  
+---
+**3. Milestones & Grading**  
 
+1. **Deploy 2 nodes and assign users** (`1-points`):
+   1. Deploy 2 nodes as Node A & B;
+   2. Assign 16 users for each node:
+      - For LTE is called User Equipment (UE)
+      - For WiFi is called Station (STA)
+   3. Provide a user table (e.g., MAC addresses or STA/UE IDs).  
+
+   This setup can be formulated as follow:
+   - **Formula:**  
+       $$X_0 = Y_0 = 16$$  
+   - **Definitions:**
+     - ($X_0$) = Initial Users in Node A
+     - ($Y_0$) = Initial Users in Node B
+
+2. **Full-Queue Model Transmission & Random mobility Model**
+  
+    Implement a [full-queue model](https://www.nsnam.org/doxygen/d9/db7/fcfs-wifi-queue-scheduler_8cc_source.html). Ensure each STA/UE continuously transmits to AP/BS. (`1-point`)
+
+   - **Simulation Duration:** 10 minutes.  
+   - **User Movement:**  
+     - **At minute 3:** 25% of users move from Node A → Node B, and 50% from Node B → Node A.  
+     - **At minute 6:** 50% of users move from Node A → Node B, and 50% from Node B → Node A.
+     - For each movement, describe which users that moved from A --> B and B --> A in your .
+   - **Formulas:**  
+     - **Minute 3:**  
+            $X_1 = X_0 \times p$ , $\quad Y_1 = Y_0 \times q$  
+     - **Minute 6:**  
+            $X_2 = X_1 \times p$, $\quad Y_2 = Y_1 \times q$  
+   - **Definitions:**  
+     - ($p$ = 25\%) → Users moving from Node A to Node B.  
+     - ($q$ = 50\% ) → Users moving from Node B to Node A.  
+     - ($X_1, X_2$) → Users in Node A after each movement.  
+     - ($Y_1, Y_2$) → Users in Node B after each movement.  
+
+**4. Analysis Report (9-points)**
+
+1. What is the final users distribution (value of $X_2$ & $Y_2$)? Show the users table for each movement. (`2-points`)
+2. Show & analyze the figures of througput of Node-A & Node-B (X-axis = time & Y-axis = throughput) (`3-points`)
+3. Show the 10-minutes video simulation (`3-points`)
+
+**5. References**  
+
+- [ns-3](https://www.nsnam.org/)  
+- [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)  
+- [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)  
+- [ns-3 LTE Module](https://www.nsnam.org/docs/models/html/lte-user.html)  
+- [ns-3 WiFi Module](https://www.nsnam.org/docs/models/html/wifi-design.html)  
+- [3GPP NR ns-3 Module](https://github.com/QiuYukang/5G-LENA)  
 
 #### A3
 
