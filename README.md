@@ -62,7 +62,7 @@
    4. [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
 5. Create your own branch in this repository using this format: `[year]-[student ID]-[English Name]`.
     <br>Ex: `2024-d11202805-Ian Joseph Chandra`
-6. Copy the content of the [branch template](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/tree/template) to your own branch & update your profile information in your README.md file.
+6. Copy the [branch template](./branch-template/) to your branch & update your profile information on `README.md` file.
 
 <!-- ## Announcement (NEW!)
 Dear all,
@@ -266,7 +266,7 @@ Ray -->
 
 4. Show the 10-minutes video simulation (`3-points`)
 
-**5. References**  
+**4. References**  
 
 - [ns-3](https://www.nsnam.org/)  
 - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)  
@@ -277,7 +277,28 @@ Ray -->
 
 #### A3
 
-- **Title**: ns-3 Open RAN
+- **Title**: Network Analysis
+- **Deadline**: 13th May, 23.50 A.M.
+- **Materials**: Access this [folder](https://drive.google.com/drive/folders/1nonACMzF6uPbLtvHoyzvDXdjTriUzQUu?usp=sharing):
+  1. Wireshark for 5G E2E callflow analysis
+  2. KS-wireshark for 5G RRC_NAS callflow analysis
+  3. 2025--LTM_WP_Final_Jan20--GSMA
+  4. 5G E2E QoS callflow logs--5QI3
+  5. 5G E2E Callflow logs for NTUST
+  6. AI tools for NTUST lessons--c2025MAR-u2025_0316
+
+**1. Submission Guideline**:
+
+    Similar with assignment-2
+
+**2. Objectives**
+
+1. Install Wireshark/KS_Wireshark --> use it to analyze PCAP log;
+2. AI tools to analyze the pcap log.
+
+ <!-- Milestones & Grading -->
+
+<!-- - **Title**: ns-3 Open RAN
 - **Deadline**: 5/13, 23.59 A.M.
 - **References:**
   - Part I (30%): Study
@@ -302,7 +323,7 @@ Ray -->
     <br>[Mutual evaluation form](https://forms.gle/pmYkqqNMTczk3FW7A)
     - 1
     - 2
-    - 3
+    - 3 -->
 
 <!-- # 3. Paper Studies
 
