@@ -293,7 +293,8 @@ Ray -->
 
 **2. Objectives**
 
-1. Install Wireshark/KS_Wireshark --> use it to analyze PCAP log;
+1. Install [Wireshark](https://www.wireshark.org/download.html) & [KS_Wireshark](https://drive.google.com/file/d/1yg40WTcRWve_13AKEiQR8AjK2kGPT-tE/view?usp=drive_link)
+  - Note
 2. AI tools to analyze the pcap log.
 
  <!-- Milestones & Grading -->
