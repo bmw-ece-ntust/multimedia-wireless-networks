@@ -207,8 +207,8 @@ int main(int argc, char *argv[]) {
     apNodes.Create(2);
     
     NodeContainer staNodesA, staNodesB;
-    staNodesA.Create(16);
-    staNodesB.Create(16);
+    staNodesA.Create(16); //initial group A STA
+    staNodesB.Create(16); //initial group B STA
     
     // Set up WiFi
     WifiHelper wifi;
