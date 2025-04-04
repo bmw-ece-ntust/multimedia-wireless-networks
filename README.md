@@ -291,10 +291,14 @@ Ray -->
 
     Similar with assignment-2
 
-**2. Objectives**
+**2. Objectives**:
 
 1. Install [Wireshark](https://www.wireshark.org/download.html) & [KS_Wireshark](https://drive.google.com/file/d/1yg40WTcRWve_13AKEiQR8AjK2kGPT-tE/view?usp=drive_link)
-  - Note
+    > **Note**: Several alternatives to install KS-Wireshark on Linux or MacOS:
+    >
+    > 1. Using [WineHQ](https://www.winehq.org/)
+    > 2. Install [Windows 10](https://software.ntust.edu.tw/bbb/UserDownload2SE.aspx) on [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
 2. AI tools to analyze the pcap log.
 
  <!-- Milestones & Grading -->
