@@ -13,20 +13,20 @@ Learn the background knowledge of interpersonal skills and apply it in the follo
 ## NS-3 Overview
 NS-3 represents a modern approach to network simulation, offering researchers and educators a powerful tool for studying digital communications. Unlike traditional network testing methods that require physical hardware, this innovative simulator creates virtual network environments where users can safely experiment with various protocols and configurations.
 
-### Key characteristics of NS-3 include:
+### Key characteristics:
 1. Built from the ground up using C++ for optimal performance
 2. Offers Python interfaces for easier scripting
 3. Designed with modular components that can be mixed and matched
 4. Provides realistic simulations of common network protocols
 5. Supports integration with popular analysis tools
 
-### The platform stands apart from its predecessor (NS-2) by offering:
+### Stands apart from NS-2:
 1. A completely redesigned architecture
 2. Improved memory efficiency
 3. More accurate modeling of network behaviors
 4. Better support for modern networking technologies
 
-### Practical applications include:
+### Practical applications:
 
 1. Testing new network protocols before real-world implementation
 2. Evaluating network performance under different conditions
