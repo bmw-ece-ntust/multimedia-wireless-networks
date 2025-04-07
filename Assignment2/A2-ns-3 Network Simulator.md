@@ -166,12 +166,11 @@ we recommend to either use a **Linux virtual machine**, or the Windows Subsystem
 
 - As of the most recent *ns-3* release (ns-3.39), the following tools are needed to get started with *ns-3*:
     
-    ![image.png](A2-ns-3%20Network%20Simulator%201c610098314380f2bfdbcf19a0a91da1/image.png)
-    
+    ![image.png](A2-ns-3-NetworkSimulator\image.png)
 
 ### Setup ns-3 environment
 
-![image.png](A2-ns-3%20Network%20Simulator%201c610098314380f2bfdbcf19a0a91da1/image%201.png)
+![image.png](A2-ns-3-NetworkSimulator\image1.png)
 
 ⚓ **Installation environment:**
 
@@ -230,7 +229,7 @@ git checkout -b ns-3.39-branch ns-3.39
 ./ns3 build
 ```
 
-![image.png](A2-ns-3%20Network%20Simulator%201c610098314380f2bfdbcf19a0a91da1/image%202.png)
+![image.png](A2-ns-3-NetworkSimulator\image2.png)
 
 **3.2 Verify Installation**
 
@@ -240,7 +239,7 @@ Run the test suite to ensure the installation is working correctly:
 ./test.py
 ```
 
-![image.png](A2-ns-3%20Network%20Simulator%201c610098314380f2bfdbcf19a0a91da1/image%203.png)
+![image.png](A2-ns-3-NetworkSimulator\image3.png)
 
 All tests should either **PASS** or be **SKIPped**.
 
@@ -252,7 +251,7 @@ Run `hello-simulator.cc`
 ./ns3 run examples/tutorial/hello-simulator
 ```
 
-![image.png](A2-ns-3%20Network%20Simulator%201c610098314380f2bfdbcf19a0a91da1/image%204.png)
+![image.png](A2-ns-3-NetworkSimulator\image4.png)
 
 ---
 
@@ -692,7 +691,7 @@ int main(int argc, char *argv[]) {
 
 ```
 
-![image.png](A2-ns-3%20Network%20Simulator%201c610098314380f2bfdbcf19a0a91da1/image%205.png)
+![image.png](A2-ns-3-NetworkSimulator\image5.png)
 
 ### Build and Run the Simulation
 
