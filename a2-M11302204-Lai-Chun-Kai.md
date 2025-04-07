@@ -72,96 +72,57 @@ cd ~/ns-allinone-3.39/ns-3.39
 
 
 
-## 3. Create `lte_assignment2.cc` to Deploy 9 gNBs
-```shell
-cd ns-allinone-3.39/ns-3.39/scratch
-vim lte_assignment2.cc
-```
-```cpp
-#include <ns3/core-module.h>
-#include <ns3/network-module.h>
-#include <ns3/mobility-module.h>
-#include <ns3/lte-module.h>
-#include "ns3/netanim-module.h"
-#include "ns3/flow-monitor-module.h"
-using namespace ns3;
+## 3. Scenario
 
-int main (int argc, char *argv[])
-{
-  CommandLine cmd;
+### 3-1 Network Topology
+Formula
+X₀ = Y₀ = 16
+**Definitions:**
+- `X₀`: Initial users in Node A
+- `Y₀`: Initial users in Node B
 
-  Ptr<LteHelper> lteHelper = CreateObject<LteHelper> ();
+### 3-2 Transmission Model
+- **Full-Queue Model:**
+  -  Each STA/UE continuously transmits to AP/BS.
+  -  Ref: [FCFS WiFi Queue Scheduler](https://www.nsnam.org/doxygen/d9/db7/fcfs-wifi-queue-scheduler_8cc_source.html)
+- **Duration:** 10 minutes
 
-  Config::SetDefault ("ns3::UdpClient::Interval", TimeValue (MilliSeconds (1000)));
-  Config::SetDefault ("ns3::UdpClient::MaxPackets", UintegerValue (1000000));
-  Config::SetDefault ("ns3::LteHelper::UseIdealRrc", BooleanValue (false));
+### 3-3 User Movement Schedule
+---
+#### Minute 3
+- **Movement:**
+  - 25% of users from Node A → Node B
+  - 50% of users from Node B → Node A
 
-  // Create 9 gNBs and 9 UEs
-  NodeContainer enbNodes;
-  enbNodes.Create (9);
-  NodeContainer ueNodes;
-  ueNodes.Create (9);
+- **Formula:**
+  - X₁ = X₀ × (1 - p) + Y₀ × q
+  - Y₁ = Y₀ × (1 - q) + X₀ × p
 
-  // Set gNB mobility
-  MobilityHelper mobility;
-  mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
-  mobility.SetPositionAllocator ("ns3::GridPositionAllocator",
-                                 "MinX", DoubleValue (0.0),
-                                 "MinY", DoubleValue (0.0),
-                                 "DeltaX", DoubleValue (20.0),
-                                 "DeltaY", DoubleValue (20.0),
-                                 "GridWidth", UintegerValue (3),
-                                 "LayoutType", StringValue ("RowFirst"));
-  mobility.Install (enbNodes);
+Where:
+- `p = 25%`
+- `q = 50%`
+---
+#### Minute 6
+- **Movement:**
+  - 50% of users from Node A → Node B
+  - 50% of users from Node B → Node A
 
-  // Set UE mobility
-  mobility.SetPositionAllocator ("ns3::GridPositionAllocator",
-                                 "MinX", DoubleValue (10.0),
-                                 "MinY", DoubleValue (10.0),
-                                 "DeltaX", DoubleValue (20.0),
-                                 "DeltaY", DoubleValue (20.0),
-                                 "GridWidth", UintegerValue (3),
-                                 "LayoutType", StringValue ("RowFirst"));
-  mobility.SetMobilityModel ("ns3::RandomWalk2dMobilityModel",
-                             "Mode", StringValue ("Time"),
-                             "Time", StringValue ("2s"),
-                             "Bounds", RectangleValue (Rectangle (-100, 100, -100, 100)));
-  mobility.Install (ueNodes);
+- **Formula:**
+  - X₂ = X₁ × (1 - p₂) + Y₁ × q₂
+  - Y₂ = Y₁ × (1 - q₂) + X₁ × p₂
 
-  // Install LTE devices
-  NetDeviceContainer enbDevs = lteHelper->InstallEnbDevice (enbNodes);
-  NetDeviceContainer ueDevs = lteHelper->InstallUeDevice (ueNodes);
+Where:
+- `p₂ = 50%`
+- `q₂ = 50%`
+- `X₁, X₂`: Users in Node A after each movement
+- `Y₁, Y₂`: Users in Node B after each movement
 
-  // Attach UEs to gNBs
-  for (uint32_t i = 0; i < ueNodes.GetN(); i++) {
-    lteHelper->Attach (ueDevs.Get(i), enbDevs.Get(i));
-  }
 
-  // Activate data bearers
-  enum EpsBearer::Qci q = EpsBearer::GBR_CONV_VOICE;
-  EpsBearer bearer (q);
-  lteHelper->ActivateDataRadioBearer (ueDevs, bearer);
+---
+### 3-4 Execution steps
+### 3-5 User Table
+### 3-6 User Movement Log
 
-  Simulator::Stop (Seconds (20));
-  lteHelper->EnablePhyTraces ();
-  lteHelper->EnableMacTraces ();
-  lteHelper->EnableRlcTraces ();
 
-  AnimationInterface anim ("lte9.xml");
-  Simulator::Run ();
-  Simulator::Destroy ();
-  return 0;
-}
-```
 
-## 4. Compile and Run
-```shell
-cd ~/ns-allinone-3.39/ns-3.39
-./ns3 run scratch/lte_assignment2.cc
-```
-
-## 5. Visualize with NetAnim
-```shell
-cd ~/ns-allinone-3.39/netanim-3.109
-./NetAnim
-```
+---
