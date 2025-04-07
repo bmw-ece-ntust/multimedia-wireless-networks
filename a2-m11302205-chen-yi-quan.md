@@ -166,11 +166,11 @@ we recommend to either use a **Linux virtual machine**, or the Windows Subsystem
 
 - As of the most recent *ns-3* release (ns-3.39), the following tools are needed to get started with *ns-3*:
     
-    ![image.png](Assignment2\A2-ns-3-NetworkSimulator\image.png)
+    [![image.png](Assignment2\A2-ns-3-NetworkSimulator\image.png)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302205-Chen-yi-quan/Assignment2/A2-ns-3-NetworkSimulator/image.png?raw=true)
 
 ### Setup ns-3 environment
 
-![image.png](Assignment2\A2-ns-3-NetworkSimulator\image1.png)
+[![image.png](Assignment2\A2-ns-3-NetworkSimulator\image1.png)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302205-Chen-yi-quan/Assignment2/A2-ns-3-NetworkSimulator/image1.png?raw=true)
 
 ⚓ **Installation environment:**
 
@@ -229,7 +229,7 @@ git checkout -b ns-3.39-branch ns-3.39
 ./ns3 build
 ```
 
-![image.png](Assignment2\A2-ns-3-NetworkSimulator\image2.png)
+[![image.png](Assignment2\A2-ns-3-NetworkSimulator\image2.png)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302205-Chen-yi-quan/Assignment2/A2-ns-3-NetworkSimulator/image2.png?raw=true)
 
 **3.2 Verify Installation**
 
@@ -239,7 +239,7 @@ Run the test suite to ensure the installation is working correctly:
 ./test.py
 ```
 
-![image.png](Assignment2\A2-ns-3-NetworkSimulator\image3.png)
+[![image.png](Assignment2\A2-ns-3-NetworkSimulator\image3.png)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302205-Chen-yi-quan/Assignment2/A2-ns-3-NetworkSimulator/image3.png?raw=true)
 
 All tests should either **PASS** or be **SKIPped**.
 
@@ -251,7 +251,7 @@ Run `hello-simulator.cc`
 ./ns3 run examples/tutorial/hello-simulator
 ```
 
-![image.png](Assignment2\A2-ns-3-NetworkSimulator\image4.png)
+[![image.png](Assignment2\A2-ns-3-NetworkSimulator\image4.png)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302205-Chen-yi-quan/Assignment2/A2-ns-3-NetworkSimulator/image4.png?raw=true)
 
 ---
 
@@ -691,7 +691,7 @@ int main(int argc, char *argv[]) {
 
 ```
 
-![image.png](Assignment2\Assignment2\A2-ns-3-NetworkSimulator\image5.png)
+[![image.png](Assignment2\Assignment2\A2-ns-3-NetworkSimulator\image5.png)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302205-Chen-yi-quan/Assignment2/A2-ns-3-NetworkSimulator/image5.png?raw=true)
 
 ### Build and Run the Simulation
 
