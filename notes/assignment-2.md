@@ -7,6 +7,7 @@
     - [2.2 Download and Install NS-3](#22-download-and-install-ns-3)
     - [2.3 Test NS-3](#23-test-ns-3)
   - [3. WiFi Simulation](#3-wifi-simulation)
+    - [3.1 Deploy 2 nodes and assign users](#31-deploy-2-nodes-and-assign-users)
   - [4. Analysis of the Simulation Results](#4-analysis-of-the-simulation-results)
   - [References](#references)
 
@@ -214,6 +215,137 @@ Only one test failed, which is the threaded-simulator test. It means that majori
 
 
 ## 3. WiFi Simulation
+
+### 3.1 Deploy 2 nodes and assign users
+Below is the code to deploy 2 nodes and assign users to them. The code creates two access points (APs) and 16 stations (STAs) for each AP. The MAC addresses of the STAs are saved in a CSV file.
+
+```c++
+#include "ns3/core-module.h"
+#include "ns3/network-module.h"
+#include "ns3/internet-module.h"
+#include "ns3/wifi-module.h"
+#include "ns3/mobility-module.h"
+#include "ns3/applications-module.h"
+#include "ns3/ssid.h"
+#include <fstream>
+
+using namespace ns3;
+
+// Function to save MAC addresses to a CSV file
+void SaveMacAddresses(NodeContainer &staNodesA, NodeContainer &staNodesB) {
+  std::ofstream macFile("sta_mac_addresses.csv");
+  macFile << "STA,MAC Address" << std::endl;
+
+  for (uint32_t i = 0; i < staNodesA.GetN(); ++i) {
+    Ptr<NetDevice> device = staNodesA.Get(i)->GetDevice(0);
+    Mac48Address mac = Mac48Address::ConvertFrom(device->GetAddress());
+    macFile << "STA-A-" << i+1 << "," << mac << std::endl;
+  }
+
+  for (uint32_t i = 0; i < staNodesB.GetN(); ++i) {
+    Ptr<NetDevice> device = staNodesB.Get(i)->GetDevice(0);
+    Mac48Address mac = Mac48Address::ConvertFrom(device->GetAddress());
+    macFile << "STA-B-" << i+1 << "," << mac << std::endl;
+  }
+
+  macFile.close();
+  NS_LOG_INFO("MAC addresses saved to sta_mac_addresses.csv");
+}
+
+int main() {
+uint32_t nStaPerAp = 16; //number of stations per AP
+double simTime = 60.0;  // Simulation time in seconds
+LogComponentEnable("WifiSimulation", LOG_LEVEL_INFO);
+
+// Create nodes
+NS_LOG_INFO("Create Nodes...");
+NodeContainer wifiStaNodesA, wifiStaNodesB, wifiApNodes;
+wifiStaNodesA.Create(nStaPerAp);  
+wifiStaNodesB.Create(nStaPerAp);  
+wifiApNodes.Create(2);
+
+// Save MAC addresses to a CSV file
+
+
+
+// Set up the Wi-Fi channel
+NS_LOG_INFO("Create Wifi Channel...");
+YansWifiChannelHelper channel = YansWifiChannelHelper::Default();
+YansWifiPhyHelper phy;
+phy.SetChannel(channel.Create());
+
+// Set up the Wi-Fi PHY layer
+WifiHelper wifi;
+wifi.SetStandard(WIFI_STANDARD_80211n);
+wifi.SetRemoteStationManager("ns3::MinstrelHtWifiManager");
+
+// Set up the Wi-Fi Mac Layer and SSID
+WifiMacHelper mac;
+Ssid ssidA = Ssid("network-A");
+Ssid ssidB = Ssid("network-B");
+
+mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssidA), "ActiveProbing", BooleanValue(false));
+NetDeviceContainer staDevicesA = wifi.Install(phy, mac, wifiStaNodesA);
+
+mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssidB), "ActiveProbing", BooleanValue(false));
+NetDeviceContainer staDevicesB = wifi.Install(phy, mac, wifiStaNodesB);
+
+mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssidA));
+NetDeviceContainer apDeviceA = wifi.Install(phy, mac, wifiApNodes.Get(0));
+
+mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssidB));
+NetDeviceContainer apDeviceB = wifi.Install(phy, mac, wifiApNodes.Get(1));
+SaveMacAddresses(wifiStaNodesA, wifiStaNodesB);
+}
+```
+
+Details of the code:
+* First create the node containers for the access points and stations using `NodeContainer`. There will be 3 node containers, one for APNodes and two for STANodes. On the APNodes, create two nodes, and on the STANodes, create 16 nodes each based on `nStaPerAp` variable.
+* The `YansWifiChannelHelper` is used to create a Wi-Fi channel, and the `YansWifiPhyHelper` is used to set up the physical layer of the Wi-Fi nodes.
+* The `WifiHelper` is used to set the Wi-Fi standard to 802.11n and configure the remote station manager. The remote station manager that is used is `MinstrelHtWifiManager`, which is a rate control algorithm for 802.11n.
+* The `WifiMacHelper` is used to set the MAC layer type for the stations and access points. The SSIDs for the two networks are defined as `network-A` and `network-B`.
+* After that, set the MAC layer type for the stations using `SetType`. The `Ssid` is set to the corresponding SSID for each network.
+* The `Install` method is called to instalenable tral the Wi-Fi devices on the nodes.
+* Finally, the `SaveMacAddresses` function is called to save the MAC addresses of the stations to a CSV file. The MAC addresses are obtained from the first device of each node using `GetDevice(0)` and `GetAddress()` methods.
+
+* The MAC addresses are saved in a CSV file named [`sta_mac_addresses.csv`](../assets/a2/mac_address.csv). Here is the table of the MAC addresses of the stations:
+
+| STA         | MAC Address          |
+|-------------|----------------------|
+| STA-A-1     | 00:00:00:00:00:01    |
+| STA-A-2     | 00:00:00:00:00:02    |
+| STA-A-3     | 00:00:00:00:00:03    |
+| STA-A-4     | 00:00:00:00:00:04    |
+| STA-A-5     | 00:00:00:00:00:05    |
+| STA-A-6     | 00:00:00:00:00:06    |
+| STA-A-7     | 00:00:00:00:00:07    |
+| STA-A-8     | 00:00:00:00:00:08    |
+| STA-A-9     | 00:00:00:00:00:09    | 
+| STA-A-10    | 00:00:00:00:00:0a    |
+| STA-A-11    | 00:00:00:00:00:0b    |
+| STA-A-12    | 00:00:00:00:00:0c    |
+| STA-A-13    | 00:00:00:00:00:0d    |
+| STA-A-14    | 00:00:00:00:00:0e    |
+| STA-A-15    | 00:00:00:00:00:0f    |
+| STA-A-16    | 00:00:00:00:00:10    |
+| STA-B-1     | 00:00:00:00:00:11    |
+| STA-B-2     | 00:00:00:00:00:12    |
+| STA-B-3     | 00:00:00:00:00:13    |
+| STA-B-4     | 00:00:00:00:00:14    |
+| STA-B-5     | 00:00:00:00:00:15    |
+| STA-B-6     | 00:00:00:00:00:16    |
+| STA-B-7     | 00:00:00:00:00:17    |
+| STA-B-8     | 00:00:00:00:00:18    |
+| STA-B-9     | 00:00:00:00:00:19    |
+| STA-B-10    | 00:00:00:00:00:1a    |
+| STA-B-11    | 00:00:00:00:00:1b    |
+| STA-B-12    | 00:00:00:00:00:1c    |
+| STA-B-13    | 00:00:00:00:00:1d    |
+| STA-B-14    | 00:00:00:00:00:1e    |
+| STA-B-15    | 00:00:00:00:00:1f    |
+| STA-B-16    | 00:00:00:00:00:20    |
+
+
 
 ## 4. Analysis of the Simulation Results
 
