@@ -771,15 +771,15 @@ Realistic Mobility: The movement of UEs between two eNodeBs under simulated mobi
 
 **Initial status**
 
-  ![alt text](./assets/log1.png =x550)
+  ![alt text](./assets/log1.png)
 
 **3 minutes status**
 
-  ![alt text](./assets/log2.png =x550)
+  ![alt text](./assets/log2.png)
 
 **6 minutes status**
 
-  ![alt text](./assets/log3.png =x550)
+  ![alt text](./assets/log3.png)
 
 This LTE handover simulation without traffic offers insights into the handover process in LTE networks. By adjusting the handover algorithm parameters and simulating UE mobility, it provides valuable data on network behavior, especially in terms of the timing and mechanics of handovers between eNodeBs.
 ### Build and Run the Simulation
