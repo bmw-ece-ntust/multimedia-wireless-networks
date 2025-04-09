@@ -1096,6 +1096,67 @@ Time 360.0s: eNodeB A Throughput = 13.12 Mbps, eNodeB B Throughput = 13.12 Mbps
 ### After second handover
 ![alt text](./assets/log6.png)
 
+---
+## Analyze
+
+### **Expected:**
+```
+eNodeB A Throughput ≈ 13.12 Mbps  
+eNodeB B Throughput ≈ 13.12 Mbps
+```
+
+### **Actual:**
+```
+eNodeB A Throughput ≈ 10.89–11.77 Mbps  
+eNodeB B Throughput ≈ 12.65–13.03 Mbps
+```
+
+### 📌 Possible reasons:
+- **Startup Transients**: At the beginning of the simulation, there may be buffering and protocol handshakes (RRC connection, bearer setup, UDP client/server start) that reduce the **first few seconds' throughput**.
+- **Imbalanced Channel Conditions**: Even with equal UE numbers (16 UEs per eNB), slight randomness in packet scheduling or PHY conditions (like fading, path loss variance, or interference) can lead to **uneven resource distribution**.
+- **FlowMonitor Granularity**: If the actual `timeFirstTxPacket` and `timeLastRxPacket` vary slightly across UEs, the throughput computed over a **short interval (0.1s)** can fluctuate more than the **coarse average** you expected.
+
+---
+### **Expected (180.0s):**
+```
+eNodeB A Throughput ≈ 9.84 Mbps  
+eNodeB B Throughput ≈ 16.40 Mbps
+```
+
+### **Actual (185.2s):**
+```
+eNodeB A Throughput ≈ 15.19 Mbps  
+eNodeB B Throughput ≈ 9.71 Mbps
+```
+
+### 📌 Possible reasons:
+- **Delay in Handover Completion**: Even though you scheduled mobility changes at **180s**, the actual **handover process (measurement → trigger → completion)** takes some **milliseconds to seconds**, so the cell load **hasn't fully shifted yet at 180.0s**.
+- **A3 Handover Parameters**: My simulation uses:
+  - `Hysteresis = 0.5 dB`
+  - `TimeToTrigger = 200 ms`
+  
+  These can **delay the reaction** of UEs to a change in signal strength, causing **throughput lag** in the expected pattern.
+
+---
+
+## 🔁 3. Around **Time 360.0s–372.3s** (After Second Handover)
+
+### **Expected (360.0s):**
+```
+eNodeB A Throughput ≈ 13.10 Mbps  
+eNodeB B Throughput ≈ 13.10 Mbps
+```
+
+### **Actual (372.1s–372.4s):**
+```
+eNodeB A Throughput ≈ 11.23 Mbps  
+eNodeB B Throughput ≈ 13.13 Mbps
+```
+
+### 📌 Possible reason:
+- **Asymmetry in UE Behavior**: After UEs move, their distance to eNBs changes, and thus **channel conditions may not be symmetrical**. UEs that are slightly farther may experience reduced CQI → lower throughput.
+
+---
 
 
 ## Video
