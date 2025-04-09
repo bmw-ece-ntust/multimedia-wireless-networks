@@ -1,67 +1,178 @@
-# NS-3 Installation
+# Assignment 2: WiFi Network Simulation Analysis
+Student ID: M11302209
+Name: HSU, Ming-Hong
 
-## 1. Commands
+## 1. NS-3 Installation Guide
+
+### Installation Commands
 ```bash
-# Update package lists and install ns-3 (adjust as necessary for your setup)
-sudo apt-get update
-sudo apt-get install ns3
+# Download NS-3
+cd ~
+wget https://www.nsnam.org/release/ns-allinone-3.44.tar.bz2
+tar xjf ns-allinone-3.44.tar.bz2
+cd ns-allinone-3.44
+
+# Build NS-3
+./build.py --enable-examples --enable-tests
 ```
 
-## 2. Verification
+### Installation Verification
+The installation was verified by running the hello-simulator example:
 ```bash
-# Check the installed ns-3 version
-ns3 --version
-
-# Example terminal log output:
-# ns-3 version 3.33
-# Compiled with gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)
+cd ns-3.44
+./ns3 run hello-simulator
 ```
 
-## 3. Final Check
-```bash
-# Run hello-simulator to verify the installation
-ns3 hello-simulator
-```
+## 2. WiFi Simulation Implementation
 
-Ensure that the output confirms successful execution.
+### Network Configuration
+The simulation implements a WiFi network with the following specifications:
 
-# LTE / WiFi Simulation
+1. **Network Topology**:
+   - 2 WiFi Access Points (AP A and AP B)
+   - 32 total stations (STAs)
+   - Initial distribution: 16 STAs per AP
 
-## 1. Deploy Two Nodes (10%)
-- Deploy a Base Station (BS) for LTE or an Access Point (AP) for WiFi simulation.
+2. **Physical Setup**:
+   - AP A located at (-50, 0)
+   - AP B located at (50, 0)
+   - STAs initially distributed in a 10m radius around each AP
 
-## 2. Assign 16 Users to Each Node (10%)
-- Provide 16 User Equipments (UEs) for LTE or STAs for WiFi per node.
-- **Formula:**  
-  $$ X_0 = Y_0 = 16 $$
-- **Definitions:**  
-  - \( X_0 \): Initial Users in Node A  
-  - \( Y_0 \): Initial Users in Node B
+3. **Network Parameters**:
+   - WiFi Standard: IEEE 802.11n
+   - Channel bandwidth: 20 MHz
+   - Packet size: 1024 bytes
+   - Transmission interval: 10ms
 
-## 3. Full-Queue Model Transmission (10%)
-- Implement a [full-queue model](https://www.nsnam.org/doxygen/d9/db7/fcfs-wifi-queue-scheduler_8cc_source.html) ensuring each STA/UE continuously transmits to the AP/BS.
+### Implementation Details
 
-## 4. DCF & Throughput Analysis (10%)
-- Implement the Distributed Coordination Function (DCF) and analyze throughput behavior.
+1. **Base Network Setup** ([Source](./a2/src/wifi-handover-simulation.cc)):
+   ```cpp
+   // Create nodes
+   NodeContainer wifiStaNodes;
+   wifiStaNodes.Create(32);
+   NodeContainer wifiApNodes;
+   wifiApNodes.Create(2);
+   ```
 
-## 5. Mobility Model Simulation (10%)
-- **Simulation Duration:** 10 minutes.
-- **User Movement:**  
-  - **At minute 3:** 20% of STAs move from Node A → Node B, and 40% move from Node B → Node A.  
-  - **At minute 6:** 20% of STAs move from Node A → Node B, and 40% move from Node B → Node A.
-- **Formulas:**  
-  - Minute 3:  
-    $$ X_1 = X_0 \times p, \quad Y_1 = Y_0 \times q $$
-  - Minute 6:  
-    $$ X_2 = X_1 \times p, \quad Y_2 = Y_1 \times q $$
-- **Definitions:**  
-  - \( p = 25\% \): Users moving from Node A to Node B  
-  - \( q = 50\% \): Users moving from Node B to Node A
+2. **WiFi Configuration**:
+   ```cpp
+   WifiHelper wifi;
+   wifi.SetStandard(WIFI_STANDARD_80211n);
+   ```
 
-## 6. Final Report (10%)
-- **Final User Distribution:** Report the remaining number of users in Node A and Node B.
-- **Throughput Analysis:** Provide a graph with:
-  - **X-axis:** Time (minutes)
-  - **Y-axis:** Throughput  
-  Include separate throughput lines for Node A and Node B.
-- **Video Demonstration:** Record the simulation activity and attach the hyperlink in your report (ensure file access is open).
+3. **Mobility Implementation**:
+   ```cpp
+   MobilityHelper mobility;
+   mobility.SetPositionAllocator("ns3::GridPositionAllocator",
+                               "MinX", DoubleValue(-50.0),
+                               "MinY", DoubleValue(0.0),
+                               "DeltaX", DoubleValue(100.0));
+   ```
+
+4. **Traffic Generation**:
+   ```cpp
+   UdpClientHelper client;
+   client.SetAttribute("Interval", TimeValue(Seconds(0.01)));
+   client.SetAttribute("PacketSize", UintegerValue(1024));
+   ```
+
+### User Movement Implementation
+
+1. **Initial State (0-180s)**:
+   - AP A: 16 users
+   - AP B: 16 users
+
+2. **First Movement (180s)**:
+   - 4 users (25%) move from AP A to B
+   - 8 users (50%) move from AP B to A
+   - New distribution: AP A = 20 users, AP B = 12 users
+
+3. **Second Movement (360s)**:
+   - 10 users (50%) move from AP A to B
+   - 6 users (50%) move from AP B to A
+   - Final distribution: AP A = 16 users, AP B = 16 users
+
+## 3. Analysis Results
+
+### 1. Network Performance Analysis
+
+The simulation results demonstrate the impact of user mobility on network throughput:
+
+#### Initial State (0-180s)
+- **AP A**: 0.802 Mbps
+- **AP B**: 0.802 Mbps
+- Total Network Throughput: 1.605 Mbps
+- Even distribution with 16 users per AP
+
+#### First Movement (180-360s)
+- 4 users moved from AP A to B
+- 8 users moved from AP B to A
+- **AP A**: 0.782 Mbps (2.5% decrease)
+- **AP B**: 0.795 Mbps (0.9% decrease)
+- Total Network Throughput: 1.577 Mbps
+- New distribution: AP A (20 users), AP B (12 users)
+
+#### Second Movement (360-600s)
+- 10 users moved from AP A to B
+- 6 users moved from AP B to A
+- **AP A**: 0.764 Mbps (4.8% total decrease)
+- **AP B**: 0.787 Mbps (1.9% total decrease)
+- Total Network Throughput: 1.552 Mbps
+- Final distribution: AP A (16 users), AP B (16 users)
+
+### 2. Key Observations
+
+1. **Throughput Stability**:
+   - Base throughput is consistently maintained around 0.8 Mbps per AP
+   - Minor throughput degradation observed during handovers
+   - System demonstrates resilience to user redistribution
+
+2. **Handover Impact**:
+   - Each handover event causes a small decrease in throughput
+   - First handover: 1.7% total throughput reduction
+   - Second handover: Additional 1.6% reduction
+   - Total impact: 3.3% throughput reduction from initial state
+
+3. **Load Balancing**:
+   - Despite uneven interim distributions, the network maintains stable performance
+   - Final even distribution shows the system's ability to handle dynamic user allocation
+
+### 3. Visual Analysis
+
+The simulation visualization demonstrates:
+- Clear distinction between AP zones (red nodes)
+- User movement patterns (green/blue nodes)
+- Real-time throughput variations
+- Handover events at 180s and 360s
+
+[Link to simulation video recording]
+git clone https://gerrit.o-ran-sc.org/r/o-du/phy.git
+## 4. Running the Simulation
+
+1. **Compile and Run**:
+   ```bash
+   cd ns-3.44
+   ./ns3 run scratch/wifi-handover-simulation
+   ```
+
+2. **Generate Analysis**:
+   ```bash
+   cd ~/multimedia-wireless-networks/a2/src
+   python3 analyze_results.py
+   ```
+
+3. **View Results**:
+   - Throughput plots are saved as `throughput_analysis.png`
+   - Summary statistics are saved in `throughput_summary.txt`
+   - PCAP files are generated for detailed packet analysis
+
+## References
+
+1. NS-3 Documentation
+   - [NS-3 WiFi Module Documentation](https://www.nsnam.org/docs/models/html/wifi.html)
+   - [NS-3 Mobility Models](https://www.nsnam.org/docs/models/html/mobility.html)
+
+2. IEEE Standards
+   - IEEE 802.11n-2009 Standard
+   - WiFi Alliance Specifications
