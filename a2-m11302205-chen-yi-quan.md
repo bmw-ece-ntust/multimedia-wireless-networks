@@ -1063,7 +1063,7 @@ int main(int argc, char *argv[]) {
 | --- | --- | --- |
 | Initial | 16 users (UE 0-15) | 16 users (UE 16-31) |
 | After 3 min | 20 users (UE 4-15, UE 16-23) | 12 users (UE 0-3, UE 24-31) |
-| After 6 min | 20 users (UE 8-15, UE 16-27) | 12 users (UE 0-7, UE 28-31) |
+| After 6 min | 16 users (UE 8-15, UE 16-23) | 16 users (UE 0-7, UE 24-31) |
 
 ### Expect Throughput outcome
 ```
@@ -1071,7 +1071,7 @@ Time 1.0s: eNodeB A Throughput = 13.12 Mbps, eNodeB B Throughput = 13.12 Mbps
 ...
 Time 180.0s: eNodeB A Throughput = 9.84 Mbps, eNodeB B Throughput = 16.40 Mbps
 ...
-Time 360.0s: eNodeB A Throughput = 6.56 Mbps, eNodeB B Throughput = 19.68 Mbps
+Time 360.0s: eNodeB A Throughput = 13.12 Mbps, eNodeB B Throughput = 13.12 Mbps
 ```
 
 - Handovers:
@@ -1080,7 +1080,7 @@ Time 360.0s: eNodeB A Throughput = 6.56 Mbps, eNodeB B Throughput = 19.68 Mbps
 - Throughput:
   - Initial balance: ~13 Mbps each.
   - Post-180s: eNodeB A ~9.84 Mbps, eNodeB B ~16.4 Mbps.
-  - Post-360s: eNodeB A ~6.56 Mbps, eNodeB B ~19.68 Mbps.
+  - Post-360s: eNodeB A ~13 Mbps, eNodeB B ~13 Mbps.
 
 
 **[throughput.csv](./Assignment2/throughput.csv)**
@@ -1095,6 +1095,8 @@ Time 360.0s: eNodeB A Throughput = 6.56 Mbps, eNodeB B Throughput = 19.68 Mbps
 
 ### After second handover
 ![alt text](./assets/log6.png)
+
+
 
 ## Video
 
