@@ -796,3 +796,9 @@ cd ../
 ```bash
 NS_LOG="WifiSimulation=info" ./ns3 run wifi_simulation
 ```
+
+<aside>
+🎥
+
+https://youtu.be/z8RbaGhKpk8
+</aside>
