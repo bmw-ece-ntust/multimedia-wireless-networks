@@ -23,7 +23,7 @@ void PrintUeConnectionStatus(Ptr<LteHelper> lteHelper, NetDeviceContainer ueLteD
 }
 
 int main(int argc, char *argv[]) {
-    Time simTime = Seconds(30.0); // Shortened for testing
+    Time simTime = Seconds(600.0); // Shortened for testing
     CommandLine cmd;
     cmd.Parse(argc, argv);
 
@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
     Simulator::Schedule(Seconds(1.0), &PrintUeConnectionStatus, lteHelper, ueLteDevs, 32);
 
     // First handover event at 3 mins (180 seconds)
-    Simulator::Schedule(Seconds(10.0), [&ueNodes]() {
+    Simulator::Schedule(Seconds(180.0), [&ueNodes]() {
         NS_LOG_INFO("[3-min] 4 UEs from eNB A → B; 8 UEs from B → A");
         // Move UEs closer to target eNodeBs
         for (uint32_t i = 0; i < 4; ++i) {
@@ -105,10 +105,10 @@ int main(int argc, char *argv[]) {
     });
 
     // Print connection status after first handover
-    Simulator::Schedule(Seconds(15.0), &PrintUeConnectionStatus, lteHelper, ueLteDevs, 32);
+    Simulator::Schedule(Seconds(185.0), &PrintUeConnectionStatus, lteHelper, ueLteDevs, 32);
 
     // Second handover event at 6 mins (360 seconds)
-    Simulator::Schedule(Seconds(20.0), [&ueNodes]() {
+    Simulator::Schedule(Seconds(360.0), [&ueNodes]() {
         NS_LOG_INFO("[6-min] Half of UEs on A & B swap positions");
         // Move UEs
         for (uint32_t i = 0; i < 8; ++i) {
@@ -120,7 +120,7 @@ int main(int argc, char *argv[]) {
     });
 
     // Print connection status after second handover
-    Simulator::Schedule(Seconds(25.0), &PrintUeConnectionStatus, lteHelper, ueLteDevs, 32);
+    Simulator::Schedule(Seconds(365.0), &PrintUeConnectionStatus, lteHelper, ueLteDevs, 32);
 
     Simulator::Stop(simTime);
     Simulator::Run();
