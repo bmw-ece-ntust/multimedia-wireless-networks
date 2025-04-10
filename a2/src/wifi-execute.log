@@ -1,0 +1,48 @@
+ming@BMWLAB:~/ns-3-allinone/ns-3.44$ ./ns3 run scratch/wifi-handover-simulation.cc 
+[0/2] Re-checking globbed directories...
+[2/2] Linking CXX executable /home/ming/ns-3-allinone/ns-3.44/build/scratch/ns3.44-wifi-handover-simulation-default
+Simulation parameters:
+- Total simulation time: 180 seconds
+- First migration at 60s: 4 users A->B, 8 users B->A
+- Second migration at 120s: 10 users A->B, 6 users B->A
+Creating topology with 2 APs and 32 stations
+AP 0 MAC address: 00:00:00:00:00:01
+AP 1 MAC address: 00:00:00:00:00:02
+Scheduled handover at 60s: 4 users A->B, 8 users B->A
+Scheduled handover at 120s: 10 users A->B, 6 users B->A
+Starting simulation for 180 seconds
+Executing handover: 4 users A->B, 8 users B->A
+Station 0 moved from AP A to AP B
+Station 1 moved from AP A to AP B
+Station 2 moved from AP A to AP B
+Station 3 moved from AP A to AP B
+Station 16 moved from AP B to AP A
+Station 17 moved from AP B to AP A
+Station 18 moved from AP B to AP A
+Station 19 moved from AP B to AP A
+Station 20 moved from AP B to AP A
+Station 21 moved from AP B to AP A
+Station 22 moved from AP B to AP A
+Station 23 moved from AP B to AP A
+Time 60s: 20 users at AP A, 12 users at AP B
+Executing handover: 10 users A->B, 6 users B->A
+Station 4 moved from AP A to AP B
+Station 5 moved from AP A to AP B
+Station 6 moved from AP A to AP B
+Station 7 moved from AP A to AP B
+Station 8 moved from AP A to AP B
+Station 9 moved from AP A to AP B
+Station 10 moved from AP A to AP B
+Station 11 moved from AP A to AP B
+Station 12 moved from AP A to AP B
+Station 13 moved from AP A to AP B
+Station 0 moved from AP B to AP A
+Station 1 moved from AP B to AP A
+Station 2 moved from AP B to AP A
+Station 3 moved from AP B to AP A
+Station 24 moved from AP B to AP A
+Station 25 moved from AP B to AP A
+Time 120s: 16 users at AP A, 16 users at AP B
+Total bytes received at AP 0: 103852032
+Total bytes received at AP 1: 74991616
+Simulation complete
