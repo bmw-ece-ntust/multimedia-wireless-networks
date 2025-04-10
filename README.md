@@ -53,7 +53,7 @@
   - [x] [Throughput Analysis](./a2-M11302209-HSU-Ming-Hong.md#throughput-analysis) - Figures and explanations (3 points)
   - [x] [Performance Divergence Analysis](./a2-M11302209-HSU-Ming-Hong.md#performance-divergence-analysis) - In-depth analysis of results
   - [x] [Conclusions](./a2-M11302209-HSU-Ming-Hong.md#5-conclusions) - Research implications
-  - [ ] [Video Simulation](#) - 5-minute demonstration of the simulation (3 points)
+  - [x] [Video Simulation](https://youtu.be/f-cTJ7FY9v0) - 5-minute demonstration of the simulation (3 points)
   
   #### Peer Review (1 point)
 

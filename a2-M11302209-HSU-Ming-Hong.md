@@ -367,6 +367,8 @@ The observed divergence illustrates an important principle in wireless networks:
 
 ### 5. Conclusions
 
+[Video Simulation](https://youtu.be/f-cTJ7FY9v0) - 5-minute demonstration of the simulation
+
 1. **Load Balancing Effectiveness**
    - The network demonstrated capability to handle asymmetric user distributions, but with significant throughput trade-offs
    - Per-user throughput varies substantially based on not just current load but historical load patterns
