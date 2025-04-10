@@ -40,7 +40,7 @@
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
-- Submissions:
+- Submissions: [Study note](a2-M11302201-Yang_ZHI_YANG.md)
   - [x] [NS-3 Installation](a2-M11302201-Yang_ZHI_YANG.md#page_facing_up-3-installation) (`1-points`)
   - [x] LTE / WiFi Simulation (`2-points`):
     - [x] [Deploy 2 nodes and assign users](a2-M11302201-Yang_ZHI_YANG.md#43-program-explanation-and-segment)
