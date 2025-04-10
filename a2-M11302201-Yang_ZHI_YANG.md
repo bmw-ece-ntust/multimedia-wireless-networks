@@ -604,12 +604,20 @@ for (int i = 0; i < ap_num; ++i) {
 	  - Number of UE in two AP
 	
 	    ![image](a2/figure/UE_num_over_time.png)
+     
 	  - UE distribution after 20 seconds
 	
 	    ![image](a2/figure/twenty_sec_location.png)
 	  - UE distribution after 40 seconds
 	
 	    ![image](a2/figure/fourty_sec_location.png)
+          
+	  - UE distribution table
+     
+	| AP   | 0s                  | 20s                            | 40s                            |
+	|------|---------------------|--------------------------------|--------------------------------|
+	| AP32  |  0 ~ 15            | 16 ~ 23                        | 24 ~ 29                        |
+	| AP33  | 16 ~ 31            | 0  ~ 3 , 24 ~ 31               |  0 ~ 13, 30 ~ 31               | 
     
 ### 4.5 Summary of Findings
 - The simulation results demonstrate that:
