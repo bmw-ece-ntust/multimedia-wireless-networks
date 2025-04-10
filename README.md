@@ -62,9 +62,6 @@
   #### Extra Credit Opportunities (up to 3 points)
   
   - **Peer Review Bonus:** Top 3 students based on peer reviews
-    - Top 1: 3 points
-    - Top 2: 2 points
-    - Top 3: 1 point
 
 ### A3 (DL: 2024/05/14, 08.00 A.M.)
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a3-deadline-514-0800-am)
