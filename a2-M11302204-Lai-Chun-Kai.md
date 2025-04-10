@@ -85,11 +85,11 @@ X₀ = Y₀ = 16
 - **Full-Queue Model:**
   -  Each STA/UE continuously transmits to AP/BS.
   -  Ref: [FCFS WiFi Queue Scheduler](https://www.nsnam.org/doxygen/d9/db7/fcfs-wifi-queue-scheduler_8cc_source.html)
-- **Duration:** 10 minutes
+- **Duration:** 5 minutes = 300 Seconds
 
 ### 3-3 User Movement Schedule
 ---
-#### Minute 3
+#### 100th Seconds
 - **Movement:**
   - 25% of users from Node A → Node B
   - 50% of users from Node B → Node A
@@ -102,7 +102,7 @@ Where:
 - `p = 25%`
 - `q = 50%`
 ---
-#### Minute 6
+#### 200th Seconds
 - **Movement:**
   - 50% of users from Node A → Node B
   - 50% of users from Node B → Node A
