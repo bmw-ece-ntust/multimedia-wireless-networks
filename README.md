@@ -6,7 +6,7 @@
   - [1. Profile](#1-profile)
   - [2. Assignments](#2-assignments)
     - [A1 (DL: 2024/03/03, 23.59 P.M.)](#a1-dl-20240303-2359-pm)
-    - [A2 (DL: 2025/04/11)](#a2-dl-20250411)
+    - [A2 (DL: 2025/04/11, 23.59 A.M.)](#a2-dl-20250411-2359-am)
     - [A3 (DL: 2024/05/14, 08.00 A.M.)](#a3-dl-20240514-0800-am)
 
 ## 1. Profile
@@ -26,35 +26,48 @@
     - [Slide Link](https://gamma.app/docs/Key-Skills-for-Success-jbbwbow7dzh4amr) 
   - [x] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5)
 
-### A2 (DL: 2025/04/11)
-- [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-networks?tab=readme-ov-file#a2)
-- Submissions:
-  - **NS-3 Installation (30%)**: [NS-3 Installation](./a2-M11302209-HSU-Ming-Hong.md#ns-3-installation)
-  - **LTE/WiFi Simulation (50%)**:
-    - [1. Deploy Two Nodes](./a2-M11302209-HSU-Ming-Hong.md#1-deploy-two-nodes)
-    - [2. Assign 16 Users to Each Node](./a2-M11302209-HSU-Ming-Hong.md#2-assign-16-users-to-each-node)
-    - [3. Full-Queue Model Transmission](./a2-M11302209-HSU-Ming-Hong.md#3-full-queue-model-transmission)
-    - [4. DCF & Throughput Analysis](./a2-M11302209-HSU-Ming-Hong.md#4-dcf--throughput-analysis)
-    - [5. Mobility Model Simulation](./a2-M11302209-HSU-Ming-Hong.md#5-mobility-model-simulation)
-    - [6. Final Report](./a2-M11302209-HSU-Ming-Hong.md#6-final-report)
-  - [ ] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5)
+### A2 (DL: 2025/04/11, 23.59 A.M.)
+  - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-networks?tab=readme-ov-file#a2)
+  - Submissions:
+      - [x] [Study Note](./a2-M11302209-HSU-Ming-Hong.md)
+  #### NS-3 Installation (1 point)
+  - [x] [Installation Guide & Commands](./a2-M11302209-HSU-Ming-Hong.md#section-1-ns-3-installation-guide)
+  - [x] [Verification Process](./a2-M11302209-HSU-Ming-Hong.md#installation-process)
+  - [x] [Hello-Simulator Test](./a2-M11302209-HSU-Ming-Hong.md#installation-verification)
 
-  - **Extra Credit (20%)**:  
-    - **Peer Review Bonus:** Top 3 students based on peer reviews receive extra credit: **Top 1:** +20%, **Top 2:** +15%, **Top 3:** +10%.  
-    - **Extended Deployment Bonus:** If you deploy **9 nodes in WiFi/LTE** and commit before **March 29, 2025, 19:00 PM**, you get an **extra 10%**.  
-      - [a2-9nodeLTE.md](./a2-9nodeLTE.md)
+  #### WiFi Simulation Milestones (2 points)
+  - [x] [Network Architecture and Initial Setup](./a2-M11302209-HSU-Ming-Hong.md#1-network-architecture-and-initial-setup) - Deploy 2 nodes and assign 16 users to each (1 point)
+  - [x] [Full-Queue Model Implementation](./a2-M11302209-HSU-Ming-Hong.md#2-full-queue-model-implementation) (1 point)
+  - [x] [User Movement Analysis](./a2-M11302209-HSU-Ming-Hong.md#3-user-movement-analysis)
+  -  Source Code Documentation
+      - [x] [WiFi Handover Simulation (Main Code)](./a2/src/wifi-handover-simulation.cc)
+      - [x] [Analysis Scripts](./a2/src/analyze_results.py)
+      - [x] [Detailed Analysis Report](./a2/src/analysis_report_20250410_155405.md)
+  - Data Files
+      - [x] [Throughput Data](./a2/src/throughput.csv)
+      - [x] [User Distribution Data](./a2/src/user_distribution.csv)
+      - [x] [Simulation Log](./a2/src/wifi-execute.log)
 
-- **References**  
-  - [ns-3](https://www.nsnam.org/)  
-  - [ns-3 Tutorial](https://www.nsnam.org/docs/tutorial/html/)  
-  - [The ns-3 Network Simulator](https://intronetworks.cs.luc.edu/current/html/ns3.html)  
-  - [ns-3 LTE Module](https://www.nsnam.org/docs/models/html/lte-user.html)  
-  - [ns-3 WiFi Module](https://www.nsnam.org/docs/models/html/wifi-design.html)  
-  - [3GPP NR ns-3 Module](https://github.com/QiuYukang/5G-LENA)  
+  #### Analysis Report (8 points)
+  - [x] [User Distribution Analysis](./a2-M11302209-HSU-Ming-Hong.md#detailed-analysis-report-summary) - Final distribution values, movement tables (2 points)
+  - [x] [Throughput Analysis](./a2-M11302209-HSU-Ming-Hong.md#throughput-analysis) - Figures and explanations (3 points)
+  - [x] [Performance Divergence Analysis](./a2-M11302209-HSU-Ming-Hong.md#performance-divergence-analysis) - In-depth analysis of results
+  - [x] [Conclusions](./a2-M11302209-HSU-Ming-Hong.md#5-conclusions) - Research implications
+  - [ ] [Video Simulation](#) - 5-minute demonstration of the simulation (3 points)
+  
+  #### Peer Review (1 point)
 
+  - [ ] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5) 
 
-### A3 (DL: 2025)
-- [Assignement Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a3-deadline-514-0800-am)
+  #### Extra Credit Opportunities (up to 3 points)
+  
+  - **Peer Review Bonus:** Top 3 students based on peer reviews
+    - Top 1: 3 points
+    - Top 2: 2 points
+    - Top 3: 1 point
+
+### A3 (DL: 2024/05/14, 08.00 A.M.)
+- [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a3-deadline-514-0800-am)
 - Submissions:
   - [ ] [Study Note](./a3-M11302209-HSU-Ming-Hong.md)
   - [ ] [Flowchart + source code for simulation and analysis](path to specific section in your study note)
