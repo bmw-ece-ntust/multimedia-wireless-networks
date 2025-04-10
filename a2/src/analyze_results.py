@@ -19,7 +19,7 @@ def load_and_preprocess_data():
     
     return throughput_df, user_dist_df
 
-def plot_throughput_analysis(throughput_df, save_path='plots'):
+def plot_throughput_analysis(throughput_df, user_dist_df, save_path='plots'):
     """Generate comprehensive throughput analysis plots"""
     # Create plots directory if not exists
     import os
@@ -83,6 +83,32 @@ def plot_throughput_analysis(throughput_df, save_path='plots'):
     plt.yticks([0, 1], ['AP A', 'AP B'])
     plt.tight_layout()
     plt.savefig(f'{save_path}/throughput_heatmap.png', dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    # 4. User Distribution Plot
+    plt.figure(figsize=(12, 6))
+    width = 0.35
+    x = np.arange(len(user_dist_df['Time']))
+    
+    plt.bar(x - width/2, user_dist_df['UsersAtA'], width, label='AP A', color='blue', alpha=0.7)
+    plt.bar(x + width/2, user_dist_df['UsersAtB'], width, label='AP B', color='red', alpha=0.7)
+    
+    plt.title('User Distribution Over Time', fontsize=14, pad=20)
+    plt.xlabel('Time (seconds)', fontsize=12)
+    plt.ylabel('Number of Users', fontsize=12)
+    plt.xticks(x, user_dist_df['Time'])
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    
+    # Add value labels on top of bars
+    for i in range(len(x)):
+        plt.text(x[i] - width/2, user_dist_df['UsersAtA'].iloc[i], str(user_dist_df['UsersAtA'].iloc[i]),
+                ha='center', va='bottom')
+        plt.text(x[i] + width/2, user_dist_df['UsersAtB'].iloc[i], str(user_dist_df['UsersAtB'].iloc[i]),
+                ha='center', va='bottom')
+    
+    plt.tight_layout()
+    plt.savefig(f'{save_path}/user_distribution.png', dpi=300, bbox_inches='tight')
     plt.close()
     
     print(f"Plots saved to: {save_path}")
@@ -169,7 +195,7 @@ def main():
     throughput_df, user_dist_df = load_and_preprocess_data()
     
     # Generate visualizations
-    plot_throughput_analysis(throughput_df)
+    plot_throughput_analysis(throughput_df, user_dist_df)
     
     # Analyze user distribution
     user_stats = analyze_user_distribution(user_dist_df)
