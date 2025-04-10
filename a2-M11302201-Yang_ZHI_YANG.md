@@ -512,8 +512,11 @@ int main (int argc, char *argv[]) {
 ./ns3 run scratch/assignment2.cc
 ```
 - Output log
+  
 ![image](a2/figure/sim_log1.png)
+
 ![image](a2/figure/sim_log2.png)
+
 - Output file
   - `throughput.csv`
   - `ue_count.csv`
@@ -571,36 +574,44 @@ for (int i = 0; i < ap_num; ++i) {
     Simulator::Schedule(Seconds(40), &MoveUsers, ueNodes, moveAtoB_6min, moveBtoA_6min, 0, 200);
     ```
 
-### 4.3 Results and Analysis
+### 4.4 Results and Analysis
 - This section presents the throughput and user association dynamics in a dual-node WiFi setup under a full-queue traffic model. The results are depicted across three figures: throughput over time, average throughput per AP, and user association per AP over time.
-- 4.1 Throughput Dynamics Over Time
-  - As shown in Figure 1, the throughput of AP32 and AP33 varies significantly across the simulation period. During the initial phase (0–20 seconds), both APs handle their assigned 16 STAs, resulting in relatively stable throughput: approximately 24–30 Mbps for both APs. At the 20-second mark, consistent with the scenario specification, 25% of users (4 users) migrate from AP32 to AP33, while 50% of users (8 users) move from AP33 to AP32. This user redistribution leads to an immediate and noticeable shift in throughput:
-    - AP32: The throughput initially drops due to the sudden influx of users, reaching a minimum before stabilizing in the 30–40 Mbps range.
-    - AP33: The throughput plummets to nearly zero as the user count decreases significantly. It remains suppressed until the next mobility event.
-  - At 40 seconds, another shift occurs: 50% of users from each AP move to the other. This event rebalances the load more evenly, and throughput for both APs improves accordingly. Notably, AP33's throughput sharply increases, exceeding 45 Mbps due to a sudden increase in users, while AP32 stabilizes slightly lower, indicating relatively balanced load sharing but still some resource contention.
-  - The green dashed line represents the system-wide average throughput. It dips during periods of transition (notably at 20s and 40s), indicating that user mobility events momentarily degrade overall efficiency before recovery.
-  - AP throughput over time
-![image](a2/figure/throughput_over_time.png)
-- 4.2 Average Throughput per Access Point
-  - Figure 2 displays the average throughput per AP over the entire 60-second period. The throughput for AP32 is slightly higher (29.17 Mbps) compared to AP33 (24.98 Mbps). This discrepancy is consistent with the observed stability and higher number of connected users for AP32 across most of the simulation timeline. The lower average of AP33 can be attributed to the period of low or near-zero throughput following the first user migration event.
-  - Average throughput of two AP
-![image](a2/figure/throughput_avg.png)
-- 4.3 User Association Dynamics
-  - In Figure 3, the number of users connected to each AP is plotted over time. Initially, both APs have 16 connected users. 
-  - At 20 seconds, user redistribution occurs according to the defined mobility rule (25% from Node A to B, 50% from B to A), leading to:
-    - AP32: 16 + 8 (from AP33) - 4 (to AP33) = 20 users
-    - AP33: 16 - 8 + 4 = 12 users
-  - At 40 seconds, both APs exchange 50% of their users (10 from AP32 and 6 from AP33, based on previous user counts). After this:
-    - AP32: 20 - 10 + 6 = 16 users
-    - AP33: 12 - 6 + 10 = 16 users
-  - This results in rebalancing both APs back to 16 users, matching the initial distribution. The user fluctuation directly correlates with throughput dynamics, confirming the impact of load balancing on network performance.
-  - Number of UE in two AP
-    ![image](a2/figure/UE_num_over_time.png)
-  - UE distribution after 20 seconds
-    ![image](a2/figure/twenty_sec_location.png)
-  - UE distribution after 40 seconds
-    ![image](a2/figure/fourty_sec_location.png)
-### 4.4 Summary of Findings
+1. Throughput Dynamics Over Time
+	  - As shown in Figure 1, the throughput of AP32 and AP33 varies significantly across the simulation period. During the initial phase (0–20 seconds), both APs handle their assigned 16 STAs, resulting in relatively stable throughput: approximately 24–30 Mbps for both APs. At the 20-second mark, consistent with the scenario specification, 25% of users (4 users) migrate from AP32 to AP33, while 50% of users (8 users) move from AP33 to AP32. This user redistribution leads to an immediate and noticeable shift in throughput:
+	    - AP32: The throughput initially drops due to the sudden influx of users, reaching a minimum before stabilizing in the 30–40 Mbps range.
+	    - AP33: The throughput plummets to nearly zero as the user count decreases significantly. It remains suppressed until the next mobility event.
+	  - At 40 seconds, another shift occurs: 50% of users from each AP move to the other. This event rebalances the load more evenly, and throughput for both APs improves accordingly. Notably, AP33's throughput sharply increases, exceeding 45 Mbps due to a sudden increase in users, while AP32 stabilizes slightly lower, indicating relatively balanced load sharing but still some resource contention.
+	  - The green dashed line represents the system-wide average throughput. It dips during periods of transition (notably at 20s and 40s), indicating that user mobility events momentarily degrade overall efficiency before recovery.
+	  - AP throughput over time
+
+		![image](a2/figure/throughput_over_time.png)
+
+2. Average Throughput per Access Point
+	  - Figure 2 displays the average throughput per AP over the entire 60-second period. The throughput for AP32 is slightly higher (29.17 Mbps) compared to AP33 (24.98 Mbps). This discrepancy is consistent with the observed stability and higher number of connected users for AP32 across most of the simulation timeline. The lower average of AP33 can be attributed to the period of low or near-zero throughput following the first user migration event.
+  	- Average throughput of two AP
+
+		![image](a2/figure/throughput_avg.png)
+
+3. User Association Dynamics
+	  - In Figure 3, the number of users connected to each AP is plotted over time. Initially, both APs have 16 connected users. 
+	  - At 20 seconds, user redistribution occurs according to the defined mobility rule (25% from Node A to B, 50% from B to A), leading to:
+	    - AP32: 16 + 8 (from AP33) - 4 (to AP33) = 20 users
+	    - AP33: 16 - 8 + 4 = 12 users
+	  - At 40 seconds, both APs exchange 50% of their users (10 from AP32 and 6 from AP33, based on previous user counts). After this:
+	    - AP32: 20 - 10 + 6 = 16 users
+	    - AP33: 12 - 6 + 10 = 16 users
+	  - This results in rebalancing both APs back to 16 users, matching the initial distribution. The user fluctuation directly correlates with throughput dynamics, confirming the impact of load balancing on network performance.
+	  - Number of UE in two AP
+	
+	    ![image](a2/figure/UE_num_over_time.png)
+	  - UE distribution after 20 seconds
+	
+	    ![image](a2/figure/twenty_sec_location.png)
+	  - UE distribution after 40 seconds
+	
+	    ![image](a2/figure/fourty_sec_location.png)
+    
+### 4.5 Summary of Findings
 - The simulation results demonstrate that:
   - Throughput performance is tightly coupled with the number of associated users.
   - Imbalanced user distribution (as seen after the first migration) leads to inefficient resource utilization, particularly affecting the AP with fewer users.
