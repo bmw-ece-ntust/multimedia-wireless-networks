@@ -49,7 +49,7 @@
     - [x] [What is the final users distribution (value of $X_2$ & $Y_2$)? Show the users table for each movement.](a2-M11302201-Yang_ZHI_YANG.md#43-program-explanation-and-segment) (`2-points`)
     - [x] [Show & analyze the figures of the aggregated throughput in Node-A & Node-B through time](a2-M11302201-Yang_ZHI_YANG.md#43-program-explanation-and-segment) (`3-points`):
     - [x] [Show the 5-minutes video simulation](https://youtu.be/4EM2yl1YBZ8) (`3-points`)
-    
+  - [ ] Peer Review (1 point)
 
 ### A3 (DL: 2024/05/14, 08.00 A.M.)
 
