@@ -35,10 +35,9 @@
 - Submissions:
   - [x] [Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/cf672e6ad04880d66418a1387a2d67fabd39d216/a1-M11302204-Lai-Chun-Kai.md)
   - [x] [Video Presentation](https://youtu.be/LONT4zU4AZ8) of your assignment explanation. [Slide](https://gamma.app/docs/Assignment1-M11302204-5k27arcabfu7fsc)
-  - [ ] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
+  - [x] [Peer Review](https://forms.gle/tPVAdfAc4hBiUtg88)
 
 ### A2 (DL: 2024/04/09, 08.00 A.M.)
-
 - [x] [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
 - [x] Submissions: [Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md)
   - NS-3 Installation (1 point)
@@ -48,20 +47,10 @@
   - WiFi Simulation Milestones (2 points)
     - [x] [Network Architecture and Initial Setup - Deploy 2 nodes and assign 16 users to each](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-1-network-topology)  (1 point)
     - [x] [Full-Queue Model Implementation](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-2-transmission-model) (1 point)
-    - [x] [User Movement Analysis](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-3-user-movement-schedule)
-      - Source Code Documentation
-         - [x] [WiFi Handover Simulation (Main Code)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2/src/assignment2.cc)
-         - [x] [Analysis Scripts](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2/src/analysis.py)
-         - [x] [Detailed Analysis Report](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-7-performance-analysis)
-      - Data Files
-         - [x] Throughput Data
-         - [x] User Distribution Data
-         - [x] Simulation Log
+
   - Analysis Report (8 points)
     - [x] [User Distribution Analysis - Final distribution values, movement tables](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-6-user-movement-log) (2 points)
     - [x] [Throughput Analysis - Figures and explanations](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-7-performance-analysis) (3 points)
-    - [x] [Performance Divergence Analysis - In-depth analysis of results](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-8-performance-evaluation)
-    - [x] [Conclusions - Research implications](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#4-conclusion)
     - [x] [Video Simulation - 5-minute demonstration of the simulation](https://youtu.be/1lW0Y37-DYI) (3 points)
   - [ ] Peer Review (1 point)
 
