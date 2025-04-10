@@ -268,8 +268,10 @@ Node B	32	00:00:00:00:00:22
 ![image](https://github.com/user-attachments/assets/60379575-3983-4098-afd0-68e78f59249f)
 
 ### 3-7 Performance Analysis
-
-
+Here is a [simple python code](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2/src/analysis.py) to create the picture about User Movement and Throughput Over Time
+```shell
+python3 analysis.py
+```
 ![image](https://github.com/user-attachments/assets/f91138b3-8eab-4e44-81b5-ab4420f26316)
 Figure1: Throughput Over Time
 > [!NOTE]
