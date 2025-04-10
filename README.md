@@ -242,15 +242,15 @@ Ray -->
   
     Implement a [full-queue model](https://www.nsnam.org/doxygen/d9/db7/fcfs-wifi-queue-scheduler_8cc_source.html). Ensure each STA/UE continuously transmits to AP/BS. (`1-point`)
 
-   - **Simulation Duration:** 10 minutes.  
+   - **Simulation Duration:** 5 minutes.  
    - **User Movement:**  
      - **At minute 3:** 25% of users move from Node A → Node B, and 50% from Node B → Node A.  
      - **At minute 6:** 50% of users move from Node A → Node B, and 50% from Node B → Node A.
      - For each movement, describe which users that moved from A --> B and B --> A in your .
    - **Formulas:**  
-     - **Minute 3:**  
+     - **Time slot 1/3 (100 seconds):**  
             $X_1 = X_0 \times p$ , $\quad Y_1 = Y_0 \times q$  
-     - **Minute 6:**  
+     - **Time slot 2/3 (200 seconds):**  
             $X_2 = X_1 \times p$, $\quad Y_2 = Y_1 \times q$  
    - **Definitions:**  
      - ($p$ = 25\%) → Users moving from Node A to Node B.  
@@ -264,7 +264,7 @@ Ray -->
       - X-axis = time & Y-axis = throughput.
       - Analyze & explain your results.
 
-4. Show the 10-minutes video simulation (`3-points`)
+4. Show the 5-minutes video simulation (`3-points`)
 
 **4. References**  
 
@@ -277,15 +277,15 @@ Ray -->
 
 #### A3
 
+> **Note**: This activity is still under discussion with Prof. Justin Ma
+
 - **Title**: Network Analysis
 - **Deadline**: 13th May, 23.50 A.M.
 - **Materials**: Access this [folder](https://drive.google.com/drive/folders/1nonACMzF6uPbLtvHoyzvDXdjTriUzQUu?usp=sharing):
   1. Wireshark for 5G E2E callflow analysis
   2. KS-wireshark for 5G RRC_NAS callflow analysis
-  3. 2025--LTM_WP_Final_Jan20--GSMA
-  4. 5G E2E QoS callflow logs--5QI3
-  5. 5G E2E Callflow logs for NTUST
-  6. AI tools for NTUST lessons--c2025MAR-u2025_0316
+  3. 5G E2E QoS callflow logs--5QI3
+  4. 5G E2E Callflow logs for NTUST
 
 **1. Submission Guideline**:
 
