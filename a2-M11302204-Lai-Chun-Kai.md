@@ -228,6 +228,8 @@ Simulator::Schedule(Seconds(20), [&staNodesA, &staNodesB, &staDevsA, &staDevsB, 
 cd ~/ns-allinone-3.39/ns-3.39
 ./ns3 run scratch/assignment2.cc
 ```
+![image](https://github.com/user-attachments/assets/4d2a981f-6818-4f18-9922-71386cfb2636)
+
 ### 3-5 User Table (Init)
 ```shell
 Node ID	STA ID	MAC Address
