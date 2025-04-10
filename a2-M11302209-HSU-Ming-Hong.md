@@ -101,6 +101,30 @@ Final distribution:
 ![Network Performance Correlation](assets/throughput_heatmap.png)
 *Figure 3: Heatmap showing the correlation between different network performance metrics. The intensity represents throughput levels across both APs over time.*
 
+#### Detailed Analysis Report Summary
+
+A comprehensive analysis of the network performance data reveals several key insights regarding the WiFi network behavior during and after user migrations. The detailed findings are available in the [full analysis report](/home/ming/multimedia-wireless-networks/a2/src/analysis_report_20250410_155405.md).
+
+Key observations from the data analysis ([throughput.csv](/home/ming/multimedia-wireless-networks/a2/src/throughput.csv), [user_distribution.csv](/home/ming/multimedia-wireless-networks/a2/src/user_distribution.csv), and [simulation logs](/home/ming/multimedia-wireless-networks/a2/src/wifi-execute.log)):
+
+1. **User Distribution Dynamics**:
+   | Time | Users at AP A | Users at AP B | Total Users | Distribution Ratio |
+   |:-----|-------------:|-------------:|------------:|:-------------------|
+   | t=0s | 16 | 16 | 32 | 16:16 |
+   | t=60s | 20 | 12 | 32 | 20:12 |
+   | t=120s | 16 | 16 | 32 | 16:16 |
+
+2. **Phase-specific Performance**:
+   - Initial phase (0-60s): Balanced throughput between APs (~13.9 Mbps each)
+   - First migration phase (60-120s): Reduced throughput for both APs, with AP A at 10.67 Mbps and AP B at 8.44 Mbps
+   - Second migration phase (120-180s): Significant divergence with AP A at 9.53 Mbps and AP B at 18.73 Mbps
+
+3. **Throughput Divergence Analysis**:
+   Despite returning to the identical 16:16 user distribution at t=120s, the network exhibits dramatically different performance characteristics compared to the initial state:
+   - AP A throughput: Decreased by 31.6% compared to initial phase
+   - AP B throughput: Increased by 35.1% compared to initial phase
+   - Throughput ratio shifted from ~1:1 to ~1:1.97 in favor of AP B
+
 #### Key Performance Metrics
 
 1. **Average Throughput**
