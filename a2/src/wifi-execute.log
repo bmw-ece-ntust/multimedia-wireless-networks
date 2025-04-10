@@ -1,6 +1,8 @@
-ming@BMWLAB:~/ns-3-allinone/ns-3.44$ ./ns3 run scratch/wifi-handover-simulation.cc 
+-- Configuring done (2.1s)
+-- Generating done (1.4s)
+-- Build files have been written to: /home/ming/ns-3-allinone/ns-3.44/cmake-cache
 [0/2] Re-checking globbed directories...
-[2/2] Linking CXX executable /home/ming/ns-3-allinone/ns-3.44/build/scratch/ns3.44-wifi-handover-simulation-default
+ninja: no work to do.
 Simulation parameters:
 - Total simulation time: 180 seconds
 - First migration at 60s: 4 users A->B, 8 users B->A
@@ -43,6 +45,6 @@ Station 3 moved from AP B to AP A
 Station 24 moved from AP B to AP A
 Station 25 moved from AP B to AP A
 Time 120s: 16 users at AP A, 16 users at AP B
-Total bytes received at AP 0: 103852032
-Total bytes received at AP 1: 74991616
+Total bytes received at AP 0: 252302272
+Total bytes received at AP 1: 305429696
 Simulation complete

@@ -247,10 +247,16 @@ int main(int argc, char *argv[]) {
 
     // Create wifi devices
     WifiHelper wifi;
-    wifi.SetStandard(WIFI_STANDARD_80211n);
+    wifi.SetStandard(WIFI_STANDARD_80211g); // Use 802.11g instead of n for better compatibility
+    wifi.SetRemoteStationManager("ns3::ConstantRateWifiManager",
+                              "DataMode", StringValue("ErpOfdmRate54Mbps"),  // Use highest 802.11g rate
+                              "ControlMode", StringValue("ErpOfdmRate24Mbps"));
 
-    // Set up PHY
-    YansWifiChannelHelper channel = YansWifiChannelHelper::Default();
+    YansWifiChannelHelper channel;
+    channel.SetPropagationDelay("ns3::ConstantSpeedPropagationDelayModel");
+    channel.AddPropagationLoss("ns3::LogDistancePropagationLossModel",
+                              "Exponent", DoubleValue(3.0));
+
     YansWifiPhyHelper phy;
     phy.SetChannel(channel.Create());
 
@@ -258,9 +264,7 @@ int main(int argc, char *argv[]) {
     WifiMacHelper mac;
     Ssid ssid = Ssid("wifi-handover-network");
     mac.SetType("ns3::ApWifiMac",
-               "Ssid", SsidValue(ssid),
-               "BeaconGeneration", BooleanValue(true),
-               "BeaconInterval", TimeValue(MicroSeconds(102400)));
+               "Ssid", SsidValue(ssid));
 
     // Install on AP nodes
     NetDeviceContainer apDevices = wifi.Install(phy, mac, apNodes);
@@ -276,23 +280,22 @@ int main(int argc, char *argv[]) {
     // Set mobility model
     MobilityHelper mobility;
 
-    // Position APs
+    // Position APs and configure mobility
     Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator>();
-    for (uint32_t i = 0; i < nAps; i++) {
-        positionAlloc->Add(Vector(i * 50.0, 0.0, 0.0));
-    }
+    positionAlloc->Add(Vector(0.0, 0.0, 0.0));  // AP A at origin
+    positionAlloc->Add(Vector(40.0, 0.0, 0.0)); // AP B at 40m distance
     mobility.SetPositionAllocator(positionAlloc);
     mobility.SetMobilityModel("ns3::ConstantPositionMobilityModel");
     mobility.Install(apNodes);
 
-    // Random walk for stations
+    // More controlled station positioning
     mobility.SetPositionAllocator("ns3::RandomDiscPositionAllocator",
-                                 "X", DoubleValue(25.0),
-                                 "Y", DoubleValue(0.0),
-                                 "Rho", StringValue("ns3::UniformRandomVariable[Min=0|Max=30]"));
+                                "X", DoubleValue(20.0),
+                                "Y", DoubleValue(0.0),
+                                "Rho", StringValue("ns3::UniformRandomVariable[Min=0|Max=20]"));
     mobility.SetMobilityModel("ns3::RandomWalk2dMobilityModel",
-                             "Bounds", RectangleValue(Rectangle(-50, 100, -50, 50)),
-                             "Speed", StringValue("ns3::ConstantRandomVariable[Constant=2.0]"));
+                            "Bounds", RectangleValue(Rectangle(-10, 50, -25, 25)),
+                            "Speed", StringValue("ns3::ConstantRandomVariable[Constant=1.0]"));
     mobility.Install(staNodes);
 
     // Install Internet stack
@@ -327,8 +330,14 @@ int main(int argc, char *argv[]) {
     OnOffHelper onoff("ns3::UdpSocketFactory", Address());
     onoff.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1]"));
     onoff.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
-    onoff.SetAttribute("DataRate", DataRateValue(DataRate("1Mbps")));
-    onoff.SetAttribute("PacketSize", UintegerValue(1024));
+    onoff.SetAttribute("DataRate", DataRateValue(DataRate("24Mbps"))); // Higher but sustainable rate
+    onoff.SetAttribute("PacketSize", UintegerValue(1472));
+
+    // Configure TCP parameters for better performance
+    Config::SetDefault("ns3::TcpSocket::SegmentSize", UintegerValue(1448));
+    Config::SetDefault("ns3::TcpSocket::DelAckCount", UintegerValue(2));
+    Config::SetDefault("ns3::TcpSocket::SndBufSize", UintegerValue(524288));
+    Config::SetDefault("ns3::TcpSocket::RcvBufSize", UintegerValue(524288));
 
     // Install applications on all stations
     ApplicationContainer clientApps;
