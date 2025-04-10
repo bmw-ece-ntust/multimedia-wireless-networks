@@ -52,7 +52,7 @@
     - [x] [User Distribution Analysis - Final distribution values, movement tables](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-6-user-movement-log) (2 points)
     - [x] [Throughput Analysis - Figures and explanations](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302204-Lai-Chun-Kai/a2-M11302204-Lai-Chun-Kai.md#3-7-performance-analysis) (3 points)
     - [x] [Video Simulation - 5-minute demonstration of the simulation](https://youtu.be/1lW0Y37-DYI) (3 points)
-  - [ ] Peer Review (1 point)
+- [ ] Peer Review (1 point)
 
 
 ### A3 (DL: 2024/05/14, 08.00 A.M.)
