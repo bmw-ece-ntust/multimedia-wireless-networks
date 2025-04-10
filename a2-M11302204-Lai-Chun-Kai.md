@@ -120,8 +120,48 @@ Where:
 
 ---
 ### 3-4 Execution steps
-### 3-5 User Table
+```shell=
+cd ~/ns-allinone-3.39/ns-3.39
+./ns3 run scratch/assignment2.cc
+```
+### 3-5 User Table (Init)
+```shell=
+Node ID	STA ID	MAC Address
+Node A	1	00:00:00:00:00:03
+Node A	2	00:00:00:00:00:04
+Node A	3	00:00:00:00:00:05
+Node A	4	00:00:00:00:00:06
+Node A	5	00:00:00:00:00:07
+Node A	6	00:00:00:00:00:08
+Node A	7	00:00:00:00:00:09
+Node A	8	00:00:00:00:00:0a
+Node A	9	00:00:00:00:00:0b
+Node A	10	00:00:00:00:00:0c
+Node A	11	00:00:00:00:00:0d
+Node A	12	00:00:00:00:00:0e
+Node A	13	00:00:00:00:00:0f
+Node A	14	00:00:00:00:00:10
+Node A	15	00:00:00:00:00:11
+Node A	16	00:00:00:00:00:12
+Node B	17	00:00:00:00:00:13
+Node B	18	00:00:00:00:00:14
+Node B	19	00:00:00:00:00:15
+Node B	20	00:00:00:00:00:16
+Node B	21	00:00:00:00:00:17
+Node B	22	00:00:00:00:00:18
+Node B	23	00:00:00:00:00:19
+Node B	24	00:00:00:00:00:1a
+Node B	25	00:00:00:00:00:1b
+Node B	26	00:00:00:00:00:1c
+Node B	27	00:00:00:00:00:1d
+Node B	28	00:00:00:00:00:1e
+Node B	29	00:00:00:00:00:1f
+Node B	30	00:00:00:00:00:20
+Node B	31	00:00:00:00:00:21
+Node B	32	00:00:00:00:00:22
+```
 ### 3-6 User Movement Log
+![image](https://github.com/user-attachments/assets/60379575-3983-4098-afd0-68e78f59249f)
 
 
 
