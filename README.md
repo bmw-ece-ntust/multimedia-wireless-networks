@@ -41,10 +41,15 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
 - Submissions:
-  - [ ] [Study Note](path to another .md file for your assignment)
-  - [ ] [Flowchart + source code for simulation and analysis](path to specific section in your study note)
-  - [ ] [Numercial Results (should be identical as the paper)](path to specific section in your study note)
-  - [ ] [Peer Review](https://forms.gle/njd22Apu7ZGTbKzJ7)
+  - [x] [NS-3 Installation](a2-M11302201-Yang_ZHI_YANG.md#page_facing_up-3-installation) (`1-points`)
+  - [x] LTE / WiFi Simulation (`2-points`):
+    - [x] [Deploy 2 nodes and assign users](a2-M11302201-Yang_ZHI_YANG.md#43-program-explanation-and-segment)
+    - [x] [Full-Queue Model Transmission](a2-M11302201-Yang_ZHI_YANG.md#43-program-explanation-and-segment)
+  - [x] Analysis Report (`8-points`):
+    - [x] [What is the final users distribution (value of $X_2$ & $Y_2$)? Show the users table for each movement.](a2-M11302201-Yang_ZHI_YANG.md#43-program-explanation-and-segment) (`2-points`)
+    - [x] [Show & analyze the figures of the aggregated throughput in Node-A & Node-B through time](a2-M11302201-Yang_ZHI_YANG.md#43-program-explanation-and-segment) (`3-points`):
+    - [x] [Show the 5-minutes video simulation](https://youtu.be/4EM2yl1YBZ8) (`3-points`)
+    
 
 ### A3 (DL: 2024/05/14, 08.00 A.M.)
 
