@@ -7,9 +7,14 @@ Video Results: https://youtu.be/NDP3rKHAqxA
     - [2.1 Prerequisites](#21-prerequisites)
     - [2.2 Download and Install NS-3](#22-download-and-install-ns-3)
     - [2.3 Test NS-3](#23-test-ns-3)
-  - [3. WiFi Simulation](#3-wifi-simulation)
-  - [4. Simulation](#4-simulation)
-  - [5. Results and analysis](#5-results-and-analysis)
+  - [3. Simulation: Deploy 2 nodes and assign users](#3-simulation-deploy-2-nodes-and-assign-users)
+  - [4. Simulation: Full-Queue Model Transmission \& Random Mobility Model](#4-simulation-full-queue-model-transmission--random-mobility-model)
+  - [5. Results and Analysis](#5-results-and-analysis)
+    - [5.1 Mac Address Results](#51-mac-address-results)
+    - [5.2 Handover Results](#52-handover-results)
+      - [Users Distribution](#users-distribution)
+    - [5.3 Throughput Results](#53-throughput-results)
+  - [6. Conclusion](#6-conclusion)
   - [References](#references)
 
 
@@ -215,7 +220,7 @@ List of CRASHed tests:
 Only one test failed, which is the threaded-simulator test. It means that majority of the tests passed successfully. The simulator is ready to use.
 
 
-## 3. WiFi Simulation
+## 3. Simulation: Deploy 2 nodes and assign users
 
 This is the topology of the simulation.
 
@@ -374,7 +379,7 @@ Details of the code:
 * The MAC addresses are saved in a CSV file named [`sta_mac_addresses.csv`](../a2/results/mac_address.csv). 
 
 
-## 4. Simulation
+## 4. Simulation: Full-Queue Model Transmission & Random Mobility Model
 
 The simulation is done in 60 seconds with full queue traffic. Every traffic will send udp to its own AP with data rate 1 Mbps. Every 20 seconds there will be handover from one AP to another AP. The handover will be done by switching the SSID of the STA and changing the destination IP address of the traffic generator application. The code:
 
@@ -600,10 +605,13 @@ Details of the code:
 * After that, the handover will be done by calling the `PerformSwitchAp` function at 60 seconds and 120 seconds. The first handover will switch 25% of the STAs from AP-A to AP-B, and the second handover will switch 50% of the STAs from AP-B to AP-A. The handover will also be saved in the CSV file.
 * The `LogThroughput` function is called to log the throughput of the simulation. The throughput is calculated based on the number of packets received at the APs and the time interval. The throughput is saved in a CSV file named [`throughput.csv`](../a2/results/throughput.csv) which can be found in the results folder.
 
-## 5. Results and analysis
+## 5. Results and Analysis
 
-This is the results of the simulation. 
-* First, the result of the MAC Address. The mac address will save the MAC address of the STAs in a CSV file. The table result:
+This is the results of the simulation:
+
+
+### 5.1 Mac Address Results
+First, the result of the MAC Address. The mac address will save the MAC address of the STAs in a CSV file. The table result:
   
 | STA         | MAC Address          |
 |-------------|----------------------|
@@ -640,7 +648,8 @@ This is the results of the simulation.
 | STA-B-15    | 00:00:00:00:00:1f    |
 | STA-B-16    | 00:00:00:00:00:20    |
 
-* The second result is the handover log. The log will save the handover of the STAs in a CSV file.The table result:
+### 5.2 Handover Results
+The second result is the handover log. The log will save the handover of the STAs in a CSV file.The table result:
 
 | Time (s) | STA ID | Old SSID   | New SSID   |
 --|-----------------|---------|---------
@@ -673,10 +682,11 @@ This is the results of the simulation.
 40|00:00:00:00:00:1d|network-B|network-A
 40|00:00:00:00:00:1e|network-B|network-A
 
+#### Users Distribution
 Summary table of the handover:
 | Time (s) | AP-A to AP-B | AP-B to AP-A |
 |-----------|--------------|--------------|
-| 20        | 4  ($X_0$ x 25%)          | 12   ($Y_0$ x 50%)         |
+| 20        | 4  ($X_0$ x 25%)          | 8    ($Y_0$ x 50%)         |
 | 40        | 10 ($X_1$ x 50%)          | 6    ($Y_1$ x 50%)         |
 
 
@@ -689,7 +699,9 @@ Summary table of number of STAs:
 
 Based on the result, we can see that the handover is done successfully. The STAs will switch from one AP to another AP based on the percentage and specific time that is set in the code.
 
-* The third result is the throughput of the simulation. The throughput will be logged in a CSV file in the [`throughput.csv`](../a2/results/throughput.csv). Actually the throughput saved is the total bytes, so we need to perform calculation to get the throughput in MBps. We will calculate this using python. The python notebook file is in the [`Result Plot.ipynb`](../a2/src/Result%20Plot.ipynb). The notebook also output the plot of the throughput. The graph is shown below:
+### 5.3 Throughput Results
+
+The third result is the throughput of the simulation. The throughput will be logged in a CSV file in the [`throughput.csv`](../a2/results/throughput.csv). Actually the throughput saved is the total bytes, so we need to perform calculation to get the throughput in MBps. We will calculate this using python. The python notebook file is in the [`Result Plot.ipynb`](../a2/src/Result%20Plot.ipynb). The notebook also output the plot of the throughput. The graph is shown below:
 
 ![Throughput](../a2/results/throughput_plot.jpg)
 The graph shows the throughput of the simulation.
@@ -697,6 +709,14 @@ The graph shows the throughput of the simulation.
 *  On the first handover (20s), the throughput of AP Network A will increase because after first handover, AP Network A will have 20 STAs and AP Network B will have 12 STAs. This results in increase of throughput of AP Network A around 25% to 1.25 MBPs and the throughput of AP Network B will decrease to 0.7 MBPs.
 *  On the second handover (40s), the throughput of AP Network A will decrease to around 1.1 MBPs and then decreasing again to be the same as Network B. The throughput of AP Network B will increasing gradually to 1 MBps to be the same as network A. This is because the STAs do handover again, 10 STAs from AP Network A to AP Network B and 6 STAs from AP Network B to AP Network A. That means that in the end, both AP will have the same sta again, which is, 16 sta. So, in the end, both APs will have the same throughput around 1 MBps.
 
+## 6. Conclusion
+
+Conclusion of the simulation:
+* NS-3 is a powerful tool for simulating wireless networks. It can be used to simulate various scenarios, including handover and mobility.
+* NS-3 can simulate various network protocols, including Wi-Fi, LTE, and others. It can also simulate various network topologies and traffic patterns.
+* The simulation shows that the handover is done successfully. The STAs will switch from one AP to another AP based on the percentage and specific time that is set in the code.
+* The throughput of the simulation is not ideal because of the interference between the two APs. The AP Network A and AP Network B are too close to each other, so the signal will interfere with each other. This will cause the throughput to decrease. However, the throughput is still above 1 MBPs.
+* The simulation also shows that the throughput will increase after the first handover, and then decrease again after the second handover. This is because the STAs do handover again, 10 STAs from AP Network A to AP Network B and 6 STAs from AP Network B to AP Network A. That means that in the end, both AP will have the same sta again, which is, 16 sta. So, in the end, both APs will have the same throughput around 1 MBps.
 
 ## References
 * [NS-3](https://www.nsnam.org/)
