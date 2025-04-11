@@ -1059,6 +1059,8 @@ int main(int argc, char *argv[]) {
 ## Output
 ### UE connection status
 
+![alt text](./ue_movement.gif)
+
 | Time | eNodeB A | eNodeB B |
 | --- | --- | --- |
 | Initial | 16 users (UE 0-15) | 16 users (UE 16-31) |
@@ -1098,6 +1100,8 @@ Time 360.0s: eNodeB A Throughput = 13.12 Mbps, eNodeB B Throughput = 13.12 Mbps
 
 ---
 ## Analyze
+
+![alt text](./throughput.png)
 
 ### **Expected:**
 ```
