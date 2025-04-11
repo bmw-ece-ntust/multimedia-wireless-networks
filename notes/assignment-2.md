@@ -529,8 +529,10 @@ ApplicationContainer InstallFullQueueTraffic(Ptr<Node> sender, Address sinkAddre
     app.Start(Seconds(startTime));
     app.Stop(Seconds(stopTime));
     return app;
+}
 
-
+//Continuation of the Main Function
+int main (){
     // Set up packet sink to receive packets at APs
     PacketSinkHelper sink("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), 9));
     ApplicationContainer sinkAppsA = sink.Install(wifiApNodes.Get(0));
@@ -662,7 +664,8 @@ This is the results of the simulation.
 
 Based on the result, we can see that the handover is done successfully. The STAs will switch from one AP to another AP based on the percentage and specific time that is set in the code.
 
-* The third result is the throughput of the simulation. The throughput will be logged in a CSV file. The result in graph:
+* The third result is the throughput of the simulation. The throughput will be logged in a CSV file in the [`throughput.csv`](../a2/results/throughput.csv). Actually the throughput saved is the total bytes, so we need to perform calculation to get the throughput in MBps. We will calculate this using python. The python notebook file is in the [`Result Plot.ipynb`](../a2/src/Result%20Plot.ipynb). The notebook also output the plot of the throughput. The graph is shown below:
+
 ![Throughput](../a2/results/throughput_plot.jpg)
 The graph shows the throughput of the simulation.
 * During the first 20s, the throughput of AP Network A is almost the same as AP Network B, which are around 1.1MBPs. Ideally the throughput should have around 2 MBPs, because each AP has 16 sta, and each sta have 1Mbps of data rate. So the total throughput of each AP is 16 * 1Mbps = 16 Mbps (2MBps). But, in the simulation, the throughput is not ideal because of the interference between the two APs. The AP Network A and AP Network B are too close to each other, so the signal will interfere with each other. This will cause the throughput to decrease. However, the throughput is still above 1 MBPs.
