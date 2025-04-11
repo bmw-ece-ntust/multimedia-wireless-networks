@@ -37,7 +37,7 @@
   - [x] [Video Presentation](https://youtu.be/RXiG3igOxuw?si=jHhZVlrCHYRaYTe0) of your assignment explanation. [Slide](https://drive.google.com/file/d/15XFntVkqvcJzERV4c7_k3KHkzRmi6CAk/view?usp=sharing)
   - [x] [Peer Review](https://forms.gle/odfFSV2dWQgKTxMw5)
 
-### A2 (DL: 2024/04/09, 08.00 A.M.)
+### A2 (DL: 2025/04/11, 11.59 P.M.)
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
 - Submissions: [Study note](a2-M11302201-Yang_ZHI_YANG.md)
