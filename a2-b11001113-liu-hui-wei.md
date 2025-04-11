@@ -199,16 +199,18 @@ nano scratch/setup-nodes.cc
 This code sets up a WiFi network simulation with:
 
 **Network Structure:**
-1. Creates 2 Access Points (APs) named Node A and Node B
-2. Connects 16 Station devices (STAs) to each AP (32 STAs total)
+1.  Node Composition: The simulation includes 2 access points (AP-A and AP-B) and 32 stations (STAs, divided into two groups: wifiStaNodesA and wifiStaNodesB, each with 16 STAs).
+2.  Network Segmentation: AP-A and its STAs use the 10.1.1.0/24 subnet, while AP-B and its STAs use the 10.1.2.0/24 subnet.
+3.  Traffic Setup: AP-A sends UDP traffic to the first STA in wifiStaNodesA, and AP-B sends UDP traffic to the first STA in wifiStaNodesB, simulating AP-to-STA communication.
 
 **WiFi Configuration:**
-1. Uses 802.11n standard with high-speed MCS7 mode
-2. Sets different SSIDs for each AP (NodeA/NodeB)
+1.  WiFi Standard: Uses the 802.11n standard with ConstantRateWifiManager for rate control, setting both data and control modes to HtMcs7.
+2.  SSID Configuration: AP-A uses the SSID "NodeA", and AP-B uses the SSID "NodeB"; wifiStaNodesA are initially associated with AP-A, and wifiStaNodesB with AP-B.
+3.  Physical Layer: Utilizes YansWifiChannelHelper to create a default WiFi channel, with no specific adjustments to physical layer parameters.
 
 **Positioning:**
-1. Places APs 100m apart (NodeA at 0,0 and NodeB at 100,0)
-2. Arranges STAs in a grid pattern around their APs
+1.  Node Positioning: AP-A is fixed at (0, 0, 0), and AP-B is fixed at (100, 0, 0), simulating a spatial separation of 100 units.
+2.  STA Positioning: Uses GridPositionAllocator to assign STA positions, starting at (0, 0) with a spacing of 10 units, a grid width of 3, and a row-first layout; all nodes use ConstantPositionMobilityModel, keeping positions fixed without movement.
 
 
 
@@ -388,20 +390,28 @@ nano scratch/setup-codes-3min.cc
 
 
 **Basic Setup:**
-1. Creates 2 eNodeBs (Cell_A at (0,0) and Cell_B at (500,0))
-2. Distributes 32 UEs evenly between both cells initially
+1. Environment Setup: The program uses ns-3 to simulate a WiFi network, consisting of 2 access points (AP-A and AP-B), 32 stations (STAs, divided into two groups: staNodesA and staNodesB, each with 16 STAs), and 1 remote host (remoteHost).
+2. Node Positioning: AP-A is located at (0, 0, 0), AP-B at (500, 0, 0); staNodesA are initially positioned around x=50, and staNodesB around x=450, simulating spatial distribution.
+3. Network Stack: An Internet protocol stack is installed on all nodes, and a point-to-point (P2P) link connects AP-A to the remoteHost with a data rate of 100Mbps and a delay of 2ms.
+4. IP Assignment: APs and STAs use the 10.1.1.0/24 subnet, while the remoteHost uses the 7.0.0.0/8 subnet. Static routing is configured to ensure the remoteHost can reach all STAs.
 
 **Handover Simulation:**
-1. At 20 seconds: Forces handover by physically moving UEs (4 from Cell_A→Cell_B and 8 from Cell_B→Cell_A)
-2. At 40 seconds: Rebalances UEs back to original distribution
+1. Simulation Scenario: The simulation runs for 40 seconds with two mobility events to achieve load balancing:
+- At 10 seconds: Move 4 STAs from AP-A to AP-B’s coverage area, expecting AP-A to have 20 users and AP-B to have 12 users.
+- At 20 seconds: Move 4 STAs from AP-A back to AP-A, and move 8 STAs from AP-B to AP-A, expecting AP-A and AP-B to each have 16 users.
+2. Reassociation: The ReassociateStaToNearestAp function dynamically adjusts STA associations based on their distance to APs, with STAs connecting to the nearest AP (AP-A or AP-B).
+3. Connection Status Monitoring: The PrintStaConnectionStatus function prints the number of users on AP-A and AP-B every second, verifying load balancing at 10, 20, and 40 seconds.
 
 **Data Collection:**
-1. Records UE count per cell every second in handover_data.csv
-2. Prints real-time status showing UE distribution between cells
+1. Throughput Logging: The MonitorThroughput function uses FlowMonitor to calculate the throughput of AP-A and AP-B every 0.1 seconds, logging the results to throughput.csv.
+2. Position Logging: The LogStaPositions function records the positions (x, y coordinates) of all STAs, saving them to sta_positions.csv.
+3. Final Statistics: At the end of the simulation, the CalculateFinalThroughput function computes the total throughput, outputting the number of transmitted packets (TX Packets), received packets (RX Packets), and overall throughput (Throughput).
 
 **Key Configurations:**
-1. Uses A3-RSRP handover algorithm with 1.5dB hysteresis
-2. Sets 256ms time-to-trigger for handovers
+1. WiFi Settings: Uses the 802.11n standard with MinstrelHtWifiManager as the rate control algorithm, and sets the transmit power to 20 dBm.
+2. UDP Traffic: The remoteHost sends UDP traffic to each STA with a packet size of 512 bytes, a sending interval of 10 milliseconds, and a maximum of 100,000 packets, running from 1 second to 40 seconds.
+3. FlowMonitor: Starts monitoring traffic from 1 second, capturing statistics for all nodes.
+4. Logging: Enables logging for WifiHandoverSim (INFO level) and disables tracing logs for UdpClient and UdpServer (set to ERROR level) to reduce output interference.
 
 
 ```cpp
@@ -792,7 +802,99 @@ int main(int argc, char *argv[]) {
 ![messageImage_1744371887511_0](https://github.com/user-attachments/assets/61da1955-1dea-4c53-8760-29a45966ccfd)
 
 
+### Analysis reports
+**1. User Distribution Issues**
 
+Possible Causes:
+- Reassociation Logic Error:
+   - The simulation uses the ReassociateStaToNearestAp function to reassign STAs based on their distance to APs. However, there may be a logic error causing STAs to associate with the wrong AP. For example, at 10 seconds, 4 STAs are moved from AP-A to AP-B's coverage area, but after reassociation, they may still associate with AP-A.
+     
+- Distance Calculation Issue:
+   - The distance calculation may be incorrect (e.g., due to inconsistent coordinate systems), leading STAs to associate with the wrong AP.
+     
+- Reassociation Not Triggered:
+   - After a mobility event, the STA's MAC layer may not update its SSID in time, causing the user distribution to not change as expected.
+     
+- Incorrect STA Selection for Mobility Events:
+   - The number or direction of moved STAs may be incorrect. For example, at 10 seconds, 4 STAs should move from AP-A to AP-B, but the actual movement direction may be reversed.
 
+**Impact:**
+Incorrect user distribution leads to load imbalance, with AP-A and AP-B user counts not meeting expectations, affecting the simulation's load balancing goal.
+
+**2. Throughput Issues**
+
+Possible Causes:
+- High Packet Loss Rate:
+  - The packet loss rate is approximately 70.5%, with potential causes including:
+    - STAs Too Far from APs: After mobility events, some STAs may move beyond the AP's coverage range, causing packets to fail transmission. For example, STAs moved to x = 450 may be outside AP-B's coverage.
+    - WiFi Interference and Collisions: With 32 STAs transmitting UDP traffic simultaneously, channel contention and collisions may increase packet loss.
+    - AP Overload: After the first mobility event at 10 seconds, AP-B has 20 users, potentially overloading AP-B and preventing it from handling all traffic.
+      
+- Throughput Calculation Issue:
+  - FlowMonitor may not correctly capture all traffic, or there may be errors in the calculation logic. For example, after a mobility event, STAs may disconnect from the AP, interrupting traffic and affecting throughput statistics.
+    
+- Inappropriate UDP Traffic Parameters:
+  - Current settings:
+    - Packet size: 512 bytes
+    - Sending interval: 10 milliseconds (100 packets/second)
+    - Theoretical throughput per STA: 100 * 512 * 8 = 409,600 bits/second = 0.4096 Mbps
+    - Total theoretical throughput for 32 STAs: 32 * 0.4096 = 13.1072 Mbps
+  - The actual throughput is only 0.409263 Mbps, far below the theoretical value, primarily due to the high packet loss rate.
+    
+- Poor Receiver Performance:
+  - The poor performance of the receiver (STAs) may be due to the following reasons:
+    - WiFi Physical Layer Parameters: The transmit power (TxPower) may be insufficient, leading to low signal strength and packet loss. The current setting is 20 dBm, which may not be enough to cover STAs after mobility.
+    - STA Processing Capability: The STA's MAC layer may not be able to handle high-frequency packets, resulting in packet loss.
+    - Connection Interruption After Mobility: STAs may not reassociate with a new AP in time after moving, causing traffic interruption.
+    - Channel Interference: The WiFi channel may experience interference (e.g., multiple STAs sharing the same channel), leading to packet loss.
+      
+**Impact:**
+- A high packet loss rate results in throughput far below expectations, failing to reflect the simulation's true performance.
+- Poor receiver performance affects the simulation's load balancing effectiveness, as some STAs cannot receive traffic properly.
+
+**Solutions**
+1. Fix User Distribution Issues
+- Adjust Reassociation Logic:
+  - Ensure the ReassociateStaToNearestAp function correctly calculates distances and reassigns STAs immediately after mobility events.
+  - Add logging to verify the reassociation result for each STA, ensuring they associate with the correct AP.
+    
+- Correct STA Selection for Mobility Events:
+  - Ensure the number and direction of moved STAs are correct:
+     - At 10 seconds: Move 4 STAs from AP-A to AP-B.
+     - At 20 seconds: Move 4 STAs from AP-A back to AP-A, and move 8 STAs from AP-B to AP-A.
+       
+- Delay Reassociation:
+  - Introduce a slight delay (e.g., 0.1 seconds) after mobility events before performing reassociation, ensuring STA position updates are complete.
+    
+2. Fix Throughput Issues
+- Reduce Packet Loss:
+  - Increase WiFi transmit power (TxPower), e.g., from 20 dBm to 30 dBm, to ensure STAs remain connected to APs after mobility.
+  - Adjust the initial positions of STAs to ensure they remain within the AP's coverage range before and after mobility. For example, adjust staNodesB initial positions from x = 450 to a position closer to AP-B.
+  - Reduce the UDP traffic sending frequency, e.g., increase the Interval from 10ms to 20ms, to reduce channel contention.
+    
+- Ensure Connection Stability:
+  - After mobility events, check the connection status of STAs to ensure they are correctly associated with the new AP.
+  - If an STA disconnects, force reassociation.
+    
+- Adjust Throughput Calculation:
+  - Ensure FlowMonitor correctly captures all traffic, and verify the logic in MonitorThroughput and CalculateFinalThroughput.
+  - Extend the time range for traffic statistics to exclude the impact of startup and mobility events.
+    
+- Optimize Receiver Performance:
+  - Increase the transmit power of APs and STAs to improve signal strength.
+  - Reduce the number of STAs transmitting simultaneously, or use different WiFi channels to reduce interference.
+  - Adjust the UDP packet size (e.g., increase to 1024 bytes) to improve throughput.
+    
+**Expected Improvements**
+- User Distribution:
+  - At 10 seconds: AP-A has 20 users, AP-B has 12 users.
+  - At 20 seconds: AP-A and AP-B each have 16 users, achieving load balancing.
+    
+- Throughput:
+  - Reduce packet loss rate (target below 10%).
+  - Increase throughput, expected to reach 5-10 Mbps, closer to the theoretical value.
+    
+**Conclusion :**
+The user distribution issues are primarily caused by errors in reassociation logic and mobility event design, while the throughput issues stem from high packet loss and poor receiver performance. By adjusting the reassociation logic, optimizing mobility events, increasing transmit power, and tuning traffic parameters, these issues can be effectively resolved, improving the accuracy and performance of the simulation.
 
 
