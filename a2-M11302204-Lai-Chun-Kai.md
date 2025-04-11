@@ -297,6 +297,22 @@ A slight throughput disparity may persist due to positional differences or inter
 > Overall Trend (0–30 seconds):
 Node-A generally achieves higher peak throughput (~40 Mbps) than Node-B (~30 Mbps), possibly due to its location at (0, 0, 0) experiencing less interference.
 Throughput fluctuates due to random STA mobility and continuous traffic, with a ceiling imposed by the 802.11ac standard and contention.
+
+![image](https://github.com/user-attachments/assets/6cfeb70e-1875-4d64-b2d7-a0cbd54c2453) 
+Ref: Ming's simulation about 3mins
+
+Because the limitation of my computrer is 30 seconds simulation. So, I want to campare with Ming Result about the influence between short and long simulation.
+* Short Simulation (30 seconds):
+Advantages: Captures initial transient and steady-state behavior, computationally feasible, and provides a quick throughput snapshot (Node A: 38-40 Mbps, Node B: 28-30 Mbps).
+Limitations: Misses migration events (e.g., at 50 and 125 seconds), potentially overestimating stability (Node A) or underestimating degradation (Node B). Long-term trends and rare events (e.g., contention effects) are not observed.
+* Long Simulation (175 seconds, "Ming Result"):
+Advantages: Offers a comprehensive view, including migration impacts, long-term stability, and statistical reliability. Reveals dynamic responses (e.g., AP A dropping to 5 Mbps, AP B rising to 20 Mbps) critical for assessing network adaptability.
+Limitations: Exceeds the user’s computational capacity, requiring more resources.
+* Direct Comparison:
+The 30-second simulation reflects baseline performance but lacks the dynamic events seen in the 175-second "Ming Result."
+Node A’s stability in 30 seconds (38-40 Mbps) contrasts with AP A’s variability in 175 seconds (10-20 Mbps pre-migration, 5 Mbps post-migration), suggesting configuration differences or event impacts.
+Node B’s slight decline (28-30 Mbps) might persist or stabilize in a longer run, as seen in AP B’s post-migration behavior (10-15 Mbps).
+
 ---
 
 ### 3-8 Performance Evaluation
