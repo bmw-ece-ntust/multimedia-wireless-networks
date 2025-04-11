@@ -32,7 +32,7 @@
 - Submissions:
   - [x] [Study Note](notes/assignment-2.md)
   - [x] [Video Presentation](https://youtu.be/NDP3rKHAqxA) of your assignment explaanation.
-  - [x] [Source code for simulation and analysis](./a2/src/)
+  - [x] [Source code](./a2/src/) for [simulation](./a2/src/assignment-2-wifi.cc) and [analysis](./a2/src/Result%20Plot.ipynb)
   - [x] [Numerical Results](./a2/results/)
   - [ ] [Peer Review](https://forms.gle/eGE2JJgjXpCXwqfq7)
 
