@@ -78,7 +78,7 @@
     2. Show & analyze the figures of the aggregated throughput in Node-A & Node-B through time (`3-points`):
         - X-axis = time & Y-axis = throughput.
         - Analyze & explain your results.
-- [x] Show the 10-minutes video simulation (`3-points`)
+- [x] Show the 3-minutes video simulation (`3-points`)
 ```
 </aside>
 
@@ -115,39 +115,93 @@ Simulation source code: [`./a2/src/mySimulation.cc`](./a2/src/mySimulation.cc)
 ### Input: Compile and Run  
 ```bash
 cd ns-3
-./ns3 run mySimulation
+./ns3 run scratch/mySimulation 2>full_log_comibined.txt
 ```
 
 ### Output:
-- Include key figures and graphs here (e.g., throughput vs time).
-- You can use `Gnuplot`, `matplotlib`, or save logs to `.csv`.
-
-#### Example Output (placeholder):
+- The simulation provides throughput ``, `aggregated_throughput.txt`, and  log file `full_log_combined.txt`.
+- shell window will show what STA moves when `--- User Initial Assignment Table (at 0s) ---
+- 
 ```
-Simulation started...
-UE attached to eNodeB
-Received packets: 1024
-Average throughput: 2.5 Mbps
+ID|Initial AP|IP
+-----------------------------------------
+ 0|         A|10.1.1.3
+ 1|         A|10.1.1.4
+ 2|         A|10.1.1.5
+ 3|         A|10.1.1.6
+ 4|         A|10.1.1.7
+ 5|         A|10.1.1.8
+ 6|         A|10.1.1.9
+ 7|         A|10.1.1.10
+ 8|         A|10.1.1.11
+ 9|         A|10.1.1.12
+10|         A|10.1.1.13
+11|         A|10.1.1.14
+12|         A|10.1.1.15
+13|         A|10.1.1.16
+14|         A|10.1.1.17
+15|         A|10.1.1.18
+16|         B|10.1.1.19
+17|         B|10.1.1.20
+18|         B|10.1.1.21
+19|         B|10.1.1.22
+20|         B|10.1.1.23
+21|         B|10.1.1.24
+22|         B|10.1.1.25
+23|         B|10.1.1.26
+24|         B|10.1.1.27
+25|         B|10.1.1.28
+26|         B|10.1.1.29
+27|         B|10.1.1.30
+28|         B|10.1.1.31
+29|         B|10.1.1.32
+30|         B|10.1.1.33
+31|         B|10.1.1.34
+-----------------------------------------
+
+== Moving STAs physically at 60s ==
+Moving 4 STAs physically from AP1 area -> AP2 area:
+  - STA node 0 moved near AP B.
+  - STA node 1 moved near AP B.
+  - STA node 2 moved near AP B.
+  - STA node 3 moved near AP B.
+Moving 8 STAs physically from AP2 area -> AP1 area:
+  - STA node 16 moved near AP A.
+  - STA node 17 moved near AP A.
+  - STA node 18 moved near AP A.
+  - STA node 19 moved near AP A.
+  - STA node 20 moved near AP A.
+  - STA node 21 moved near AP A.
+  - STA node 22 moved near AP A.
+  - STA node 23 moved near AP A.
+
+== Moving STAs physically at 120s ==
+Moving 10 STAs physically from AP1 area -> AP2 area:
+  - STA node 4 moved near AP B.
+  - STA node 5 moved near AP B.
+  - STA node 6 moved near AP B.
+  - STA node 7 moved near AP B.
+  - STA node 8 moved near AP B.
+  - STA node 9 moved near AP B.
+  - STA node 10 moved near AP B.
+  - STA node 11 moved near AP B.
+  - STA node 12 moved near AP B.
+  - STA node 13 moved near AP B.
+Moving 6 STAs physically from AP2 area -> AP1 area:
+  - STA node 24 moved near AP A.
+  - STA node 25 moved near AP A.
+  - STA node 26 moved near AP A.
+  - STA node 27 moved near AP A.
+  - STA node 28 moved near AP A.
+  - STA node 29 moved near AP A.
+                
+===== Simulation Ended =====
+AP A (Node 0) Total Received: 381381000 bytes
+AP B (Node 1) Total Received: 321452600 bytes
 ```
+- using script `graph.py` we can get simulation graph result
+  
 
----
-
-## 📊 3. Analysis Report (8 points)
-
-- **Network Topology**: Describe UE, eNB, EPC, WiFi AP, and backhaul setup.
-- **Throughput Analysis**: Explain how throughput varies over time.
-- **Latency Trends**: If simulated.
-- **Resource Allocation & Interference**: Any spectrum sharing insights?
-- **Limitations**: What’s simplified in the model?
-- **Improvement Suggestions**: Eg. mobility models, fading channels, handover support.
-- **Screenshots/Logs**: Add charts or terminal outputs.
-
-```bash
-git clone https://gitlab.com/nsnam/ns-3-dev.git
-cd ns-3-dev
-git checkout -b ns-3.39-branch ns-3.39
-(The -- separates ns-3 arguments from script arguments. logFile is defined in mySimulation.cc.)
-```
 ## Milestone 1: Deploy 2 Nodes and Assign Users
 
 **Node Deployment:**
@@ -171,20 +225,54 @@ git checkout -b ns-3.39-branch ns-3.39
     * Source Code Link: Initial STA Positioning
 
 **Initial User Table:**
-
+```
+ID|Initial AP|IP
+-----------------------------------------
+ 0|         A|10.1.1.3
+ 1|         A|10.1.1.4
+ 2|         A|10.1.1.5
+ 3|         A|10.1.1.6
+ 4|         A|10.1.1.7
+ 5|         A|10.1.1.8
+ 6|         A|10.1.1.9
+ 7|         A|10.1.1.10
+ 8|         A|10.1.1.11
+ 9|         A|10.1.1.12
+10|         A|10.1.1.13
+11|         A|10.1.1.14
+12|         A|10.1.1.15
+13|         A|10.1.1.16
+14|         A|10.1.1.17
+15|         A|10.1.1.18
+16|         B|10.1.1.19
+17|         B|10.1.1.20
+18|         B|10.1.1.21
+19|         B|10.1.1.22
+20|         B|10.1.1.23
+21|         B|10.1.1.24
+22|         B|10.1.1.25
+23|         B|10.1.1.26
+24|         B|10.1.1.27
+25|         B|10.1.1.28
+26|         B|10.1.1.29
+27|         B|10.1.1.30
+28|         B|10.1.1.31
+29|         B|10.1.1.32
+30|         B|10.1.1.33
+31|         B|10.1.1.34
+-----------------------------------------
+```
 * The simulation prints the initial assignment (based on proximity) and IP addresses at t=0.1s.
 * Initial State: X0 = 16 users near AP A, Y0 = 16 users near AP B.
 * Output Screenshot Showing Initial User Table:
 
-    ![Initial User Table](image_3.png)
+   
     ## Milestone 2: Full-Queue Model Transmission & Mobility Model
 
 **Full-Queue Model Transmission:**
 
 * Each STA continuously transmits UDP packets at 1 Mbps (DataRate = "1Mbps", PacketSize = 1400).
 * `UdpClientHelper` is configured with `MaxPackets = 0` (unlimited) and a calculated `Interval` to ensure continuous sending, approximating a full-queue scenario.
-    * Source Code Link: Data Rate/Packet Size
-    * Source Code Link: Client Setup (Unlimited Packets, Interval)
 * **Note:** Each STA sends traffic simultaneously towards both AP A and AP B.
     * Source Code Link: Installing Clients to Both APs
 
@@ -257,7 +345,7 @@ git checkout -b ns-3.39-branch ns-3.39
 
 * Throughput Plot:
 
-    ![Throughput Plot](throughput_plot.png)
+    ![Throughput Plot](src/Figure1.png)
     * Analysis of Throughput Trends:
 
     * Initial Phase (t=4s to ~60s): After clients start at t=3s, throughput ramps up. Both AP A and AP B achieve a stable throughput of approximately 16 Mbps each. This balanced throughput matches the initial balanced user distribution (16 STAs near each AP). The total system throughput (~32 Mbps) corresponds to the total number of STAs (32) multiplied by their individual transmission rate (1 Mbps).
