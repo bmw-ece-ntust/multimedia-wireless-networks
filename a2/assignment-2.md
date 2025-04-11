@@ -146,3 +146,138 @@ Average throughput: 2.5 Mbps
 git clone https://gitlab.com/nsnam/ns-3-dev.git
 cd ns-3-dev
 git checkout -b ns-3.39-branch ns-3.39
+(The -- separates ns-3 arguments from script arguments. logFile is defined in mySimulation.cc.)
+```
+## Milestone 1: Deploy 2 Nodes and Assign Users
+
+**Node Deployment:**
+
+* Two nodes (Node 0, Node 1) are created as WiFi Access Points (AP A, AP B).
+    * Source Code Link: Node Creation
+* AP A is positioned at (0,0,0) and AP B at (100,0,0).
+    * Source Code Link: AP Positioning
+* Both APs operate on the same channel and share the SSID `MyWiFiNetwork`.
+    * Source Code Link: Shared SSID
+    * Source Code Link: AP MAC Setup
+
+**User Assignment:**
+
+* 32 user nodes (Stations - STAs) are created (initialUsersPerNode = 16).
+    * Source Code Link: STA Count
+    * Source Code Link: STA Node Creation
+* STAs 0-15 are initially placed randomly near AP A.
+* STAs 16-31 are initially placed randomly near AP B.
+    * Source Code Link: Initial AP Assignment Logic
+    * Source Code Link: Initial STA Positioning
+
+**Initial User Table:**
+
+* The simulation prints the initial assignment (based on proximity) and IP addresses at t=0.1s.
+* Initial State: X0 = 16 users near AP A, Y0 = 16 users near AP B.
+* Output Screenshot Showing Initial User Table:
+
+    ![Initial User Table](image_3.png)
+    ## Milestone 2: Full-Queue Model Transmission & Mobility Model
+
+**Full-Queue Model Transmission:**
+
+* Each STA continuously transmits UDP packets at 1 Mbps (DataRate = "1Mbps", PacketSize = 1400).
+* `UdpClientHelper` is configured with `MaxPackets = 0` (unlimited) and a calculated `Interval` to ensure continuous sending, approximating a full-queue scenario.
+    * Source Code Link: Data Rate/Packet Size
+    * Source Code Link: Client Setup (Unlimited Packets, Interval)
+* **Note:** Each STA sends traffic simultaneously towards both AP A and AP B.
+    * Source Code Link: Installing Clients to Both APs
+
+**Mobility Model & Simulation Duration:**
+
+* Simulation Duration: 180 seconds.
+    * Source Code Link: Simulation Time Variable
+    * Source Code Link: Simulator Stop Time
+* Mobility: STAs use `ConstantPositionMobilityModel` but their positions are updated instantly at scheduled times using `SetPosition`. Re-association is facilitated by the STA WiFi MAC layer (`ActiveProbing = true`).
+    * Source Code Link: STA MAC Active Probing
+    * Source Code Link: Mobility Update Function Call
+    * Source Code Link: Setting Position in Mobility Function
+
+**User Movement Schedule:**
+
+* At t = 60 seconds: (moveTime1)
+    * Percentages: 25% A → B (percentAtoB_M1), 50% B → A (percentBtoA_M1).
+    * Number Moving A → B: 16 \* 0.25 = 4 users.
+    * Number Moving B → A: 16 \* 0.50 = 8 users.
+    * Specific Users Moved:
+        * A → B (Near AP B): STAs 0, 1, 2, 3. (Code Link: Move Schedule 1)
+        * B → A (Near AP A): STAs 16, 17, ..., 23. (Code Link: Move Schedule 1)
+    * Physical Distribution after 60s: X1 = 20 near A, Y1 = 12 near B.
+* At t = 120 seconds: (moveTime2)
+    * Percentages: 50% A → B (percentAtoB_M2), 50% B → A (percentBtoA_M2). Applied to current populations (20 near A, 12 near B).
+    * Number Moving A → B: 20 \* 0.50 = 10 users.
+    * Number Moving B → A: 12 \* 0.50 = 6 users.
+    * Specific Users Moved:
+        * A → B (Near AP B): STAs 4, 5, ..., 13. (Code Link: Move Schedule 2, uses offsets)
+        * B → A (Near AP A): STAs 24, 25, ..., 29. (Code Link: Move Schedule 2, uses offsets)
+    * Physical Distribution after 120s: X2 = 16 near A, Y2 = 16 near B.
+
+## 📊 3. Analysis Report
+
+**1. Final User Distribution**
+
+* The simulation models the physical movement of STAs between the vicinities of AP A and AP B.
+
+* Initial State (t=0s):
+    * Users physically near AP A (X0): 16 (IDs 0-15)
+    * Users physically near AP B (Y0): 16 (IDs 16-31)
+
+* State after 1st Movement (t=60s):
+    * 4 users (IDs 0-3) move from A → B.
+    * 8 users (IDs 16-23) move from B → A.
+    * Users physically near AP A (X1): (16 - 4) + 8 = 20
+    * Users physically near AP B (Y1): (16 - 8) + 4 = 12
+    * Conceptual User Table (Physical Location):
+        * Near A: {4..15} ∪ {16..23}
+        * Near B: {0..3} ∪ {24..31}
+
+* State after 2nd Movement (t=120s):
+    * 10 users (IDs 4-13) move from A → B.
+    * 6 users (IDs 24-29) move from B → A.
+    * Users physically near AP A (X2): (20 - 10) + 6 = 16
+    * Users physically near AP B (Y2): (12 - 6) + 10 = 16
+    * Conceptual User Table (Physical Location):
+        * Near A: {14, 15} ∪ {16..23} ∪ {24..29}
+        * Near B: {0..3} ∪ {30, 31} ∪ {4..13}
+
+* Final Calculated User Distribution (at t=180s):
+    * Value of X (Users physically near AP A): 16
+    * Value of Y (Users physically near AP B): 16
+    * (Note: Only the initial user table is printed by the code; subsequent distributions are derived from the simulation logic.)
+
+**2. Aggregated Throughput Analysis**
+
+* The aggregated throughput (rate of data successfully received) at each AP's sink application was logged every second into `aggregated_throughput.txt` (see Appendix C).
+* The plot below was generated using `graph.py` (see Appendix B).
+
+* Throughput Plot:
+
+    ![Throughput Plot](throughput_plot.png)
+    * Analysis of Throughput Trends:
+
+    * Initial Phase (t=4s to ~60s): After clients start at t=3s, throughput ramps up. Both AP A and AP B achieve a stable throughput of approximately 16 Mbps each. This balanced throughput matches the initial balanced user distribution (16 STAs near each AP). The total system throughput (~32 Mbps) corresponds to the total number of STAs (32) multiplied by their individual transmission rate (1 Mbps).
+    * First Movement Impact (t ≈ 60s): At t=60s, the physical distribution changes to 20 STAs near A and 12 near B. The plot shows an immediate corresponding shift in throughput:
+        * AP A's throughput jumps to approximately 20 Mbps.
+        * AP B's throughput drops to approximately 12 Mbps.
+        * This indicates that STAs quickly re-associate with their nearest AP after moving, and the network load redistributes accordingly.
+    * Intermediate Phase (t=~61s to ~120s): Throughput remains stable at the new levels (~20 Mbps for A, ~12 Mbps for B), reflecting the unbalanced user distribution during this period.
+    * Second Movement Impact (t ≈ 120s): At t=120s, the physical distribution returns to 16 STAs near A and 16 near B. The plot shows the throughput adjusting back:
+        * AP A's throughput decreases to approximately 16 Mbps.
+        * AP B's throughput increases to approximately 16 Mbps.
+        * This further confirms that the aggregated throughput at each AP closely follows the number of users associated with it.
+    * Final Phase (t=~121s to 180s): The system returns to a balanced state, with both APs sustaining approximately 16 Mbps each, similar to the initial phase.
+
+* Conclusion: The simulation demonstrates that user mobility significantly impacts load distribution in a WiFi network with multiple APs using a shared SSID. The throughput measured at each AP dynamically adjusts to reflect the number of users physically located in its vicinity, indicating effective re-association managed by the ns-3 WiFi STA MAC layer (aided by Active Probing). The total system throughput remains relatively constant, dictated by the number of active users and their transmission rates.
+
+## 🎬 4. Video Simulation
+
+* A video recording demonstrating the simulation run is required. (Video to be uploaded)
+* Link to Simulation Video: \[Placeholder - Insert Link to Simulation Video Here]  ```
+
+
+This Markdown will render nicely on platforms like GitHub, GitLab, and m
