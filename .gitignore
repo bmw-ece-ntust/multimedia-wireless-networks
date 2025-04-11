@@ -1,0 +1,6 @@
+# exclude the following directories and files
+# python environments for assignment 2
+a2/a2
+a2/env_checker.py
+a2/src/pcap-files
+
