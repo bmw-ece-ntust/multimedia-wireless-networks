@@ -60,6 +60,23 @@ root@879e342b5a47:/usr/ns3/ns-3.38# ./ns3 run examples/wireless/wifi-80211e-txop
 * Continuous UDP traffic (full-queue model)
 * 10 Mbps data rate from each station to its AP
 * UDP packet size of 1472 bytes (standard MSS)
+
+**WifiLoadBalancer Class Declaration (Lines 16-81)**
+- CreateNodes (Lines 75-91): Creates AP and station nodes, assigning stations to APs
+- ConfigureWifi (Lines 94-146): Sets up WiFi devices with 802.11g standard, configures APs and stations
+- ConfigureMobility (Lines 149-174): Positions APs statically and stations with random mobility
+- SetupInternetStack (Lines 177-187): Configures IP addressing and network stack
+- ConfigureApplications (Lines 190-235): Sets up UDP traffic generators and packet sinks
+- MigrateUsers (Lines 238-293): Handles station reassignment between APs
+- MeasureThroughput (Lines 296-329): Calculates and logs throughput metrics periodically
+
+**Main Function (Lines 345-399)**
+- Defines simulation parameters (Lines 350-361)
+- Processes command-line arguments (Lines 364-375)
+- Creates the load balancer with specified parameters (Line 387)
+- Schedules migrations at designated times (Lines 390-391)
+- Configures throughput monitoring (Line 394)
+- Runs the simulation (Line 397)
 ```cpp
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
