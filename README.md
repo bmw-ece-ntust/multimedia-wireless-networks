@@ -32,10 +32,15 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/tree/master?tab=readme-ov-file#a2)
 - Submissions:
-  - [ ] [Study Note](path to another .md file for your assignment)
-  - [x] [source code](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a2/src/a2.cc)
+  - [x] [ns-3 Study Note](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a2/doc/ns3_studt_note.md)
   - [x] [ns-3 Installation Guide](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a2/doc/Installation_guide.md)
-  - [x] [Simulation Explanation](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a2/doc/Simulation_explanation.md)
+  - [x] [WiFi Simulation]
+    - [x] [source code](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/tree/2025-m11302229-Chen-Chun-Yu/a2/src)
+    - [x] [result](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/tree/2025-m11302229-Chen-Chun-Yu/a2/result)
+  - [x] Analysis reports
+    - [x] [Simulation Explanation ](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a2/doc/Simulation_explanation.md#-simulation-explanation--ns-3-network-simulator)
+    - [x] [Analysis of output files and figures](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/2025-m11302229-Chen-Chun-Yu/a2/doc/Simulation_explanation.md#analysis-of-output-files-and-figures)
+  - [x] [Demo Video](https://www.youtube.com/watch?v=8N1iCFL8YJk)
   - [ ] [Peer Review](https://forms.gle/njd22Apu7ZGTbKzJ7)
 
 ### A3 (DL: 2024/05/14, 08.00 A.M.)
