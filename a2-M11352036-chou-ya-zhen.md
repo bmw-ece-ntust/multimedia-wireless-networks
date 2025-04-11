@@ -300,6 +300,14 @@ STA B-14: 00:00:00:00:00:1f
 STA B-15: 00:00:00:00:00:20
 ```
 
+### 3.2 Full-Queue Model Transmission
+```bash
+// FULL-QUEUE 模型：每個 STA 都會持續送封包
+  UdpEchoServerHelper server(9); //9 是這個 Echo Server 要監聽的 UDP 埠號
+  ApplicationContainer serverA = server.Install(aps.Get(0));
+  ApplicationContainer serverB = server.Install(aps.Get(1));  // Node B 的 AP
+```
+Full code:
 ```#include "ns3/core-module.h"
 #include "ns3/network-module.h"
 #include "ns3/internet-module.h"
