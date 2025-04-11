@@ -62,22 +62,24 @@ root@879e342b5a47:/usr/ns3/ns-3.38# ./ns3 run examples/wireless/wifi-80211e-txop
 * UDP packet size of 1472 bytes (standard MSS)
 
 **WifiLoadBalancer Class Declaration (Lines 16-81)**
-- CreateNodes (Lines 75-91): Creates AP and station nodes, assigning stations to APs
-- ConfigureWifi (Lines 94-146): Sets up WiFi devices with 802.11g standard, configures APs and stations
-- ConfigureMobility (Lines 149-174): Positions APs statically and stations with random mobility
-- SetupInternetStack (Lines 177-187): Configures IP addressing and network stack
-- ConfigureApplications (Lines 190-235): Sets up UDP traffic generators and packet sinks
-- MigrateUsers (Lines 238-293): Handles station reassignment between APs
-- MeasureThroughput (Lines 296-329): Calculates and logs throughput metrics periodically
+- CreateNodes [(Lines 75-91)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L79): Creates AP and station nodes, assigning stations to APs
+- ConfigureWifi [(Lines 94-146)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L98): Sets up WiFi devices with 802.11g standard, configures APs and stations
+- ConfigureMobility [(Lines 149-174)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L153): Positions APs statically and stations with random mobility
+- SetupInternetStack [(Lines 177-187)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L179): Configures IP addressing and network stack
+- ConfigureApplications [(Lines 190-235)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L192): Sets up UDP traffic generators and packet sinks
+- MigrateUsers [(Lines 238-293)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L237
+): Handles station reassignment between APs
+- MeasureThroughput [(Lines 296-329)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L293): Calculates and logs throughput metrics periodically
 
 **Main Function (Lines 345-399)**
-- Defines simulation parameters [(Lines 350-361)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L79
+- Defines simulation parameters [(Lines 350-361)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L349
 )
-- Processes command-line arguments (Lines 364-375)
-- Creates the load balancer with specified parameters (Line 387)
-- Schedules migrations at designated times (Lines 390-391)
-- Configures throughput monitoring (Line 394)
-- Runs the simulation (Line 397)
+- Processes command-line arguments [(Lines 364-375)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L349)
+- Creates the load balancer with specified parameters [(Line 387)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L367)
+- Schedules migrations at designated times [(Lines 390-391)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L388)
+- Configures throughput monitoring [(Line 394)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L389)
+- Runs the simulation [(Line 397)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L393
+)
 ```cpp
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
