@@ -82,9 +82,65 @@
 ```
 </aside>
 
-## **NS-3 Installation Guide**
-instalation will be straight formward aslonng as you use the same ubuntu system
-### **Download ns-3**
+## 🧩 1. NS-3 Installation Guide (1 point)
+
+**System:**  
+- OS: Ubuntu 24.04 LTS (VirtualBox VM)  
+- RAM: 8192 MB  
+- CPUs: 4  
+- Disk: 50 GB  
+- Acceleration: Nested Paging, KVM Paravirtualization  
+- Network: NAT (Intel PRO/1000 MT Desktop)
+
+**Installation Steps:**
+```bash
+sudo apt update
+sudo apt install -y git g++ python3 python3-pip cmake
+git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3
+cd ns-3
+./ns3 configure --enable-examples --enable-tests
+./ns3 build
+```
+
+✅ NS-3 version: [insert version from terminal if needed]  
+🧪 Test run: `./ns3 run hello-simulator` — verified output.
+
+---
+
+## 📡 2.  WiFi Simulation (2 points)
+
+### Code Location  
+Simulation source code: [`./a2/src/mySimulation.cc`](./a2/src/mySimulation.cc)
+
+### Input: Compile and Run  
+```bash
+cd ns-3
+./ns3 run mySimulation
+```
+
+### Output:
+- Include key figures and graphs here (e.g., throughput vs time).
+- You can use `Gnuplot`, `matplotlib`, or save logs to `.csv`.
+
+#### Example Output (placeholder):
+```
+Simulation started...
+UE attached to eNodeB
+Received packets: 1024
+Average throughput: 2.5 Mbps
+```
+
+---
+
+## 📊 3. Analysis Report (8 points)
+
+- **Network Topology**: Describe UE, eNB, EPC, WiFi AP, and backhaul setup.
+- **Throughput Analysis**: Explain how throughput varies over time.
+- **Latency Trends**: If simulated.
+- **Resource Allocation & Interference**: Any spectrum sharing insights?
+- **Limitations**: What’s simplified in the model?
+- **Improvement Suggestions**: Eg. mobility models, fading channels, handover support.
+- **Screenshots/Logs**: Add charts or terminal outputs.
 
 ```bash
 git clone https://gitlab.com/nsnam/ns-3-dev.git
