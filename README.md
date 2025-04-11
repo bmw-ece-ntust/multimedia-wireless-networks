@@ -30,9 +30,9 @@
 
 - [Assignment Information](https://github.com/bmw-ece-ntust/multimedia-wireless-network?tab=readme-ov-file#a2-deadline-49-0800-am)
 - Submissions:
-  - [ ] [Study Note](notes/a2-m11302832-Joshevan.md)
-  - [ ] [Flowchart + source code for simulation and analysis](path to specific section in your study note)
-  - [ ] [Numerical Results (should be identical as the paper)](path to specific section in your study note)
+  - [x] [Study Note](notes/assignment-2.md)
+  - [x] [Source code for simulation and analysis](assets/a2/src)
+  - [x] [Numerical Results (should be identical as the paper)](assets/a2/)
   - [ ] [Peer Review](https://forms.gle/eGE2JJgjXpCXwqfq7)
 
 ### A3

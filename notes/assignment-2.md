@@ -1,4 +1,5 @@
 # **Multimedia Wireless Network A2**
+Video Results: http://youtube.com
 
 - [**Multimedia Wireless Network A2**](#multimedia-wireless-network-a2)
   - [1. Introduction](#1-introduction)
@@ -8,7 +9,8 @@
     - [2.3 Test NS-3](#23-test-ns-3)
   - [3. WiFi Simulation](#3-wifi-simulation)
     - [3.1 Deploy 2 nodes and assign users](#31-deploy-2-nodes-and-assign-users)
-  - [4. Analysis of the Simulation Results](#4-analysis-of-the-simulation-results)
+  - [4. Simulation](#4-simulation)
+  - [5. Results and analysis](#5-results-and-analysis)
   - [References](#references)
 
 
@@ -252,50 +254,98 @@ void SaveMacAddresses(NodeContainer &staNodesA, NodeContainer &staNodesB) {
   NS_LOG_INFO("MAC addresses saved to sta_mac_addresses.csv");
 }
 
-int main() {
-uint32_t nStaPerAp = 16; //number of stations per AP
-double simTime = 60.0;  // Simulation time in seconds
-LogComponentEnable("WifiSimulation", LOG_LEVEL_INFO);
+int main(int argc, char *argv[]) {
+    uint32_t staA = 16;
+    uint32_t staB = 16;
+    double simTime = 180.0;
+    LogComponentEnable("WifiSimulation", LOG_LEVEL_INFO);
 
-// Create nodes
-NS_LOG_INFO("Create Nodes...");
-NodeContainer wifiStaNodesA, wifiStaNodesB, wifiApNodes;
-wifiStaNodesA.Create(nStaPerAp);  
-wifiStaNodesB.Create(nStaPerAp);  
-wifiApNodes.Create(2);
+    NS_LOG_INFO("Create Nodes...");
 
-// Save MAC addresses to a CSV file
+    // Create nodes for STA-A and STA-B
+    NodeContainer wifiStaNodesA, wifiStaNodesB, wifiApNodes;
+    wifiStaNodesA.Create(staA);
+    wifiStaNodesB.Create(staB);
+    wifiApNodes.Create(2);
+
+    NS_LOG_INFO("Create Wifi Channel...");
+    YansWifiChannelHelper channel = YansWifiChannelHelper::Default();
+    YansWifiPhyHelper phy;
+    phy.SetChannel(channel.Create());
+
+    // Set Wifi PHY parameters
+    WifiHelper wifi;
+    wifi.SetStandard(WIFI_STANDARD_80211n);
+    wifi.SetRemoteStationManager("ns3::MinstrelHtWifiManager");
+
+    // Set Wifi PHY parameters
+    WifiMacHelper mac;
+    Ssid ssidA = Ssid("network-A");
+    Ssid ssidB = Ssid("network-B");
+
+    // Set Wifi MAC parameters
+    mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssidA), "ActiveProbing", BooleanValue(false));
+    NetDeviceContainer staDevicesA = wifi.Install(phy, mac, wifiStaNodesA);
+
+    mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssidB), "ActiveProbing", BooleanValue(false));
+    NetDeviceContainer staDevicesB = wifi.Install(phy, mac, wifiStaNodesB);
+
+    mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssidA));
+    NetDeviceContainer apDeviceA = wifi.Install(phy, mac, wifiApNodes.Get(0));
+
+    mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssidB));
+    NetDeviceContainer apDeviceB = wifi.Install(phy, mac, wifiApNodes.Get(1));
+
+    MobilityHelper mobility;
+    // Set Mobility for STA-A Nodes (near AP-A)
+    MobilityHelper mobilityStaA;
+    mobilityStaA.SetPositionAllocator("ns3::RandomRectanglePositionAllocator",
+                                             "X", StringValue("ns3::UniformRandomVariable[Min=-5.0|Max=5.0]"),
+                                             "Y", StringValue("ns3::UniformRandomVariable[Min=-10.0|Max=10.0]"));
+    mobilityStaA.SetMobilityModel("ns3::RandomWalk2dMobilityModel",
+                                         "Bounds", RectangleValue(Rectangle(-10, 10, -10, 10)),
+                                         "Speed", StringValue("ns3::ConstantRandomVariable[Constant=1.0]"),
+                                         "Distance", DoubleValue(5.0));
+    mobilityStaA.Install(wifiStaNodesA);
+
+    // Set Mobility for STA-B Nodes (near AP-B at (10,0,0))
+    MobilityHelper mobilityStaB;
+    mobilityStaB.SetPositionAllocator("ns3::RandomRectanglePositionAllocator",
+                                             "X", StringValue("ns3::UniformRandomVariable[Min=5.0|Max=10.0]"),
+                                             "Y", StringValue("ns3::UniformRandomVariable[Min=-10.0|Max=10.0]"));
+    mobilityStaB.SetMobilityModel("ns3::RandomWalk2dMobilityModel",
+                                         "Bounds", RectangleValue(Rectangle(-10, 10, -10, 10)),
+                                         "Speed", StringValue("ns3::ConstantRandomVariable[Constant=1.0]"),
+                                         "Distance", DoubleValue(5.0));
+    mobilityStaB.Install(wifiStaNodesB);
+
+    // Set Mobility for AP Nodes
+    MobilityHelper mobilityAp;
+    mobilityAp.SetMobilityModel("ns3::ConstantPositionMobilityModel");
+    mobilityAp.Install(wifiApNodes);
+
+    // Set AP A Position at (0,0,0)
+    Ptr<MobilityModel> mobApA = wifiApNodes.Get(0)->GetObject<MobilityModel>();
+    mobApA->SetPosition(Vector(0.0, 0.0, 0.0));
+
+    // Set AP B Position at (10,0,0)
+    Ptr<MobilityModel> mobApB = wifiApNodes.Get(1)->GetObject<MobilityModel>();
+    mobApB->SetPosition(Vector(10.0, 0.0, 0.0));
 
 
+    InternetStackHelper stack;
+    stack.Install(wifiStaNodesA);
+    stack.Install(wifiStaNodesB);
+    stack.Install(wifiApNodes);
 
-// Set up the Wi-Fi channel
-NS_LOG_INFO("Create Wifi Channel...");
-YansWifiChannelHelper channel = YansWifiChannelHelper::Default();
-YansWifiPhyHelper phy;
-phy.SetChannel(channel.Create());
-
-// Set up the Wi-Fi PHY layer
-WifiHelper wifi;
-wifi.SetStandard(WIFI_STANDARD_80211n);
-wifi.SetRemoteStationManager("ns3::MinstrelHtWifiManager");
-
-// Set up the Wi-Fi Mac Layer and SSID
-WifiMacHelper mac;
-Ssid ssidA = Ssid("network-A");
-Ssid ssidB = Ssid("network-B");
-
-mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssidA), "ActiveProbing", BooleanValue(false));
-NetDeviceContainer staDevicesA = wifi.Install(phy, mac, wifiStaNodesA);
-
-mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssidB), "ActiveProbing", BooleanValue(false));
-NetDeviceContainer staDevicesB = wifi.Install(phy, mac, wifiStaNodesB);
-
-mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssidA));
-NetDeviceContainer apDeviceA = wifi.Install(phy, mac, wifiApNodes.Get(0));
-
-mac.SetType("ns3::ApWifiMac", "Ssid", SsidValue(ssidB));
-NetDeviceContainer apDeviceB = wifi.Install(phy, mac, wifiApNodes.Get(1));
-SaveMacAddresses(wifiStaNodesA, wifiStaNodesB);
+    // Assign IP addresses to the nodes
+    Ipv4AddressHelper address;
+    address.SetBase("10.1.1.0", "255.255.255.0");
+    Ipv4InterfaceContainer apInterfaceA = address.Assign(apDeviceA);
+    Ipv4InterfaceContainer apInterfaceB = address.Assign(apDeviceB);
+    address.Assign(staDevicesA);
+    address.Assign(staDevicesB);
+    Simulator::Schedule(Seconds(0.5), &SaveMacAddresses, wifiStaNodesA, wifiStaNodesB);
 }
 ```
 
@@ -305,11 +355,231 @@ Details of the code:
 * The `WifiHelper` is used to set the Wi-Fi standard to 802.11n and configure the remote station manager. The remote station manager that is used is `MinstrelHtWifiManager`, which is a rate control algorithm for 802.11n.
 * The `WifiMacHelper` is used to set the MAC layer type for the stations and access points. The SSIDs for the two networks are defined as `network-A` and `network-B`.
 * After that, set the MAC layer type for the stations using `SetType`. The `Ssid` is set to the corresponding SSID for each network.
-* The `Install` method is called to instalenable tral the Wi-Fi devices on the nodes.
+* The `Install` method is called to install the Wi-Fi devices on the nodes.
+* Set mobility models for the stations and access points using `MobilityHelper`. The stations are set to move randomly within a specified rectangle, while the access points are set to a constant position.
 * Finally, the `SaveMacAddresses` function is called to save the MAC addresses of the stations to a CSV file. The MAC addresses are obtained from the first device of each node using `GetDevice(0)` and `GetAddress()` methods.
 
-* The MAC addresses are saved in a CSV file named [`sta_mac_addresses.csv`](../assets/a2/mac_address.csv). Here is the table of the MAC addresses of the stations:
+* The MAC addresses are saved in a CSV file named [`sta_mac_addresses.csv`](../assets/a2/mac_address.csv). 
 
+
+## 4. Simulation
+
+The simulation is done in 180 seconds with full queue traffic. Every traffic will send udp to its own AP with data rate 1 Mbps. Every 60 seconds there will be handover from one AP to another AP. The handover will be done by switching the SSID of the STA and changing the destination IP address of the traffic generator application. The code:
+
+```c++
+void SwitchAp(Ptr<WifiNetDevice> staDevice, Ssid newSsid, Ptr<OnOffApplication> app, Ipv4Address newApIp)
+{
+    Ptr<StaWifiMac> staMac = DynamicCast<StaWifiMac>(staDevice->GetMac());
+    if (staMac)
+    {   
+        AddressValue remoteAddress(InetSocketAddress(newApIp, 9));
+        app->SetAttribute("Remote", remoteAddress);
+        NS_LOG_INFO("STA " << staDevice->GetNode()->GetId() << " switched to SSID: " << newSsid);
+        NS_LOG_INFO("STA " << staDevice->GetNode()->GetId() << " updated destination to " << newApIp);
+    }
+    else
+    {
+        NS_LOG_ERROR("Failed to cast to StaWifiMac for STA " << staDevice->GetNode()->GetId());
+    }
+}
+
+void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double percentageA, double percentageB, Ssid ssidA, Ssid ssidB, uint32_t time
+, std::vector<Ptr<OnOffApplication>> &appsA, std::vector<Ptr<OnOffApplication>> &appsB, Ipv4Address apAIp, Ipv4Address apBIp)
+{
+    uint32_t totalStaA = staNodesA.GetN();
+    uint32_t totalStaB = staNodesB.GetN();
+    
+    uint32_t numToSwitchA = static_cast<uint32_t>(totalStaA * percentageA);
+    uint32_t numToSwitchB = static_cast<uint32_t>(totalStaB * percentageB);
+    NS_LOG_INFO("Switching " << numToSwitchA << " STAs from SSID " << ssidA << " to " << ssidB);
+
+    NodeContainer movingStaA;
+    std::vector<Ptr<OnOffApplication>> movingAppsA, movingAppsB;
+    for (uint32_t i = 0; i < numToSwitchA; ++i) {
+        movingStaA.Add(staNodesA.Get(i));
+    }
+    staNodesB.Add(movingStaA);
+
+    // Create temporary containers for the remaining STAs
+    NodeContainer remainingStaA;
+    for (uint32_t i = numToSwitchA; i < staNodesA.GetN(); ++i) {
+        remainingStaA.Add(staNodesA.Get(i));
+    }
+    staNodesA = remainingStaA;
+
+    // Move STAs from AP-B to AP-A
+    NodeContainer movingStaB;
+    for (uint32_t i = 0; i < numToSwitchB; ++i) {
+        movingStaB.Add(staNodesB.Get(i));
+    }
+    staNodesA.Add(movingStaB);
+
+    NodeContainer remainingStaB;
+    for (uint32_t i = numToSwitchB; i < staNodesB.GetN(); ++i) {
+        remainingStaB.Add(staNodesB.Get(i));
+    }
+    staNodesB = remainingStaB;
+
+    for (uint32_t i = 0; i < numToSwitchA; ++i)
+    {
+        Ptr<Node> staNode = movingStaA.Get(i);
+        Ptr<MobilityModel> staA = staNode->GetObject<MobilityModel>();
+        if (staA)
+        {
+            Ptr<UniformRandomVariable> randX = CreateObject<UniformRandomVariable>();
+            randX->SetAttribute("Min", DoubleValue(5.0));
+            randX->SetAttribute("Max", DoubleValue(10.0));
+            
+            Ptr<UniformRandomVariable> randY = CreateObject<UniformRandomVariable>();
+            randY->SetAttribute("Min", DoubleValue(-10.0));
+            randY->SetAttribute("Max", DoubleValue(10.0));
+
+            double x = randX->GetValue();
+            double y = randY->GetValue();
+            double z = 0.0;
+            staA->SetPosition(Vector(x, y, z));
+        }
+        else
+        {
+            NS_LOG_ERROR("Failed to get MobilityModel for STA " << staNode->GetId());
+        }
+        Ptr<WifiNetDevice> staDevice = DynamicCast<WifiNetDevice>(staNode->GetDevice(0));
+        if (staDevice)
+        {
+            OnOffHelper onoff2("ns3::UdpSocketFactory", InetSocketAddress(apBIp, 9));
+            onoff2.SetConstantRate(DataRate("1Mbps"));
+            onoff2.SetAttribute("PacketSize", UintegerValue(1472));
+            onoff2.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1000]"));
+            onoff2.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+            ApplicationContainer app = onoff2.Install(staNode);
+            app.Stop(Seconds(time));
+            app.Start(Seconds(time));
+            app.Stop(Seconds(time+60));
+        }
+        else
+        {
+            NS_LOG_ERROR("Failed to get WifiNetDevice for STA " << staNode->GetId());
+        }
+        LogHandover(time, staNode, "network-A", "network-B");
+    }
+
+    NS_LOG_INFO("Switching " << numToSwitchB << " STAs from SSID " << ssidB << " to " << ssidA);
+    for (uint32_t i = 0; i < numToSwitchB; ++i)
+    {
+        Ptr<Node> staNode = movingStaB.Get(i);
+        Ptr<MobilityModel> staB = staNode->GetObject<MobilityModel>();
+        if (staB)
+        {
+            Ptr<UniformRandomVariable> randX = CreateObject<UniformRandomVariable>();
+            randX->SetAttribute("Min", DoubleValue(-5.0));
+            randX->SetAttribute("Max", DoubleValue(5.0));
+            
+            Ptr<UniformRandomVariable> randY = CreateObject<UniformRandomVariable>();
+            randY->SetAttribute("Min", DoubleValue(-10.0));
+            randY->SetAttribute("Max", DoubleValue(10.0));
+
+            double x = randX->GetValue();
+            double y = randY->GetValue();
+            double z = 0.0;
+            staB->SetPosition(Vector(x, y, z));
+        }
+        else
+        {
+            NS_LOG_ERROR("Failed to get MobilityModel for STA " << staNode->GetId());
+        }
+        Ptr<WifiNetDevice> staDevice = DynamicCast<WifiNetDevice>(staNode->GetDevice(0));
+        if (staDevice)
+        {
+            OnOffHelper onoff1("ns3::UdpSocketFactory", InetSocketAddress(apAIp, 9));
+            onoff1.SetConstantRate(DataRate("1Mbps"));
+            onoff1.SetAttribute("PacketSize", UintegerValue(1472));
+            onoff1.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1000]"));
+            onoff1.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+            ApplicationContainer app = onoff1.Install(staNode);
+            app.Stop(Seconds(time));
+            app.Start(Seconds(time));
+            app.Stop(Seconds(time+60));
+        }
+        else
+        {
+            NS_LOG_ERROR("Failed to get WifiNetDevice for STA " << staNode->GetId());
+        }
+        LogHandover(time, staNode, "network-B", "network-A");
+    }
+}
+
+ApplicationContainer InstallFullQueueTraffic(Ptr<Node> sender, Address sinkAddress, double startTime, double stopTime) {
+    OnOffHelper onoff("ns3::UdpSocketFactory", sinkAddress);
+    onoff.SetConstantRate(DataRate("1Mbps"));
+    onoff.SetAttribute("PacketSize", UintegerValue(1472));
+    onoff.SetAttribute("OnTime", StringValue("ns3::ConstantRandomVariable[Constant=1000]"));
+    onoff.SetAttribute("OffTime", StringValue("ns3::ConstantRandomVariable[Constant=0]"));
+    ApplicationContainer app = onoff.Install(sender);
+    app.Start(Seconds(startTime));
+    app.Stop(Seconds(stopTime));
+    return app;
+
+
+    // Set up packet sink to receive packets at APs
+    PacketSinkHelper sink("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), 9));
+    ApplicationContainer sinkAppsA = sink.Install(wifiApNodes.Get(0));
+    sinkAppsA.Start(Seconds(0.0));
+    sinkAppsA.Stop(Seconds(simTime));
+    sinkAppsA.Get(0)->GetObject<PacketSink>()->TraceConnectWithoutContext("Rx", MakeCallback(&RxCallbackAp1));
+
+    ApplicationContainer sinkAppsB = sink.Install(wifiApNodes.Get(1));
+    sinkAppsB.Start(Seconds(0.0));
+    sinkAppsB.Stop(Seconds(simTime));
+    sinkAppsB.Get(0)->GetObject<PacketSink>()->TraceConnectWithoutContext("Rx", MakeCallback(&RxCallbackAp2));
+    std::vector<Ptr<OnOffApplication>> appsA, appsB;
+    
+    // Install traffic generator applications on STAs
+    for (uint32_t i = 0; i < wifiStaNodesA.GetN(); ++i) {
+        ApplicationContainer tempApp;
+        tempApp = InstallFullQueueTraffic(wifiStaNodesA.Get(i), InetSocketAddress(apInterfaceA.GetAddress(0), 9), 1.0, simTime);
+        appsA.push_back(DynamicCast<OnOffApplication>(tempApp.Get(0)));
+    }
+
+    // Install traffic generator applications on STAs
+    for (uint32_t i = 0; i < wifiStaNodesB.GetN(); ++i) {
+        ApplicationContainer tempApp;
+        tempApp = InstallFullQueueTraffic(wifiStaNodesB.Get(i), InetSocketAddress(apInterfaceB.GetAddress(0), 9), 1.0, simTime);
+        appsB.push_back(DynamicCast<OnOffApplication>(tempApp.Get(0)));
+    }
+    // First Handover at 60 seconds
+    Simulator::Schedule(Seconds(60.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.25, 0.5, ssidA, ssidB, 60.0,
+    std::ref(appsA), std::ref(appsB), apInterfaceA.GetAddress(0), apInterfaceB.GetAddress(0));
+
+    // Second Handover at 120 seconds
+    Simulator::Schedule(Seconds(120.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.5, 0.5, ssidA, ssidB, 120.0,
+    std::ref(appsA), std::ref(appsB), apInterfaceA.GetAddress(0), apInterfaceB.GetAddress(0));
+    
+
+    Simulator::Schedule(Seconds(1.0), &LogThroughput);
+    Simulator::Schedule(Seconds(0.5), &SaveMacAddresses, wifiStaNodesA, wifiStaNodesB);
+
+    NS_LOG_INFO("Run Simulation...");
+    Simulator::Stop(Seconds(simTime));
+    Simulator::Run();
+    Simulator::Destroy();
+    NS_LOG_INFO("Simulation Done.");
+}
+```
+
+Details of the code:
+* The `SwitchAp` function is responsible for switching the SSID of the STA and updating the destination IP address of the traffic generator application. It takes the STA device, new SSID, application, and new AP IP address as parameters.
+* The `PerformSwitchAp` function is responsible for performing the handover between APs. It takes the STA nodes, percentages of STAs to switch, SSIDs, time, applications, and AP IP addresses as parameters. It creates temporary containers for the moving and remaining STAs and updates their positions and applications accordingly. This will also save the handover log in a CSV file which is [handover.csv](../assets/a2/handover.csv).
+* The `InstallFullQueueTraffic` function is responsible for installing the traffic generator application on the STAs. It creates an `OnOffHelper` application that sends UDP packets to the specified sink address at a constant rate of 1 Mbps. The packet size is set to 1472 bytes, and the application starts sending packets at the specified start time and stops at the specified stop time.
+* The `OnOffHelper` is used to create a traffic generator application that sends UDP packets to the specified sink address. The `SetConstantRate` method sets the data rate to 1 Mbps, and the `SetAttribute` method sets the packet size and on/off times for the application.
+* The `PacketSinkHelper` is used to create a packet sink application that receives packets at the APs. The `InetSocketAddress` is used to specify the address and port for the sink.
+* After that, the handover will be done by calling the `PerformSwitchAp` function at 60 seconds and 120 seconds. The first handover will switch 25% of the STAs from AP-A to AP-B, and the second handover will switch 50% of the STAs from AP-B to AP-A. The handover will also be saved in the CSV file.
+* The `LogThroughput` function is called to log the throughput of the simulation. The `SaveMacAddresses` function is called to save the MAC addresses of the STAs to a CSV file.
+
+## 5. Results and analysis
+
+This is the results of the simulation. 
+* First, the result of the MAC Address. The mac address will save the MAC address of the STAs in a CSV file. The table result:
+  
 | STA         | MAC Address          |
 |-------------|----------------------|
 | STA-A-1     | 00:00:00:00:00:01    |
@@ -345,10 +615,18 @@ Details of the code:
 | STA-B-15    | 00:00:00:00:00:1f    |
 | STA-B-16    | 00:00:00:00:00:20    |
 
+* The second result is the handover log. The log will save the handover of the STAs in a CSV file.The table result:
 
+| Time (s) | STA ID | Old SSID   | New SSID   |
 
-## 4. Analysis of the Simulation Results
+Based on the result, we can see that the handover is done successfully. The STAs will switch from one AP to another AP based on the percentage and specific time that is set in the code.
 
+* The third result is the throughput of the simulation. The throughput will be logged in a CSV file. The result in graph:
+![Throughput](../assets/a2/throughput.png)
+The graph shows the throughput of the simulation.
+* During the first 60s, the throughput of AP Network A is almost the same as AP Network B, which are around 2MBPs, this is because each AP has 16 sta, and each sta habe 1Mbps of data rate. So the total throughput of each AP is 16 * 1Mbps = 16 Mbps (2MBps). the throughput may not exactly 2 MBPs because of protocol and collision
+*  On the first handover (60s), the throughput of AP Network A will increase because after first handover, AP Network A will have 20 STAs and AP Network B will have 12 STAs. This results in increase of throughput of AP Network A around 25% to 2.5 MBPs and the throughput of AP Network B will decrease to 1.5 MBPs.
+*  On the second handover (120s), the throughput of AP Network A will decrease to 2.0 MBPs and the throughput of AP Network B will increase to 2.0 MBPs. This is because after second handover, both AP will have 16 STAs again. So the throughput of each AP will be 16 * 1Mbps = 16 Mbps (2MBps).
 
 
 ## References
