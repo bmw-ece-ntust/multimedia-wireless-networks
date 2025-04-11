@@ -71,7 +71,8 @@ root@879e342b5a47:/usr/ns3/ns-3.38# ./ns3 run examples/wireless/wifi-80211e-txop
 - MeasureThroughput (Lines 296-329): Calculates and logs throughput metrics periodically
 
 **Main Function (Lines 345-399)**
-- Defines simulation parameters (Lines 350-361)
+- Defines simulation parameters [(Lines 350-361)](https://github.com/bmw-ece-ntust/multimedia-wireless-networks/blob/9ab23e022343a783fc0506f52ff18ce697063810/a2/src/wifi.cc#L79
+)
 - Processes command-line arguments (Lines 364-375)
 - Creates the load balancer with specified parameters (Line 387)
 - Schedules migrations at designated times (Lines 390-391)
