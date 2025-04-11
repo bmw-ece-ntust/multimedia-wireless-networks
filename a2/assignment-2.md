@@ -345,7 +345,7 @@ ID|Initial AP|IP
 
 * Throughput Plot:
 
-    ![Throughput Plot](src/Figure1.png)
+    ![Throughput Plot](src/Figure 1.png)
     * Analysis of Throughput Trends:
 
     * Initial Phase (t=4s to ~60s): After clients start at t=3s, throughput ramps up. Both AP A and AP B achieve a stable throughput of approximately 16 Mbps each. This balanced throughput matches the initial balanced user distribution (16 STAs near each AP). The total system throughput (~32 Mbps) corresponds to the total number of STAs (32) multiplied by their individual transmission rate (1 Mbps).
