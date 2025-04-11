@@ -673,6 +673,19 @@ This is the results of the simulation.
 40|00:00:00:00:00:1d|network-B|network-A
 40|00:00:00:00:00:1e|network-B|network-A
 
+Summary table of the handover:
+| Time (s) | AP-A to AP-B | AP-B to AP-A |
+|-----------|--------------|--------------|
+| 20        | 4  $(X_0 * 25\%)$           | 12   $(Y_0 * 50\%)$        |
+| 40        | 10 $(X_1 * 50\%)$           | 6    $(Y_1 * 50\%)$        |
+
+
+Summary table of number of STAs:
+| Time (s) | AP-A | AP-B |
+|-----------|------|------|
+|  0 - 20   | 16 $(X_0)$   | 16  $(Y_0)$  |
+| 20 - 40   | 20 $(X_1)$   | 12  $(Y_1)$  |
+| 40 - 60   | 16 $(X_2)$   | 16  $(Y_2)$  |
 
 Based on the result, we can see that the handover is done successfully. The STAs will switch from one AP to another AP based on the percentage and specific time that is set in the code.
 
