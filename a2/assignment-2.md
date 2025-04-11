@@ -328,7 +328,5 @@ ID|Initial AP|IP
 
 ## 🎬 4. Video Simulation
 
-* A video recording demonstrating the simulation run is required. (Video to be uploaded)
-* Link to Simulation Video: \[Placeholder - Insert Link to Simulation Video Here]  ```
-
+* A video recording demonstrating the simulation run  as required is provided in the same folder as this description
 
