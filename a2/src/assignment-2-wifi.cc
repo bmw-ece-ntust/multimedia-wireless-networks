@@ -82,6 +82,7 @@ void SwitchAp(Ptr<WifiNetDevice> staDevice, Ssid newSsid, Ptr<OnOffApplication> 
     Ptr<StaWifiMac> staMac = DynamicCast<StaWifiMac>(staDevice->GetMac());
     if (staMac)
     {   
+        staMac->SetSsid(newSsid);
         AddressValue remoteAddress(InetSocketAddress(newApIp, 9));
         app->SetAttribute("Remote", remoteAddress);
         NS_LOG_INFO("STA " << staDevice->GetNode()->GetId() << " switched to SSID: " << newSsid);
@@ -161,6 +162,8 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
         Ptr<WifiNetDevice> staDevice = DynamicCast<WifiNetDevice>(staNode->GetDevice(0));
         if (staDevice)
         {
+            // Switch to new SSID
+            SwitchAp(staDevice, ssidB, appsA[i], apBIp);
             OnOffHelper onoff2("ns3::UdpSocketFactory", InetSocketAddress(apBIp, 9));
             onoff2.SetConstantRate(DataRate("1Mbps"));
             onoff2.SetAttribute("PacketSize", UintegerValue(1472));
@@ -206,6 +209,8 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
         Ptr<WifiNetDevice> staDevice = DynamicCast<WifiNetDevice>(staNode->GetDevice(0));
         if (staDevice)
         {
+            // Switch to new SSID
+            SwitchAp(staDevice, ssidA, appsB[i], apAIp);
             OnOffHelper onoff1("ns3::UdpSocketFactory", InetSocketAddress(apAIp, 9));
             onoff1.SetConstantRate(DataRate("1Mbps"));
             onoff1.SetAttribute("PacketSize", UintegerValue(1472));

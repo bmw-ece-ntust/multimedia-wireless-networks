@@ -372,6 +372,7 @@ void SwitchAp(Ptr<WifiNetDevice> staDevice, Ssid newSsid, Ptr<OnOffApplication> 
     Ptr<StaWifiMac> staMac = DynamicCast<StaWifiMac>(staDevice->GetMac());
     if (staMac)
     {   
+        staMac->SetSsid(newSsid);
         AddressValue remoteAddress(InetSocketAddress(newApIp, 9));
         app->SetAttribute("Remote", remoteAddress);
         NS_LOG_INFO("STA " << staDevice->GetNode()->GetId() << " switched to SSID: " << newSsid);
@@ -383,6 +384,7 @@ void SwitchAp(Ptr<WifiNetDevice> staDevice, Ssid newSsid, Ptr<OnOffApplication> 
     }
 }
 
+// Function to perform the switch of APs for a group of STAs
 void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double percentageA, double percentageB, Ssid ssidA, Ssid ssidB, uint32_t time
 , std::vector<Ptr<OnOffApplication>> &appsA, std::vector<Ptr<OnOffApplication>> &appsB, Ipv4Address apAIp, Ipv4Address apBIp)
 {
@@ -394,7 +396,8 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
     NS_LOG_INFO("Switching " << numToSwitchA << " STAs from SSID " << ssidA << " to " << ssidB);
 
     NodeContainer movingStaA;
-    std::vector<Ptr<OnOffApplication>> movingAppsA, movingAppsB;
+
+    // Move STAs from AP-A to AP-B
     for (uint32_t i = 0; i < numToSwitchA; ++i) {
         movingStaA.Add(staNodesA.Get(i));
     }
@@ -414,15 +417,18 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
     }
     staNodesA.Add(movingStaB);
 
+    // Create temporary containers for the remaining STAs
     NodeContainer remainingStaB;
     for (uint32_t i = numToSwitchB; i < staNodesB.GetN(); ++i) {
         remainingStaB.Add(staNodesB.Get(i));
     }
     staNodesB = remainingStaB;
 
+    // Switch APs for the selected STAs
     for (uint32_t i = 0; i < numToSwitchA; ++i)
     {
         Ptr<Node> staNode = movingStaA.Get(i);
+        // Set new SSID for the STA
         Ptr<MobilityModel> staA = staNode->GetObject<MobilityModel>();
         if (staA)
         {
@@ -446,6 +452,8 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
         Ptr<WifiNetDevice> staDevice = DynamicCast<WifiNetDevice>(staNode->GetDevice(0));
         if (staDevice)
         {
+            // Switch to new SSID
+            SwitchAp(staDevice, ssidB, appsA[i], apBIp);
             OnOffHelper onoff2("ns3::UdpSocketFactory", InetSocketAddress(apBIp, 9));
             onoff2.SetConstantRate(DataRate("1Mbps"));
             onoff2.SetAttribute("PacketSize", UintegerValue(1472));
@@ -454,7 +462,7 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
             ApplicationContainer app = onoff2.Install(staNode);
             app.Stop(Seconds(time));
             app.Start(Seconds(time));
-            app.Stop(Seconds(time+60));
+            app.Stop(Seconds(time+100));
         }
         else
         {
@@ -464,6 +472,7 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
     }
 
     NS_LOG_INFO("Switching " << numToSwitchB << " STAs from SSID " << ssidB << " to " << ssidA);
+    // Switch APs for the selected STAs
     for (uint32_t i = 0; i < numToSwitchB; ++i)
     {
         Ptr<Node> staNode = movingStaB.Get(i);
@@ -490,6 +499,8 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
         Ptr<WifiNetDevice> staDevice = DynamicCast<WifiNetDevice>(staNode->GetDevice(0));
         if (staDevice)
         {
+            // Switch to new SSID
+            SwitchAp(staDevice, ssidA, appsB[i], apAIp);
             OnOffHelper onoff1("ns3::UdpSocketFactory", InetSocketAddress(apAIp, 9));
             onoff1.SetConstantRate(DataRate("1Mbps"));
             onoff1.SetAttribute("PacketSize", UintegerValue(1472));
@@ -498,7 +509,7 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
             ApplicationContainer app = onoff1.Install(staNode);
             app.Stop(Seconds(time));
             app.Start(Seconds(time));
-            app.Stop(Seconds(time+60));
+            app.Stop(Seconds(time+100));
         }
         else
         {
