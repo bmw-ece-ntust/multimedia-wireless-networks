@@ -257,7 +257,7 @@ void SaveMacAddresses(NodeContainer &staNodesA, NodeContainer &staNodesB) {
 int main(int argc, char *argv[]) {
     uint32_t staA = 16;
     uint32_t staB = 16;
-    double simTime = 180.0;
+    double simTime = 60.0;
     LogComponentEnable("WifiSimulation", LOG_LEVEL_INFO);
 
     NS_LOG_INFO("Create Nodes...");
@@ -359,7 +359,7 @@ Details of the code:
 * Set mobility models for the stations and access points using `MobilityHelper`. The stations are set to move randomly within a specified rectangle, while the access points are set to a constant position.
 * Finally, the `SaveMacAddresses` function is called to save the MAC addresses of the stations to a CSV file. The MAC addresses are obtained from the first device of each node using `GetDevice(0)` and `GetAddress()` methods.
 
-* The MAC addresses are saved in a CSV file named [`sta_mac_addresses.csv`](../assets/a2/mac_address.csv). 
+* The MAC addresses are saved in a CSV file named [`sta_mac_addresses.csv`](../a2/results/mac_address.csv). 
 
 
 ## 4. Simulation
@@ -546,12 +546,12 @@ ApplicationContainer InstallFullQueueTraffic(Ptr<Node> sender, Address sinkAddre
         tempApp = InstallFullQueueTraffic(wifiStaNodesB.Get(i), InetSocketAddress(apInterfaceB.GetAddress(0), 9), 1.0, simTime);
         appsB.push_back(DynamicCast<OnOffApplication>(tempApp.Get(0)));
     }
-    // First Handover at 60 seconds
-    Simulator::Schedule(Seconds(60.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.25, 0.5, ssidA, ssidB, 60.0,
+    // First Handover at 20 seconds
+    Simulator::Schedule(Seconds(20.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.25, 0.5, ssidA, ssidB, 20.0,
     std::ref(appsA), std::ref(appsB), apInterfaceA.GetAddress(0), apInterfaceB.GetAddress(0));
 
-    // Second Handover at 120 seconds
-    Simulator::Schedule(Seconds(120.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.5, 0.5, ssidA, ssidB, 120.0,
+    // Second Handover at 40 seconds
+    Simulator::Schedule(Seconds(40.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.5, 0.5, ssidA, ssidB, 40.0,
     std::ref(appsA), std::ref(appsB), apInterfaceA.GetAddress(0), apInterfaceB.GetAddress(0));
     
 
@@ -568,12 +568,12 @@ ApplicationContainer InstallFullQueueTraffic(Ptr<Node> sender, Address sinkAddre
 
 Details of the code:
 * The `SwitchAp` function is responsible for switching the SSID of the STA and updating the destination IP address of the traffic generator application. It takes the STA device, new SSID, application, and new AP IP address as parameters.
-* The `PerformSwitchAp` function is responsible for performing the handover between APs. It takes the STA nodes, percentages of STAs to switch, SSIDs, time, applications, and AP IP addresses as parameters. It creates temporary containers for the moving and remaining STAs and updates their positions and applications accordingly. This will also save the handover log in a CSV file which is [handover.csv](../assets/a2/handover.csv).
+* The `PerformSwitchAp` function is responsible for performing the handover between APs. It takes the STA nodes, percentages of STAs to switch, SSIDs, time, applications, and AP IP addresses as parameters. It creates temporary containers for the moving and remaining STAs and updates their positions and applications accordingly. This will also save the handover log in a CSV file which is [`handover.csv`](../a2/results/handover.csv).
 * The `InstallFullQueueTraffic` function is responsible for installing the traffic generator application on the STAs. It creates an `OnOffHelper` application that sends UDP packets to the specified sink address at a constant rate of 1 Mbps. The packet size is set to 1472 bytes, and the application starts sending packets at the specified start time and stops at the specified stop time.
 * The `OnOffHelper` is used to create a traffic generator application that sends UDP packets to the specified sink address. The `SetConstantRate` method sets the data rate to 1 Mbps, and the `SetAttribute` method sets the packet size and on/off times for the application.
 * The `PacketSinkHelper` is used to create a packet sink application that receives packets at the APs. The `InetSocketAddress` is used to specify the address and port for the sink.
 * After that, the handover will be done by calling the `PerformSwitchAp` function at 60 seconds and 120 seconds. The first handover will switch 25% of the STAs from AP-A to AP-B, and the second handover will switch 50% of the STAs from AP-B to AP-A. The handover will also be saved in the CSV file.
-* The `LogThroughput` function is called to log the throughput of the simulation. The `SaveMacAddresses` function is called to save the MAC addresses of the STAs to a CSV file.
+* The `LogThroughput` function is called to log the throughput of the simulation. The throughput is calculated based on the number of packets received at the APs and the time interval. The throughput is saved in a CSV file named [`throughput.csv`](../a2/results/throughput.csv) which can be found in the results folder.
 
 ## 5. Results and analysis
 
@@ -618,15 +618,45 @@ This is the results of the simulation.
 * The second result is the handover log. The log will save the handover of the STAs in a CSV file.The table result:
 
 | Time (s) | STA ID | Old SSID   | New SSID   |
+--|-----------------|---------|---------
+20|00:00:00:00:00:01|network-A|network-B
+20|00:00:00:00:00:02|network-A|network-B
+20|00:00:00:00:00:03|network-A|network-B
+20|00:00:00:00:00:04|network-A|network-B
+20|00:00:00:00:00:11|network-B|network-A
+20|00:00:00:00:00:12|network-B|network-A
+20|00:00:00:00:00:13|network-B|network-A
+20|00:00:00:00:00:14|network-B|network-A
+20|00:00:00:00:00:15|network-B|network-A
+20|00:00:00:00:00:16|network-B|network-A
+20|00:00:00:00:00:17|network-B|network-A
+20|00:00:00:00:00:18|network-B|network-A
+40|00:00:00:00:00:05|network-A|network-B
+40|00:00:00:00:00:06|network-A|network-B
+40|00:00:00:00:00:07|network-A|network-B
+40|00:00:00:00:00:08|network-A|network-B
+40|00:00:00:00:00:09|network-A|network-B
+40|00:00:00:00:00:0a|network-A|network-B
+40|00:00:00:00:00:0b|network-A|network-B
+40|00:00:00:00:00:0c|network-A|network-B
+40|00:00:00:00:00:0d|network-A|network-B
+40|00:00:00:00:00:0e|network-A|network-B
+40|00:00:00:00:00:19|network-B|network-A
+40|00:00:00:00:00:1a|network-B|network-A
+40|00:00:00:00:00:1b|network-B|network-A
+40|00:00:00:00:00:1c|network-B|network-A
+40|00:00:00:00:00:1d|network-B|network-A
+40|00:00:00:00:00:1e|network-B|network-A
+
 
 Based on the result, we can see that the handover is done successfully. The STAs will switch from one AP to another AP based on the percentage and specific time that is set in the code.
 
 * The third result is the throughput of the simulation. The throughput will be logged in a CSV file. The result in graph:
-![Throughput](../assets/a2/throughput.png)
+![Throughput](../a2/results/throughput_plot.jpg)
 The graph shows the throughput of the simulation.
-* During the first 60s, the throughput of AP Network A is almost the same as AP Network B, which are around 2MBPs, this is because each AP has 16 sta, and each sta habe 1Mbps of data rate. So the total throughput of each AP is 16 * 1Mbps = 16 Mbps (2MBps). the throughput may not exactly 2 MBPs because of protocol and collision
-*  On the first handover (60s), the throughput of AP Network A will increase because after first handover, AP Network A will have 20 STAs and AP Network B will have 12 STAs. This results in increase of throughput of AP Network A around 25% to 2.5 MBPs and the throughput of AP Network B will decrease to 1.5 MBPs.
-*  On the second handover (120s), the throughput of AP Network A will decrease to 2.0 MBPs and the throughput of AP Network B will increase to 2.0 MBPs. This is because after second handover, both AP will have 16 STAs again. So the throughput of each AP will be 16 * 1Mbps = 16 Mbps (2MBps).
+* During the first 20s, the throughput of AP Network A is almost the same as AP Network B, which are around 1.1MBPs. Ideally the throughput should have around 2 MBPs, because each AP has 16 sta, and each sta have 1Mbps of data rate. So the total throughput of each AP is 16 * 1Mbps = 16 Mbps (2MBps). But, in the simulation, the throughput is not ideal because of the interference between the two APs. The AP Network A and AP Network B are too close to each other, so the signal will interfere with each other. This will cause the throughput to decrease. However, the throughput is still above 1 MBPs.
+*  On the first handover (20s), the throughput of AP Network A will increase because after first handover, AP Network A will have 20 STAs and AP Network B will have 12 STAs. This results in increase of throughput of AP Network A around 25% to 1.25 MBPs and the throughput of AP Network B will decrease to 0.7 MBPs.
+*  On the second handover (40s), the throughput of AP Network A will decrease to around 1.1 MBPs and then decreasing again to be the same as Network B. The throughput of AP Network B will increasing gradually to 1 MBps to be the same as network A. This is because the STAs do handover again, 10 STAs from AP Network A to AP Network B and 6 STAs from AP Network B to AP Network A. That means that in the end, both AP will have the same sta again, which is, 16 sta. So, in the end, both APs will have the same throughput around 1 MBps.
 
 
 ## References

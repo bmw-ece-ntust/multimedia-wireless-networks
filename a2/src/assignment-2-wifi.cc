@@ -15,15 +15,17 @@ NS_LOG_COMPONENT_DEFINE("WifiSimulation");
 uint64_t ap1Bytes = 0;
 uint64_t ap2Bytes = 0;
 
-
+// Callback function to log received packets AP 1
 void RxCallbackAp1(Ptr<const Packet> packet, const Address &addr) {
     ap1Bytes += packet->GetSize();
 }
 
+// Callback function to log received packets AP 2
 void RxCallbackAp2(Ptr<const Packet> packet, const Address &addr) {
     ap2Bytes += packet->GetSize();
 }
 
+// Function to log throughput
 void LogThroughput() {
     static std::ofstream outFile("throughput.csv", std::ios::app);
     static uint32_t time = 1;
@@ -33,6 +35,7 @@ void LogThroughput() {
     Simulator::Schedule(Seconds(1.0), &LogThroughput);
 }
 
+// Function to install traffic generator applications
 ApplicationContainer InstallFullQueueTraffic(Ptr<Node> sender, Address sinkAddress, double startTime, double stopTime) {
     OnOffHelper onoff("ns3::UdpSocketFactory", sinkAddress);
     onoff.SetConstantRate(DataRate("1Mbps"));
@@ -45,6 +48,7 @@ ApplicationContainer InstallFullQueueTraffic(Ptr<Node> sender, Address sinkAddre
     return app;
 }
 
+// Function to save MAC addresses to a CSV file
 void SaveMacAddresses(NodeContainer staNodesA, NodeContainer staNodesB) {
     std::ofstream macFile("sta_mac_addresses.csv");
     macFile << "STA,MAC Address" << std::endl;
@@ -62,6 +66,7 @@ void SaveMacAddresses(NodeContainer staNodesA, NodeContainer staNodesB) {
     NS_LOG_INFO("MAC addresses saved to sta_mac_addresses.csv");
 }
 
+// Function to log handover events
 void LogHandover(uint32_t time, Ptr<Node> sta, const std::string& fromAp, const std::string& toAp) {
     Ptr<NetDevice> device = sta->GetDevice(0);
     Mac48Address mac = Mac48Address::ConvertFrom(device->GetAddress());
@@ -71,6 +76,7 @@ void LogHandover(uint32_t time, Ptr<Node> sta, const std::string& fromAp, const 
     NS_LOG_INFO("Handover - Time: " << time << "s, STA MAC: " << mac << " From: " << fromAp << " To: " << toAp);
 }
 
+// Function to switch APs for a STA
 void SwitchAp(Ptr<WifiNetDevice> staDevice, Ssid newSsid, Ptr<OnOffApplication> app, Ipv4Address newApIp)
 {
     Ptr<StaWifiMac> staMac = DynamicCast<StaWifiMac>(staDevice->GetMac());
@@ -87,6 +93,7 @@ void SwitchAp(Ptr<WifiNetDevice> staDevice, Ssid newSsid, Ptr<OnOffApplication> 
     }
 }
 
+// Function to perform the switch of APs for a group of STAs
 void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double percentageA, double percentageB, Ssid ssidA, Ssid ssidB, uint32_t time
 , std::vector<Ptr<OnOffApplication>> &appsA, std::vector<Ptr<OnOffApplication>> &appsB, Ipv4Address apAIp, Ipv4Address apBIp)
 {
@@ -98,7 +105,8 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
     NS_LOG_INFO("Switching " << numToSwitchA << " STAs from SSID " << ssidA << " to " << ssidB);
 
     NodeContainer movingStaA;
-    std::vector<Ptr<OnOffApplication>> movingAppsA, movingAppsB;
+
+    // Move STAs from AP-A to AP-B
     for (uint32_t i = 0; i < numToSwitchA; ++i) {
         movingStaA.Add(staNodesA.Get(i));
     }
@@ -118,15 +126,18 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
     }
     staNodesA.Add(movingStaB);
 
+    // Create temporary containers for the remaining STAs
     NodeContainer remainingStaB;
     for (uint32_t i = numToSwitchB; i < staNodesB.GetN(); ++i) {
         remainingStaB.Add(staNodesB.Get(i));
     }
     staNodesB = remainingStaB;
 
+    // Switch APs for the selected STAs
     for (uint32_t i = 0; i < numToSwitchA; ++i)
     {
         Ptr<Node> staNode = movingStaA.Get(i);
+        // Set new SSID for the STA
         Ptr<MobilityModel> staA = staNode->GetObject<MobilityModel>();
         if (staA)
         {
@@ -158,7 +169,7 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
             ApplicationContainer app = onoff2.Install(staNode);
             app.Stop(Seconds(time));
             app.Start(Seconds(time));
-            app.Stop(Seconds(time+20));
+            app.Stop(Seconds(time+100));
         }
         else
         {
@@ -168,6 +179,7 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
     }
 
     NS_LOG_INFO("Switching " << numToSwitchB << " STAs from SSID " << ssidB << " to " << ssidA);
+    // Switch APs for the selected STAs
     for (uint32_t i = 0; i < numToSwitchB; ++i)
     {
         Ptr<Node> staNode = movingStaB.Get(i);
@@ -202,7 +214,7 @@ void PerformSwitchAp(NodeContainer &staNodesA, NodeContainer &staNodesB, double 
             ApplicationContainer app = onoff1.Install(staNode);
             app.Stop(Seconds(time));
             app.Start(Seconds(time));
-            app.Stop(Seconds(time+20));
+            app.Stop(Seconds(time+100));
         }
         else
         {
@@ -219,6 +231,8 @@ int main(int argc, char *argv[]) {
     LogComponentEnable("WifiSimulation", LOG_LEVEL_INFO);
 
     NS_LOG_INFO("Create Nodes...");
+
+    // Create nodes for STA-A and STA-B
     NodeContainer wifiStaNodesA, wifiStaNodesB, wifiApNodes;
     wifiStaNodesA.Create(staA);
     wifiStaNodesB.Create(staB);
@@ -229,14 +243,17 @@ int main(int argc, char *argv[]) {
     YansWifiPhyHelper phy;
     phy.SetChannel(channel.Create());
 
+    // Set Wifi PHY parameters
     WifiHelper wifi;
     wifi.SetStandard(WIFI_STANDARD_80211n);
     wifi.SetRemoteStationManager("ns3::MinstrelHtWifiManager");
 
+    // Set Wifi PHY parameters
     WifiMacHelper mac;
     Ssid ssidA = Ssid("network-A");
     Ssid ssidB = Ssid("network-B");
 
+    // Set Wifi MAC parameters
     mac.SetType("ns3::StaWifiMac", "Ssid", SsidValue(ssidA), "ActiveProbing", BooleanValue(false));
     NetDeviceContainer staDevicesA = wifi.Install(phy, mac, wifiStaNodesA);
 
@@ -291,6 +308,7 @@ int main(int argc, char *argv[]) {
     stack.Install(wifiStaNodesB);
     stack.Install(wifiApNodes);
 
+    // Assign IP addresses to the nodes
     Ipv4AddressHelper address;
     address.SetBase("10.1.1.0", "255.255.255.0");
     Ipv4InterfaceContainer apInterfaceA = address.Assign(apDeviceA);
@@ -298,24 +316,27 @@ int main(int argc, char *argv[]) {
     address.Assign(staDevicesA);
     address.Assign(staDevicesB);
 
-    PacketSinkHelper sink("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), 9));
+    // Set up packet sink to receive packets at APs
+    PacketSinkHelper sink("ns3::UdpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), 9));v
     ApplicationContainer sinkAppsA = sink.Install(wifiApNodes.Get(0));
     sinkAppsA.Start(Seconds(0.0));
     sinkAppsA.Stop(Seconds(simTime));
     sinkAppsA.Get(0)->GetObject<PacketSink>()->TraceConnectWithoutContext("Rx", MakeCallback(&RxCallbackAp1));
-
+60
     ApplicationContainer sinkAppsB = sink.Install(wifiApNodes.Get(1));
     sinkAppsB.Start(Seconds(0.0));
     sinkAppsB.Stop(Seconds(simTime));
     sinkAppsB.Get(0)->GetObject<PacketSink>()->TraceConnectWithoutContext("Rx", MakeCallback(&RxCallbackAp2));
     std::vector<Ptr<OnOffApplication>> appsA, appsB;
     
+    // Install traffic generator applications on STAs
     for (uint32_t i = 0; i < wifiStaNodesA.GetN(); ++i) {
         ApplicationContainer tempApp;
         tempApp = InstallFullQueueTraffic(wifiStaNodesA.Get(i), InetSocketAddress(apInterfaceA.GetAddress(0), 9), 1.0, simTime);
         appsA.push_back(DynamicCast<OnOffApplication>(tempApp.Get(0)));
     }
 
+    // Install traffic generator applications on STAs
     for (uint32_t i = 0; i < wifiStaNodesB.GetN(); ++i) {
         ApplicationContainer tempApp;
         tempApp = InstallFullQueueTraffic(wifiStaNodesB.Get(i), InetSocketAddress(apInterfaceB.GetAddress(0), 9), 1.0, simTime);
@@ -325,9 +346,10 @@ int main(int argc, char *argv[]) {
     Simulator::Schedule(Seconds(20.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.25, 0.5, ssidA, ssidB, 20.0,
     std::ref(appsA), std::ref(appsB), apInterfaceA.GetAddress(0), apInterfaceB.GetAddress(0));
 
+    // Second Handover at 40 seconds
     Simulator::Schedule(Seconds(40.0), &PerformSwitchAp, std::ref(wifiStaNodesA), std::ref(wifiStaNodesB), 0.5, 0.5, ssidA, ssidB, 40.0,
     std::ref(appsA), std::ref(appsB), apInterfaceA.GetAddress(0), apInterfaceB.GetAddress(0));
-    // Second Handover at 40 seconds
+    
 
     Simulator::Schedule(Seconds(1.0), &LogThroughput);
     Simulator::Schedule(Seconds(0.5), &SaveMacAddresses, wifiStaNodesA, wifiStaNodesB);
