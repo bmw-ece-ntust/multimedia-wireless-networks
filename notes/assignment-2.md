@@ -8,7 +8,6 @@ Video Results: http://youtube.com
     - [2.2 Download and Install NS-3](#22-download-and-install-ns-3)
     - [2.3 Test NS-3](#23-test-ns-3)
   - [3. WiFi Simulation](#3-wifi-simulation)
-    - [3.1 Deploy 2 nodes and assign users](#31-deploy-2-nodes-and-assign-users)
   - [4. Simulation](#4-simulation)
   - [5. Results and analysis](#5-results-and-analysis)
   - [References](#references)
@@ -218,7 +217,6 @@ Only one test failed, which is the threaded-simulator test. It means that majori
 
 ## 3. WiFi Simulation
 
-### 3.1 Deploy 2 nodes and assign users
 This is the topology of the simulation.
 
 ```
@@ -378,7 +376,7 @@ Details of the code:
 
 ## 4. Simulation
 
-The simulation is done in 180 seconds with full queue traffic. Every traffic will send udp to its own AP with data rate 1 Mbps. Every 60 seconds there will be handover from one AP to another AP. The handover will be done by switching the SSID of the STA and changing the destination IP address of the traffic generator application. The code:
+The simulation is done in 60 seconds with full queue traffic. Every traffic will send udp to its own AP with data rate 1 Mbps. Every 20 seconds there will be handover from one AP to another AP. The handover will be done by switching the SSID of the STA and changing the destination IP address of the traffic generator application. The code:
 
 ```c++
 void SwitchAp(Ptr<WifiNetDevice> staDevice, Ssid newSsid, Ptr<OnOffApplication> app, Ipv4Address newApIp)
