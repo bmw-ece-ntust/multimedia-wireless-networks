@@ -219,6 +219,20 @@ Only one test failed, which is the threaded-simulator test. It means that majori
 ## 3. WiFi Simulation
 
 ### 3.1 Deploy 2 nodes and assign users
+This is the topology of the simulation.
+
+```
+    +------------------+          +------------------+
+    |                  |          |                  |
+    |      AP-A        |          |      AP-B        |
+    |                  |          |                  |
+    +------------------+          +------------------+
+    
+    |                  |          |                  | 
+          16 sta                         16 sta 
+    |                  |          |                  |
+```
+
 Below is the code to deploy 2 nodes and assign users to them. The code creates two access points (APs) and 16 stations (STAs) for each AP. The MAC addresses of the STAs are saved in a CSV file.
 
 ```c++
