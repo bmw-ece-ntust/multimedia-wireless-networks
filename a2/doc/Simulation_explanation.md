@@ -291,7 +291,7 @@ plt.yticks(np.arange(0, sta_count[['AP1_STA_Count', 'AP2_STA_Count']].values.max
 plt.savefig("APs_sta_count_plot.png")
 plt.close()
 ```
-![APs_throughput_plot.png](../a2/result/APs_sta_count_plot.png)
+![APs_throughput_plot.png](../result/APs_sta_count_plot.png)
 
 
 ### 📄`ap1_throughput.csv` and `ap2_throughput.csv`
@@ -353,7 +353,7 @@ plt.yticks(np.arange(0, ap1['Throughput(Mbps)'].max() + 0.5, 0.2))  # 每 0.2 Mb
 plt.savefig("APs_throughput_plot.png")
 plt.close()
 ```
-![APs_throughput_plot.png](../a2/result/APs_throughput_plot.png)
+![APs_throughput_plot.png](../result/APs_throughput_plot.png)
 
 ## 📌 **Summary**
 
