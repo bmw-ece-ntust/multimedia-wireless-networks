@@ -123,41 +123,7 @@ cd ns-3
 - shell window will show what STA moves when `--- User Initial Assignment Table (at 0s) ---
 - 
 ```
-ID|Initial AP|IP
------------------------------------------
- 0|         A|10.1.1.3
- 1|         A|10.1.1.4
- 2|         A|10.1.1.5
- 3|         A|10.1.1.6
- 4|         A|10.1.1.7
- 5|         A|10.1.1.8
- 6|         A|10.1.1.9
- 7|         A|10.1.1.10
- 8|         A|10.1.1.11
- 9|         A|10.1.1.12
-10|         A|10.1.1.13
-11|         A|10.1.1.14
-12|         A|10.1.1.15
-13|         A|10.1.1.16
-14|         A|10.1.1.17
-15|         A|10.1.1.18
-16|         B|10.1.1.19
-17|         B|10.1.1.20
-18|         B|10.1.1.21
-19|         B|10.1.1.22
-20|         B|10.1.1.23
-21|         B|10.1.1.24
-22|         B|10.1.1.25
-23|         B|10.1.1.26
-24|         B|10.1.1.27
-25|         B|10.1.1.28
-26|         B|10.1.1.29
-27|         B|10.1.1.30
-28|         B|10.1.1.31
-29|         B|10.1.1.32
-30|         B|10.1.1.33
-31|         B|10.1.1.34
------------------------------------------
+
 
 == Moving STAs physically at 60s ==
 Moving 4 STAs physically from AP1 area -> AP2 area:
@@ -195,9 +161,7 @@ Moving 6 STAs physically from AP2 area -> AP1 area:
   - STA node 28 moved near AP A.
   - STA node 29 moved near AP A.
                 
-===== Simulation Ended =====
-AP A (Node 0) Total Received: 381381000 bytes
-AP B (Node 1) Total Received: 321452600 bytes
+
 ```
 - using script `graph.py` we can get simulation graph result
   
