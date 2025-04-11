@@ -676,8 +676,8 @@ This is the results of the simulation.
 Summary table of the handover:
 | Time (s) | AP-A to AP-B | AP-B to AP-A |
 |-----------|--------------|--------------|
-| 20        | 4  $(X_0 * 25\% )$           | 12   $(Y_0 * 50\% )$        |
-| 40        | 10 $(X_1 * 50\% )$           | 6    $(Y_1 * 50\% )$        |
+| 20        | 4  ($X_0$ x 25%)          | 12   ($Y_0$ x 50%)         |
+| 40        | 10 ($X_1$ x 50%)          | 6    ($Y_1$ x 50%)         |
 
 
 Summary table of number of STAs:
