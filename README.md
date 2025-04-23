@@ -97,17 +97,17 @@ Ray -->
 | :--------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | **Week 1**: 2/18       | [Opening](./Teaching%20Materials/2025_MultimediaWirelessNetworks.pdf)                              |                                                             |
 | **Week 2**: 2/25       | [Part-I:](./Teaching%20Materials/Part-1_2024.pdf) Multimedia Applications                          |                                                             |
-| **Week 3**: 3/4        | QoS Fundamentals                                                                                   | [Assignment 1](#a1-deadline-33-2359-am)                     |
+| **Week 3**: 3/4        | QoS Fundamentals                                                                                   | [Assignment 1](#a1)                     |
 | **Week 4**: 3/11       | QoS Fundamentals                                                                                   |                                                             |
 | **Week 5**: 3/18       | QoS Mechanisms                                                                                     |                                                             |
 | **Week 6**: 3/25       | QoS Mechanisms                                                                                     | [Time Management](https://hackmd.io/YfiaqPIqSLO2Cj76zcUrrA) |
 | **Week 7**: 4/1        | QoS Mechanisms                                                                                     |                                                             |
-| **Week 8**: 4/8        | QoS Mechanisms                                                                                     | [Assignment 2](#a2-deadline-47-2359-am)                     |
+| **Week 8**: 4/8        | QoS Mechanisms                                                                                     | [Assignment 2](#a2)                     |
 | **Week 9**: 4/15       | Part-II: [Wireless Local Area Networks (WLANs)](), [Overview of 802.11 Networks](), [802.11 MAC]() |                                                             |
 | **Week 10**: 4/22      | [802.11 MAC]()                                                                                     | [Introduction to 802.11ax]()                                |
 | **Week 11**: 4/29      |                                                                                                    | 802.11 MAC                                                  |
 | **Week 12**: 5/6       | [802.11e](https://drive.google.com/file/d/1ik94M5TC_-1_C-LKtcRgO24c5oR-YDFq/view?usp=sharing)      |                                                             |
-| **Week 13**: 5/13      | 802.11e                                                                                            | [Assignment 3](#a3-deadline-513-2359-am)                    |
+| **Week 13**: 5/13      | 802.11e                                                                                            | [Assignment 3](#a3)                    |
 | **Week 14**: 5/20      | 5G QoS                                                                                             |                                                             |
 | **Week 15**: 5/27      | 5G QoS                                                                                             |                                                             |
 | **Week 16**: 6/3       | **Final Exam**                                                                                     |                                                             |
