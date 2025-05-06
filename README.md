@@ -140,10 +140,10 @@ Ray -->
 - **Deadline**: 3/3 23.59 A.M.
 - **Purpose**: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
 - Peer Review: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfRnxq685epUtG5pLHLfxgMmcAg7UcMH0B4z4mDJwshvSMvHg/viewform?usp=sharing)  
-  **Top-3 students**:
-  1. <Student ID - 1>
-  2. <Student ID - 2>
-  3. <Student ID - 3>
+  [**Top-3 students**](https://docs.google.com/spreadsheets/d/134k3g4kB1ndqwDK_2v1NW8qrnkAJ3-hKxGlikc0dSqE/edit?usp=sharing):
+  1. M11302209 (+3)
+  2. M11302204 (+2)
+  3. M11302832 (+1) & M11351802 (+1)
 - **Interpersonal Skills**:
     1. 5-Minute Research Presentation ([[1]](https://gradcareers.cornell.edu/spotlights/tips-for-a-5-minute-research-presentation/),[[2]](https://www.youtube.com/watch?v=YVgS_opYacQ))
     2. [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
