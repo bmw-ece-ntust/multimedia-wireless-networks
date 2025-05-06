@@ -139,7 +139,7 @@ Ray -->
 
 - **Deadline**: 3/3 23.59 A.M.
 - **Purpose**: Learn the background knowledge of interpersonal skills and apply it in the following assignments.
-- Peer Review: [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfRnxq685epUtG5pLHLfxgMmcAg7UcMH0B4z4mDJwshvSMvHg/viewform?usp=sharing)  
+- Peer Review: [Google Form](https://docs.google.com/spreadsheets/d/134k3g4kB1ndqwDK_2v1NW8qrnkAJ3-hKxGlikc0dSqE/edit?resourcekey=&gid=2014021267#gid=2014021267)  
   [**Top-3 students**](https://docs.google.com/spreadsheets/d/134k3g4kB1ndqwDK_2v1NW8qrnkAJ3-hKxGlikc0dSqE/edit?usp=sharing):
   1. M11302209 (+3)
   2. M11302204 (+2)
@@ -150,8 +150,9 @@ Ray -->
     3. [How to Write a Report](https://www.openpolytechnic.ac.nz/current-students/study-tips-and-techniques/assignments/how-to-write-a-report/)
     4. [10 Tips for Better Teamwork](https://www.aces.edu/blog/topics/finance-career/10-tips-for-effective-teamwork-in-the-workplace/)
 - **Score (15%)**:
-  - Study note: 2 pt/item * 4 = **7 pt**;
-  - Video (4~5 mins): 1 pt/item * 4 = **6 pt**;
+- **Score (15%)**:
+  - Study note: 2 pt/item * 4 = **8 pt**;
+  - Video (4~5 mins): 1.5 pt/item * 4 = **6 pt**;
   - Experience sharing (3~5 mins): **2 pt**
 <!-- 
 ##### A1-new
