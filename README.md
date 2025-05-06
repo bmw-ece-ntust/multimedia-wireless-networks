@@ -279,27 +279,17 @@ Ray -->
 
 > **Note**: This activity is still under discussion with Prof. Justin Ma
 
-- **Title**: Network Analysis
-- **Deadline**: 13th May, 23.50 A.M.
-- **Materials**: Access this [folder](https://drive.google.com/drive/folders/1nonACMzF6uPbLtvHoyzvDXdjTriUzQUu?usp=sharing):
+- **Title**: PCAP Network Analysis using AI
+- **Deadline**: 20th May, 23.59 A.M.
+- **Learning Materials**: Access this [folder](https://drive.google.com/drive/folders/1nonACMzF6uPbLtvHoyzvDXdjTriUzQUu?usp=sharing):
   1. Wireshark for 5G E2E callflow analysis
   2. KS-wireshark for 5G RRC_NAS callflow analysis
   3. 5G E2E QoS callflow logs--5QI3
   4. 5G E2E Callflow logs for NTUST
-
-**1. Submission Guideline**:
-
-    Similar with assignment-2
-
-**2. Objectives**:
-
-1. Install [Wireshark](https://www.wireshark.org/download.html) & [KS_Wireshark](https://drive.google.com/file/d/1yg40WTcRWve_13AKEiQR8AjK2kGPT-tE/view?usp=drive_link)
-    > **Note**: Several alternatives to install KS-Wireshark on Linux or MacOS:
-    >
-    > 1. Using [WineHQ](https://www.winehq.org/)
-    > 2. Install [Windows 10](https://software.ntust.edu.tw/bbb/UserDownload2SE.aspx) on [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-
-2. AI tools to analyze the pcap log.
+- **Questions**: Rename & answer on this [file](./branch-template/a3-[Student%20ID]-[Full%20English%20Name].md).  
+  **Note** :
+  - Please put the assignment-3 file on the same structure with the [branch-template](./branch-template/) folder.
+  - For assignment 1-2, please DO NOT modify or move it anymore. We will use script to check the commit time.
 
  <!-- Milestones & Grading -->
 
